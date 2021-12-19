@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Probabilis</string>
+    <string-array name="picker">
+        <item>كرة</item>
+        <item>كرتين</item>
+        <item>3 كرات</item>
+        <item>4 كرات</item>
+        <item>5 كرات</item>
+        <item>6 كرات</item>
+        <item>7 كرات</item>
+        <item>8 كرات</item>
+        <item>9 كرات</item>
+        <item>10 كرات</item>
+
+
+    </string-array>
 </resources>

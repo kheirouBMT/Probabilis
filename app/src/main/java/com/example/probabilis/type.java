@@ -8,18 +8,27 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 
 public class type extends AppCompatActivity {
     TextView show;
     int i=0;
+    String[] choices;
     Dialog popUP;
+    NumberPicker draws;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type);
         popUP = new Dialog(this);
         show = findViewById(R.id.selector);
+        draws = findViewById(R.id.draws);// num picker
+
+        choices = getResources().getStringArray(R.array.picker);
+        draws.setDisplayedValues(choices);
+        draws.setMinValue(0);
+        draws.setMaxValue(9);
 
     }
     public void togetherT(View v){
