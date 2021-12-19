@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class type extends AppCompatActivity {
     TextView show;
+    int i=0;
     Dialog popUP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,16 @@ public class type extends AppCompatActivity {
         setContentView(R.layout.activity_type);
         popUP = new Dialog(this);
         show = findViewById(R.id.selector);
+
+    }
+    public void togetherT(View v){
+        show.setText("في آن واحد");
+    }
+    public void irja3T(View v){
+        show.setText("بإرجاع");
+    }
+    public void withoutT(View v){
+        show.setText("بدون إرجاع");
     }
     public void showPOP(View v) {
         TextView txtclose, show;
@@ -40,7 +51,7 @@ public class type extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 popUP.dismiss();
-
+                togetherT(null);
             }
         });
         tawali.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +65,7 @@ public class type extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 popUP.dismiss();
+                irja3T(null);
 
             }
         });
@@ -61,6 +73,7 @@ public class type extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 popUP.dismiss();
+                withoutT(null);
 
             }
         });

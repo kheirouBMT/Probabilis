@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
+    app:circularflow_radiusInDP="10dp"
     tools:context=".type">
 
     <TextView
@@ -60,10 +61,14 @@
         android:id="@+id/selector"
         android:layout_width="126dp"
         android:layout_height="50dp"
-        android:background="#80CDCDCD"
+        android:background="#80403D3D"
         android:cursorVisible="true"
         android:onClick="showPOP"
-        android:textColor="#000000"
+        android:paddingVertical="7dp"
+        android:text=" "
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
