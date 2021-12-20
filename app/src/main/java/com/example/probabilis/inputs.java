@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -176,6 +177,11 @@ public class inputs extends AppCompatActivity {
 
     }
     public void  type(View view){
-        startActivity(new Intent(this,type.class));
+        if (Result ==0){
+            Toast.makeText(inputs.this, "أرجوا إضافة كرات",Toast.LENGTH_SHORT).show();
+        }
+        else {
+            startActivity(new Intent(this,type.class));}
+
     }
 }

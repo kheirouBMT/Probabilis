@@ -26,6 +26,7 @@ public class type extends AppCompatActivity {
         draws = findViewById(R.id.draws);// num picker
 
         choices = getResources().getStringArray(R.array.picker);
+        draws.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
         draws.setDisplayedValues(choices);
         draws.setMinValue(0);
         draws.setMaxValue(9);
