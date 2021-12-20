@@ -15,6 +15,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class inputs extends AppCompatActivity {
+    public static final String Re = "com.example.inputs.Re";
     EditText Red, Blue, Green, Yellow, White, Black;
     TextView re;
     ArrayList<Integer> allBalls;
@@ -181,7 +182,10 @@ public class inputs extends AppCompatActivity {
             Toast.makeText(inputs.this, "أرجوا إضافة كرات",Toast.LENGTH_SHORT).show();
         }
         else {
-            startActivity(new Intent(this,type.class));}
+            Intent intent = new Intent(this, type.class);
+            intent.putExtra(Re, Result);
+            startActivity(intent);
+        }
 
     }
 }

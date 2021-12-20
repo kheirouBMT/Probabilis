@@ -3,6 +3,7 @@ package com.example.probabilis;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
-
 public class type extends AppCompatActivity {
     TextView show;
     int i=0;
@@ -21,15 +21,16 @@ public class type extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type);
+        Intent intent = getIntent();
+        int Result = intent.getIntExtra(inputs.Re, 0);
         popUP = new Dialog(this);
         show = findViewById(R.id.selector);
         draws = findViewById(R.id.draws);// num picker
-
         choices = getResources().getStringArray(R.array.picker);
         draws.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
         draws.setDisplayedValues(choices);
         draws.setMinValue(0);
-        draws.setMaxValue(9);
+        draws.setMaxValue(Result-1);
 
     }
     public void togetherT(View v){
