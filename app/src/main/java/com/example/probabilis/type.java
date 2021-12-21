@@ -8,15 +8,21 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+
+import javax.xml.transform.Result;
+
 public class type extends AppCompatActivity {
     TextView show;
-    int i=0;
+    int i=0, type, test, Result;
     String[] choices;
     Dialog popUP;
     NumberPicker draws;
+    public static final String draw = "com.example.inputs.draw";
+    public static final String Re = "com.example.inputs.Re";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,7 @@ public class type extends AppCompatActivity {
         draws.setMinValue(0);
         draws.setMaxValue(Result-1);
 
+
     }
     public void togetherT(View v){
         show.setText("في آن واحد");
@@ -41,6 +48,23 @@ public class type extends AppCompatActivity {
     }
     public void withoutT(View v){
         show.setText("بدون إرجاع");
+
+    }
+    public void next2(View view){
+        if(type==1){
+            Intent intent = new Intent(this, togetherF.class);
+            int drawss = (draws.getValue()+1);
+
+            intent.putExtra(draw, drawss);
+            intent.putExtra(Re, Result);
+            startActivity(intent);
+        }
+        else if(type==2){
+
+        }
+        else if(type==3){
+
+        }
     }
     public void showPOP(View v) {
         TextView txtclose, show;
@@ -63,6 +87,7 @@ public class type extends AppCompatActivity {
             public void onClick(View v) {
                 popUP.dismiss();
                 togetherT(null);
+                type =1;
             }
         });
         tawali.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +102,7 @@ public class type extends AppCompatActivity {
             public void onClick(View v) {
                 popUP.dismiss();
                 irja3T(null);
+                type =2;
 
             }
         });
@@ -85,10 +111,12 @@ public class type extends AppCompatActivity {
             public void onClick(View v) {
                 popUP.dismiss();
                 withoutT(null);
+                type =3;
 
             }
         });
         popUP.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         popUP.show();
     }
+
 }

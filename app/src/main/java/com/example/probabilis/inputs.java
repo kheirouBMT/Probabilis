@@ -16,10 +16,17 @@ import java.util.ArrayList;
 
 public class inputs extends AppCompatActivity {
     public static final String Re = "com.example.inputs.Re";
+    public static final String rouge = "com.example.inputs.rouge";
+    public static final String bleu = "com.example.inputs.bleu";
+    public static final String vert = "com.example.inputs.vert";
+    public static final String jaune = "com.example.inputs.jaune";
+    public static final String blanc = "com.example.inputs.blanc";
+    public static final String noir = "com.example.inputs.noir";
+    int red,blue,green,yellow,white,black;
     EditText Red, Blue, Green, Yellow, White, Black;
     TextView re;
     ArrayList<Integer> allBalls;
-    int Result;
+    static int Result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -131,7 +138,7 @@ public class inputs extends AppCompatActivity {
         re = findViewById(R.id.result);
     }
     public void sum(View view) {
-        int red,blue,green,yellow,white,black;
+
         allBalls = new ArrayList<Integer>();
         if ( TextUtils.isEmpty(Red.getText().toString())){
             red = 0;
@@ -184,6 +191,12 @@ public class inputs extends AppCompatActivity {
         else {
             Intent intent = new Intent(this, type.class);
             intent.putExtra(Re, Result);
+            intent.putExtra(rouge, red);
+            intent.putExtra(bleu, blue);
+            intent.putExtra(vert, green);
+            intent.putExtra(jaune, yellow);
+            intent.putExtra(blanc, white);
+            intent.putExtra(noir, black);
             startActivity(intent);
         }
 
