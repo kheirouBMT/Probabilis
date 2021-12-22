@@ -26,13 +26,15 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="168dp"
-        android:layout_height="37dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="*اختر عدد الكرات المسحوبة*"
         android:textColor="#0097A7"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/draws"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/draws" />
 
     <Button
         android:id="@+id/next2"
@@ -41,7 +43,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="25dp"
         android:onClick="next2"
-        android:text="Next"
+        android:text="التالي"
         android:textColor="#000000"
         android:textColorHighlight="#FF0000"
         android:textColorHint="#E91E63"
@@ -55,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginBottom="25dp"
-        android:text="Previous"
+        android:text="السابق"
         android:textColor="#000000"
         android:textColorHighlight="#FF0000"
         android:textColorHint="#E91E63"
