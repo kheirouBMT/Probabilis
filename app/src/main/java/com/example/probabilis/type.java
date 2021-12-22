@@ -38,7 +38,6 @@ public class type extends AppCompatActivity {
         draws.setMinValue(0);
         draws.setMaxValue(Result-1);
 
-
     }
     public void togetherT(View v){
         show.setText("في آن واحد");

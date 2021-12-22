@@ -16,17 +16,12 @@ import java.util.ArrayList;
 
 public class inputs extends AppCompatActivity {
     public static final String Re = "com.example.inputs.Re";
-    public static final String rouge = "com.example.inputs.rouge";
-    public static final String bleu = "com.example.inputs.bleu";
-    public static final String vert = "com.example.inputs.vert";
-    public static final String jaune = "com.example.inputs.jaune";
-    public static final String blanc = "com.example.inputs.blanc";
-    public static final String noir = "com.example.inputs.noir";
-    int red,blue,green,yellow,white,black;
+    public static final String allballs = "com.example.inputs.allballs";
+
     EditText Red, Blue, Green, Yellow, White, Black;
     TextView re;
-    ArrayList<Integer> allBalls;
-    static int Result;
+    static ArrayList<Integer> allBalls;
+    static int Result,blue,green,yellow,white,black,red;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -139,10 +134,12 @@ public class inputs extends AppCompatActivity {
     }
     public void sum(View view) {
 
-        allBalls = new ArrayList<Integer>();
+        ArrayList<Integer> allBalls = new ArrayList<Integer>();
         if ( TextUtils.isEmpty(Red.getText().toString())){
             red = 0;
-            allBalls.add(red);}
+            allBalls.add(red);
+        }
+
         else {
             red = Integer.parseInt(Red.getText().toString());
             allBalls.add(red);}
@@ -191,12 +188,9 @@ public class inputs extends AppCompatActivity {
         else {
             Intent intent = new Intent(this, type.class);
             intent.putExtra(Re, Result);
-            intent.putExtra(rouge, red);
-            intent.putExtra(bleu, blue);
-            intent.putExtra(vert, green);
-            intent.putExtra(jaune, yellow);
-            intent.putExtra(blanc, white);
-            intent.putExtra(noir, black);
+            intent.putExtra(allballs, allBalls);
+
+
             startActivity(intent);
         }
 

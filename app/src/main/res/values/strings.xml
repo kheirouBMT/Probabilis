@@ -1,17 +1,56 @@
 <resources>
     <string name="app_name">Probabilis</string>
     <string-array name="picker">
-        <item>كرة</item>
-        <item>كرتين</item>
-        <item>3 كرات</item>
-        <item>4 كرات</item>
-        <item>5 كرات</item>
-        <item>6 كرات</item>
-        <item>7 كرات</item>
-        <item>8 كرات</item>
-        <item>9 كرات</item>
-        <item>10 كرات</item>
-
+        <item>كرية واحدة</item>
+        <item>كريتين</item>
+        <item>3 كريات</item>
+        <item>4 كريات</item>
+        <item>5 كريات</item>
+        <item>6 كريات</item>
+        <item>7 كريات</item>
+        <item>8 كريات</item>
+        <item>9 كريات</item>
+        <item>10 كريات</item>
+        <item>11 كرية</item>
+        <item>12 كرية</item>
+        <item>13 كرية</item>
+        <item>14 كرية</item>
+        <item>15 كرية</item>
+        <item>16 كرية</item>
+        <item>17 كرية</item>
+        <item>18 كرية</item>
+        <item>19 كرية</item>
+        <item>20 كرية</item>
+        <item>21 كرية</item>
+        <item>22 كرية</item>
+        <item>23 كرية</item>
+        <item>24 كرية</item>
+        <item>25 كرية</item>
+        <item>26 كرية</item>
+        <item>27 كرية</item>
+        <item>28 كرية</item>
+        <item>29 كرية</item>
+        <item>30 كرية</item>
+        <item>31 كرية</item>
+        <item>32 كرية</item>
+        <item>33 كرية</item>
+        <item>34 كرية</item>
+        <item>35 كرية</item>
+        <item>36 كرية</item>
+        <item>37 كرية</item>
+        <item>38 كرية</item>
+        <item>39 كرية</item>
+        <item>40 كرية</item>
+        <item>41 كرية</item>
+        <item>42 كرية</item>
+        <item>43 كرية</item>
+        <item>44 كرية</item>
+        <item>45 كرية</item>
+        <item>46 كرية</item>
+        <item>47 كرية</item>
+        <item>48 كرية</item>
+        <item>49 كرية</item>
+        <item>50 كرية</item>
 
     </string-array>
 </resources>
