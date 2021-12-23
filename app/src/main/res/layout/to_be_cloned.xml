@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_line"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:layoutDirection="inherit">
+
+    <NumberPicker
+        android:id="@+id/TEST"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:importantForAccessibility="noHideDescendants"
+        android:scaleY="0.7"
+        android:scrollbarSize="1dp"
+        android:textAlignment="center"
+        android:theme="@style/picker1"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="72dp"
+        android:layout_height="37dp"
+        android:background="#000000"
+        android:paddingVertical="5dp"
+        android:text=" تحمل اللون "
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/color"
+        android:layout_width="86dp"
+        android:layout_height="54dp"
+        android:onClick="switchColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
