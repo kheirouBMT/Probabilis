@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -31,6 +33,7 @@ public class togetherF extends AppCompatActivity {
     androidx.constraintlayout.widget.ConstraintLayout first_line;
     androidx.constraintlayout.widget.ConstraintLayout second_line;
     androidx.constraintlayout.widget.ConstraintLayout third_line;
+    LinearLayout hadita_one;
     Dialog popUP2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +89,7 @@ public class togetherF extends AppCompatActivity {
                 if (index != 0) {
                     popUP2.setContentView(R.layout.pop_up2);
                     popUP2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                    popUP2.setCanceledOnTouchOutside(false);
                     popUP2.show();
                     ImageButton special = (ImageButton) popUP2.findViewById(R.id.special);
                     special.setOnClickListener(new View.OnClickListener() {
@@ -93,29 +97,29 @@ public class togetherF extends AppCompatActivity {
                         public void onClick(View v) {
                             if (numberOfLines == 1) {
                                 int selected1 = allballs.get(index - 1);
-                                selected1 = selected1 - 1;
+                                selected1 = selected1 - picker1.getValue();
                                 allballs.set(index - 1, selected1);
                                 first_line = findViewById(R.id.first_line);
-                                change_color1(null);
                                 for (int i = 0; i < first_line.getChildCount(); i++) {
                                     View child = first_line.getChildAt(i);
                                     child.setEnabled(false);
                                 }
                                 second_line = findViewById(R.id.second);
                                 second_line.setVisibility(View.VISIBLE);
+                                picker2.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
                                 picker2.setDisplayedValues(choices);
                                 picker2.setMinValue(0);
                                 picker2.setMaxValue(Math.min(Result - 2, draw - 1));
                                 numberOfLines++;
                                 index = 0;
+                                change_bg1(null);
                                 popUP2.dismiss();
                             }
                             else if (numberOfLines == 2) {
-                                int selected1 = allballs.get(index - 1);
-                                selected1 = selected1 - 1;
-                                allballs.set(index - 1, selected1);
+                                int selected2 = allballs.get(index - 1);
+                                selected2 = selected2 - picker2.getValue();
+                                allballs.set(index - 1, selected2);
                                 second_line = findViewById(R.id.second);
-                                change_color2(null);
                                 for (int i = 0; i < second_line.getChildCount(); i++) {
                                     View child = second_line.getChildAt(i);
                                     child.setEnabled(false);
@@ -123,6 +127,7 @@ public class togetherF extends AppCompatActivity {
                                 int varTwo = picker2.getValue();
                                 third_line = findViewById(R.id.third);
                                 third_line.setVisibility(View.VISIBLE);
+                                picker3.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
                                 picker3.setDisplayedValues(choices);
                                 picker3.setMinValue(0);
                                 picker3.setMaxValue(Math.min(Result - 3, draw - 1));
@@ -340,9 +345,45 @@ public class togetherF extends AppCompatActivity {
             switchColor2 (null);
         }
     }
-    public void change_color1(View view){
-        first_line.setBackgroundColor(ContextCompat.getColor(this,
-                R.color.dark_grey));
+    public void for_max(View view){
+        popUP2.dismiss();
+        plus.setVisibility(View.GONE);
+        if(numberOfLines==1){
+            first_line = findViewById(R.id.first_line);
+            for (int i = 0; i < first_line.getChildCount(); i++) {
+                View child = first_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+        if(numberOfLines==2){
+            second_line = findViewById(R.id.first_line);
+            for (int i = 0; i < second_line.getChildCount(); i++) {
+                View child = second_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+    }
+    public void for_min(View view){
+        popUP2.dismiss();
+        plus.setVisibility(View.GONE);
+        if(numberOfLines==1){
+            first_line = findViewById(R.id.first_line);
+            for (int i = 0; i < first_line.getChildCount(); i++) {
+                View child = first_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+        if(numberOfLines==2){
+            second_line = findViewById(R.id.first_line);
+            for (int i = 0; i < second_line.getChildCount(); i++) {
+                View child = second_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+    }
+    public void change_bg1(View view) {
+        hadita_one = findViewById(R.id.hadita_one);
+        hadita_one.setBackgroundResource(R.drawable.pix2);
     }
     @SuppressLint("ResourceAsColor")
     public void change_color2(View view){

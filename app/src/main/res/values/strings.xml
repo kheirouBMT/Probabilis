@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Probabilis</string>
+    <string name="total_draws">عدد السحبات الممكنة هو :</string>
+    <string name="text1">تحمل اللون</string>
     <string-array name="picker">
         <item>كرية واحدة</item>
         <item>كريتين</item>

@@ -75,6 +75,7 @@ public class type extends AppCompatActivity {
         tawali = (ImageView) popUP.findViewById(R.id.tawali);
         irja3 = (ImageView) popUP.findViewById(R.id.irja3);
         without = (ImageView) popUP.findViewById(R.id.without);
+        popUP.setCanceledOnTouchOutside(false);
         txtclose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
