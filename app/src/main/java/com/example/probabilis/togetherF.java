@@ -25,10 +25,11 @@ import java.util.ArrayList;
 
 public class togetherF extends AppCompatActivity {
     String[] choices;
-    int index=0, Result, draw, numberOfLines=1;
+    int index=0, Result, draw, numberOfLines=1; //7adita lewla
     NumberPicker picker1,picker2,picker3;
     ArrayList<Integer> allballs = new ArrayList<>();
     ImageButton plus;
+    TextView other;
     static ImageView colors, colors2, colors3;
     androidx.constraintlayout.widget.ConstraintLayout first_line;
     androidx.constraintlayout.widget.ConstraintLayout second_line;
@@ -57,11 +58,16 @@ public class togetherF extends AppCompatActivity {
         colors = findViewById(R.id.color);
         colors2 = findViewById(R.id.color2);
         colors3 = findViewById(R.id.color3);
+        first_line = findViewById(R.id.first_line);
+        second_line = findViewById(R.id.second);
+        third_line = findViewById(R.id.third);
+        other = findViewById(R.id.others);
         TextView all1 = (TextView) findViewById(R.id.all1);
         all1.setText("عدد السحبات الممكنة هو : " + permutation(Result, draw));
         picker1 = findViewById(R.id.picker1);
         picker2 = findViewById(R.id.picker2);
         picker3 = findViewById(R.id.picker3);
+        hadita_one = findViewById(R.id.hadita_one);
         choices = getResources().getStringArray(R.array.picker);
         picker1.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
         picker1.setDisplayedValues(choices);
@@ -72,9 +78,11 @@ public class togetherF extends AppCompatActivity {
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
                 if(picker1.getValue()==draw-1){
                     plus.setVisibility(View.GONE);
+                    other.setVisibility(View.VISIBLE);
                 }
                 else{
                     plus.setVisibility(View.VISIBLE);
+                    other.setVisibility(View.GONE);
                 }
             }
         });
@@ -99,7 +107,6 @@ public class togetherF extends AppCompatActivity {
                                 int selected1 = allballs.get(index - 1);
                                 selected1 = selected1 - picker1.getValue();
                                 allballs.set(index - 1, selected1);
-                                first_line = findViewById(R.id.first_line);
                                 for (int i = 0; i < first_line.getChildCount(); i++) {
                                     View child = first_line.getChildAt(i);
                                     child.setEnabled(false);
@@ -112,7 +119,6 @@ public class togetherF extends AppCompatActivity {
                                 picker2.setMaxValue(Math.min(Result - 2, draw - 1));
                                 numberOfLines++;
                                 index = 0;
-                                change_bg1(null);
                                 popUP2.dismiss();
                             }
                             else if (numberOfLines == 2) {
@@ -125,7 +131,6 @@ public class togetherF extends AppCompatActivity {
                                     child.setEnabled(false);
                                 }
                                 int varTwo = picker2.getValue();
-                                third_line = findViewById(R.id.third);
                                 third_line.setVisibility(View.VISIBLE);
                                 picker3.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
                                 picker3.setDisplayedValues(choices);
@@ -134,7 +139,8 @@ public class togetherF extends AppCompatActivity {
                                 numberOfLines++;
                                 index = 0;
                                 popUP2.dismiss();
-                                plus.setVisibility(View.GONE);}
+                                plus.setVisibility(View.GONE);
+                                other.setVisibility(View.VISIBLE);}
 
                         }
                     });
@@ -154,6 +160,7 @@ public class togetherF extends AppCompatActivity {
     static long permutation(long a, long b){
         return (factorial(a) / (factorial(a-b)*factorial(b)));}
     public void switchColor1(View view ){
+        if(index==6){index=0;}
         if(allballs.get(index)!=0 & index==0){
             colors.setImageResource(R.drawable.red1);
             picker1 = findViewById(R.id.picker1);
@@ -209,15 +216,16 @@ public class togetherF extends AppCompatActivity {
             colors.setImageResource(R.drawable.black1);
             picker1 = findViewById(R.id.picker1);
             picker1.setMaxValue(Math.min(draw-1, allballs.get(index)-1));
-            index=0;
+            index++;
             return;
         }
         if(allballs.get(index)==0 & index==5){
-            index=0;
+            index++;
             switchColor1 (null);
         }
     }
     public void switchColor2(View view ){
+        if(index==6){index=0;}
         if(allballs.get(index)!=0 & index==0){
             colors2.setImageResource(R.drawable.red1);
             picker2 = findViewById(R.id.picker2);
@@ -273,15 +281,16 @@ public class togetherF extends AppCompatActivity {
             colors2.setImageResource(R.drawable.black1);
             picker2 = findViewById(R.id.picker2);
             picker2.setMaxValue(Math.min(draw-1, allballs.get(index)-1));
-            index=0;
+            index++;
             return;
         }
         if(allballs.get(index)==0 & index==5){
-            index=0;
+            index++;
             switchColor2 (null);
         }
     }
     public void switchColor3(View view ){
+        if(index==6){index=0;}
         if(allballs.get(index)!=0 & index==0){
             colors3.setImageResource(R.drawable.red1);
             picker3 = findViewById(R.id.picker3);
@@ -337,17 +346,18 @@ public class togetherF extends AppCompatActivity {
             colors3.setImageResource(R.drawable.black1);
             picker3 = findViewById(R.id.picker3);
             picker3.setMaxValue(Math.min(draw-1, allballs.get(index)-1));
-            index=0;
+            index++;
             return;
         }
         if(allballs.get(index)==0 & index==5){
-            index=0;
+            index++;
             switchColor2 (null);
         }
     }
     public void for_max(View view){
         popUP2.dismiss();
         plus.setVisibility(View.GONE);
+        other.setVisibility(View.VISIBLE);
         if(numberOfLines==1){
             first_line = findViewById(R.id.first_line);
             for (int i = 0; i < first_line.getChildCount(); i++) {
@@ -355,8 +365,8 @@ public class togetherF extends AppCompatActivity {
                 child.setEnabled(false);
             }
         }
-        if(numberOfLines==2){
-            second_line = findViewById(R.id.first_line);
+        else if(numberOfLines==2){
+            second_line = findViewById(R.id.second);
             for (int i = 0; i < second_line.getChildCount(); i++) {
                 View child = second_line.getChildAt(i);
                 child.setEnabled(false);
@@ -366,6 +376,7 @@ public class togetherF extends AppCompatActivity {
     public void for_min(View view){
         popUP2.dismiss();
         plus.setVisibility(View.GONE);
+        other.setVisibility(View.VISIBLE);
         if(numberOfLines==1){
             first_line = findViewById(R.id.first_line);
             for (int i = 0; i < first_line.getChildCount(); i++) {
@@ -374,20 +385,34 @@ public class togetherF extends AppCompatActivity {
             }
         }
         if(numberOfLines==2){
-            second_line = findViewById(R.id.first_line);
+            second_line = findViewById(R.id.second);
             for (int i = 0; i < second_line.getChildCount(); i++) {
                 View child = second_line.getChildAt(i);
                 child.setEnabled(false);
             }
         }
     }
-    public void change_bg1(View view) {
-        hadita_one = findViewById(R.id.hadita_one);
-        hadita_one.setBackgroundResource(R.drawable.pix2);
-    }
-    @SuppressLint("ResourceAsColor")
-    public void change_color2(View view){
-        second_line.setBackgroundColor(ContextCompat.getColor(this,
-                R.color.dark_grey));
+
+    public void reset(View view){
+        second_line.setVisibility(View.GONE);
+        third_line.setVisibility(View.GONE);
+        hadita_one.setBackgroundResource(R.drawable.pix1);
+        numberOfLines=1;
+        index=0;
+        colors.setImageResource(R.drawable.click);
+        colors2.setImageResource(R.drawable.click);
+        colors3.setImageResource(R.drawable.click);
+        plus.setVisibility(View.VISIBLE);
+        other.setVisibility(View.GONE);
+        for (int i = 0; i < first_line.getChildCount(); i++) {
+            View child = first_line.getChildAt(i);
+            child.setEnabled(true);
+        }
+        picker1.setValue(0);
+        for (int i = 0; i < second_line.getChildCount(); i++) {
+            View child = second_line.getChildAt(i);
+            child.setEnabled(true);
+        }
+        picker2.setValue(0);
     }
 }
