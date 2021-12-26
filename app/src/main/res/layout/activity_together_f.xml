@@ -20,15 +20,6 @@
             android:orientation="vertical"
             android:paddingVertical="20dp">
 
-            <TextView
-                android:id="@+id/all1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/total_draws"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:paddingVertical="10dp"/>
 
             <TextView
                 android:id="@+id/intro1"
@@ -38,7 +29,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:paddingVertical="10dp"/>
+                android:paddingVertical="15dp"/>
 
             <LinearLayout
                 android:id="@+id/hadita_one"
@@ -48,7 +39,21 @@
                 android:background="@drawable/layout_bg"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layoutDirection="rtl">
 
+                    <ImageButton
+                        android:id="@+id/reset"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/remove"
+                        android:gravity="center"
+                        android:onClick="reset"
+                        android:textColor="#FF0000"
+                        android:textSize="34sp" />
+                </LinearLayout>
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/first_line"
                     android:layout_width="343dp"
@@ -155,7 +160,7 @@
 
                     <NumberPicker
                         android:id="@+id/picker3"
-                        android:layout_width="70dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="8dp"
                         android:importantForAccessibility="noHideDescendants"
@@ -193,50 +198,30 @@
                         app:srcCompat="@drawable/click" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <LinearLayout
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="15dp">
+                    android:layout_height="8dp"/>
 
-                    <ImageButton
-                        android:id="@+id/reset"
-                        android:layout_width="15dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/remove"
-                        android:gravity="left"
-                        android:onClick="reset"
-                        android:textColor="#FF0000"
-                        android:textSize="34sp" />
-                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/plus"
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/plus"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
+
             </LinearLayout>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="8dp"/>
-            <ImageButton
-                android:id="@+id/plus"
-                android:layout_width="48dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:background="@drawable/plus"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
         <Space
             android:layout_width="match_parent"
             android:layout_height="8dp"/>
 
-        <TextView
-            android:id="@+id/others"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/white_button"
-            android:text="إضافة حادثة أخرى"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:visibility="visible" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -246,9 +231,23 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/layout_bg"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layoutDirection="rtl">
 
-
+                    <ImageButton
+                        android:id="@+id/reset2"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/remove"
+                        android:gravity="left"
+                        android:onClick="reset2"
+                        android:textColor="#FF0000"
+                        android:textSize="34sp" />
+                </LinearLayout>
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/first_line2"
                     android:layout_width="343dp"
@@ -288,7 +287,7 @@
                         android:id="@+id/color21"
                         android:layout_width="88dp"
                         android:layout_height="65dp"
-                        android:onClick="switchColor1"
+                        android:onClick="switchColor21"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/textView22"
                         app:layout_constraintHorizontal_bias="0.773"
@@ -336,7 +335,7 @@
                         android:id="@+id/color22"
                         android:layout_width="86dp"
                         android:layout_height="54dp"
-                        android:onClick="switchColor2"
+                        android:onClick="switchColor22"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/textView23"
                         app:layout_constraintHorizontal_bias="0.773"
@@ -355,7 +354,7 @@
 
                     <NumberPicker
                         android:id="@+id/picker23"
-                        android:layout_width="70dp"
+                        android:layout_width="80dp"
                         android:layout_height="match_parent"
                         android:layout_marginStart="8dp"
                         android:importantForAccessibility="noHideDescendants"
@@ -384,7 +383,7 @@
                         android:id="@+id/color23"
                         android:layout_width="86dp"
                         android:layout_height="54dp"
-                        android:onClick="switchColor3"
+                        android:onClick="switchColor23"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/textView24"
                         app:layout_constraintHorizontal_bias="0.773"
@@ -393,22 +392,223 @@
                         app:srcCompat="@drawable/click" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
+                <ImageButton
+                    android:id="@+id/plus2"
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/plus"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/hadita_three"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical"
+                android:visibility="gone">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="15dp">
+                    android:layout_height="15dp"
+                    android:layoutDirection="rtl">
 
                     <ImageButton
-                        android:id="@+id/reset2"
+                        android:id="@+id/reset3"
                         android:layout_width="15dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/remove"
                         android:gravity="left"
-                        android:onClick="reset"
+                        android:onClick="reset2"
                         android:textColor="#FF0000"
                         android:textSize="34sp" />
                 </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/first_line3"
+                    android:layout_width="343dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+
+                    android:layoutDirection="inherit">
+
+                    <NumberPicker
+                        android:id="@+id/picker31"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:importantForAccessibility="noHideDescendants"
+                        android:scaleY="0.7"
+                        android:scrollbarSize="1dp"
+                        android:textAlignment="center"
+                        android:theme="@style/picker1"
+                        app:layout_constraintStart_toEndOf="@+id/textView32"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="72dp"
+                        android:layout_height="37dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/text1"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/color31"
+                        android:layout_width="88dp"
+                        android:layout_height="65dp"
+                        android:onClick="switchColor21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView32"
+                        app:layout_constraintHorizontal_bias="0.773"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/click" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/second3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layoutDirection="inherit"
+                    android:visibility="gone">
+
+                    <NumberPicker
+                        android:id="@+id/picker32"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:importantForAccessibility="noHideDescendants"
+                        android:scaleY="0.7"
+                        android:scrollbarSize="1dp"
+                        android:textAlignment="center"
+                        android:theme="@style/picker1"
+                        app:layout_constraintStart_toEndOf="@+id/textView33"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="72dp"
+                        android:layout_height="37dp"
+                        android:paddingVertical="5dp"
+                        android:text=" تحمل اللون "
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/color32"
+                        android:layout_width="86dp"
+                        android:layout_height="54dp"
+                        android:onClick="switchColor22"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView33"
+                        app:layout_constraintHorizontal_bias="0.773"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/click" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/third3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layoutDirection="inherit"
+                    android:visibility="gone">
+
+                    <NumberPicker
+                        android:id="@+id/picker33"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:importantForAccessibility="noHideDescendants"
+                        android:scaleY="0.7"
+                        android:scrollbarSize="1dp"
+                        android:textAlignment="center"
+                        android:theme="@style/picker1"
+                        app:layout_constraintStart_toEndOf="@+id/textView34"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="72dp"
+                        android:layout_height="37dp"
+                        android:paddingVertical="5dp"
+                        android:text=" تحمل اللون "
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/color33"
+                        android:layout_width="86dp"
+                        android:layout_height="54dp"
+                        android:onClick="switchColor23"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView34"
+                        app:layout_constraintHorizontal_bias="0.773"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/click" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
+                <ImageButton
+                    android:id="@+id/plus3"
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/plus"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
             </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/others"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/white_button"
+                android:onClick="showParts"
+                android:text="إضافة حادثة أخرى"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:visibility="gone" />
 
 
 
