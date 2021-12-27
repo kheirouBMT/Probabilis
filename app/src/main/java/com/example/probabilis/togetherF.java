@@ -138,6 +138,10 @@ public class togetherF extends AppCompatActivity {
                     plus.setVisibility(View.VISIBLE);
                     other.setVisibility(View.GONE);
                 }
+                if(Collections.frequency(allballs, 0)==5){
+                    plus.setVisibility(View.GONE);
+                    other.setVisibility(View.VISIBLE);
+                }
             }
         });
         picker2.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
@@ -151,6 +155,9 @@ public class togetherF extends AppCompatActivity {
                     plus.setVisibility(View.VISIBLE);
                     other.setVisibility(View.GONE);
                 }
+                if(Collections.frequency(allballs, 0)==4){
+                    plus.setVisibility(View.GONE);
+                    other.setVisibility(View.VISIBLE);}
             }
         });
         picker21.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
@@ -168,6 +175,9 @@ public class togetherF extends AppCompatActivity {
                     plus2.setVisibility(View.VISIBLE);
                     other.setVisibility(View.GONE);
                 }
+                if(Collections.frequency(allballs2, 0)==5){
+                    plus2.setVisibility(View.GONE);
+                    other.setVisibility(View.VISIBLE);}
             }
         });
         picker22.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
@@ -181,6 +191,9 @@ public class togetherF extends AppCompatActivity {
                     plus2.setVisibility(View.VISIBLE);
                     other.setVisibility(View.GONE);
                 }
+                if(Collections.frequency(allballs2, 0)==4){
+                    plus2.setVisibility(View.GONE);
+                    other.setVisibility(View.VISIBLE);}
             }
         });
         //
@@ -198,6 +211,8 @@ public class togetherF extends AppCompatActivity {
                     plus3.setVisibility(View.VISIBLE);
                     other.setVisibility(View.GONE);
                 }
+                if(Collections.frequency(allballs3, 0)==5){
+                    plus3.setVisibility(View.GONE);}
             }
         });
         picker32.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
@@ -210,6 +225,8 @@ public class togetherF extends AppCompatActivity {
                     plus3.setVisibility(View.VISIBLE);
                     other.setVisibility(View.GONE);
                 }
+                if(Collections.frequency(allballs3, 0)==4){
+                    plus3.setVisibility(View.GONE);}
             }
         });
 
@@ -264,7 +281,8 @@ public class togetherF extends AppCompatActivity {
                                 numberOfLines++;
                                 index = 0;
                                 popUP2.dismiss();
-                                other.setVisibility(View.VISIBLE);}
+                                other.setVisibility(View.VISIBLE);
+                                }
 
                         }
                     });
@@ -324,7 +342,8 @@ public class togetherF extends AppCompatActivity {
                                 index2 = 0;
                                 popUP2.dismiss();
                                 plus2.setVisibility(View.GONE);
-                                other.setVisibility(View.VISIBLE);}
+                                other.setVisibility(View.VISIBLE);
+                                }
 
                         }
                     });
@@ -410,22 +429,32 @@ public class togetherF extends AppCompatActivity {
             picker1.setMaxValue(Math.min(draw-1, allballs.get(index)-1));
             if(draw==1){
                 plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);
             }
             else{plus.setVisibility(View.VISIBLE);}
             if(picker1.getValue()+1==draw){
                 plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);
             }
+            if(Collections.frequency(allballs, 0)==5){
+                plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index++;
             return;
         }
         if(allballs.get(index)==0 & index==0){
             if(draw==1){
                 plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);
             }
             else{plus.setVisibility(View.VISIBLE);}
             if(picker1.getValue()+1==draw){
                 plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);
             }
+            if(Collections.frequency(allballs, 0)==5){
+                plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index++;
         }
 
@@ -491,6 +520,9 @@ public class togetherF extends AppCompatActivity {
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
             }
+            if(Collections.frequency(allballs, 0)==4){
+                plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index++;
             return;
         }
@@ -506,6 +538,9 @@ public class togetherF extends AppCompatActivity {
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
             }
+            if(Collections.frequency(allballs, 0)==4){
+                plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index++;
             return;
         }
@@ -610,7 +645,7 @@ public class togetherF extends AppCompatActivity {
             index++;
         }
         if(allballs.get(index)!=0 & index==4){
-            colors2.setImageResource(R.drawable.white1);
+            colors3.setImageResource(R.drawable.white1);
             picker3 = findViewById(R.id.picker3);
             picker3.setMaxValue(Math.min(draw-varTwo-varOne-1, allballs.get(index)-1));
             index++;
@@ -646,6 +681,9 @@ public class togetherF extends AppCompatActivity {
                 plus2.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
             }
+            if(Collections.frequency(allballs2, 0)==5){
+                plus2.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index2++;
             return;
         }
@@ -659,6 +697,9 @@ public class togetherF extends AppCompatActivity {
                 plus2.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
             }
+            if(Collections.frequency(allballs2, 0)==5){
+                plus2.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index2++;
         }
 
@@ -703,7 +744,7 @@ public class togetherF extends AppCompatActivity {
             index2++;
         }
         if(allballs2.get(index2)!=0 & index2==5){
-            colors1.setImageResource(R.drawable.black1);
+            colors21.setImageResource(R.drawable.black1);
             picker21 = findViewById(R.id.picker21);
             picker21.setMaxValue(Math.min(draw-1, allballs2.get(index2)-1));
             index2++;
@@ -723,11 +764,17 @@ public class togetherF extends AppCompatActivity {
             if(var2One+picker22.getValue()+1==draw){
                 plus2.setVisibility(View.GONE);
             }
+            if(Collections.frequency(allballs2, 0)==4){
+                plus2.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index2++;
             return;
         }
         if(allballs2.get(index2)==0 & index2==0){
             plus2.setVisibility(View.VISIBLE);
+            if(Collections.frequency(allballs2, 0)==4){
+                plus2.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);}
             index2++;
         }
 
@@ -753,7 +800,7 @@ public class togetherF extends AppCompatActivity {
             }            index2++;
             return;
         }
-        if(allballs2.get(index2)==0 & index==2){
+        if(allballs2.get(index2)==0 & index2==2){
             index2++;
         }
         if(allballs2.get(index2)!=0 & index2==3){
@@ -858,6 +905,229 @@ public class togetherF extends AppCompatActivity {
             switchColor23 (null);
         }
     }
+    public void switchColor31(View view ){
+        if(index3==6){index3=0;}
+        if(allballs3.get(index3)!=0 & index3==0){
+            colors31.setImageResource(R.drawable.red1);
+            picker31 = findViewById(R.id.picker31);
+            picker31.setMaxValue(Math.min(draw-1, allballs3.get(index3)-1));
+            if(draw==1){
+                plus3.setVisibility(View.GONE);
+            }
+            else{plus3.setVisibility(View.VISIBLE);}
+            if(picker31.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==0){
+            if(draw==1){
+                plus3.setVisibility(View.GONE);
+            }
+            else{plus3.setVisibility(View.VISIBLE);}
+            if(picker31.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }
+            index3++;
+        }
+
+        if(allballs3.get(index3)!=0 & index3==1){
+            colors31.setImageResource(R.drawable.blue1);
+            picker31 = findViewById(R.id.picker31);
+            picker31.setMaxValue(Math.min(draw-1, allballs3.get(index3)-1));
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==1){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==2){
+            colors31.setImageResource(R.drawable.green1);
+            picker31 = findViewById(R.id.picker31);
+            picker31.setMaxValue(Math.min(draw-1, allballs3.get(index3)-1));
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==2){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==3){
+            colors31.setImageResource(R.drawable.yellow1);
+            picker31 = findViewById(R.id.picker31);
+            picker31.setMaxValue(Math.min(draw-1, allballs3.get(index3)-1));
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==3){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==4){
+            colors31.setImageResource(R.drawable.white1);
+            picker31 = findViewById(R.id.picker31);
+            picker31.setMaxValue(Math.min(draw-1, allballs3.get(index3)-1));
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==4){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==5){
+            colors31.setImageResource(R.drawable.black1);
+            picker31 = findViewById(R.id.picker31);
+            picker31.setMaxValue(Math.min(draw-1, allballs3.get(index3)-1));
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==5){
+            index3++;
+            switchColor31 (null);
+        }
+    }
+    public void switchColor32(View view ){
+        if(index3==6){index3=0;}
+        if(allballs3.get(index3)!=0 & index3==0){
+            colors32.setImageResource(R.drawable.red1);
+            picker32 = findViewById(R.id.picker32);
+            picker32.setMaxValue(Math.min(draw-var3One-1, allballs3.get(index3)-1));
+            if(var3One+picker32.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==0){
+            plus3.setVisibility(View.VISIBLE);
+            index3++;
+        }
+
+        if(allballs3.get(index3)!=0 & index3==1){
+            colors32.setImageResource(R.drawable.blue1);
+            picker32 = findViewById(R.id.picker32);
+            picker32.setMaxValue(Math.min(draw-var3One-1, allballs3.get(index3)-1));
+            if(var3One+picker32.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==1){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==2){
+            colors32.setImageResource(R.drawable.green1);
+            picker32 = findViewById(R.id.picker32);
+            picker32.setMaxValue(Math.min(draw-var3One-1, allballs3.get(index3)-1));
+            if(var3One+picker32.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==2){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==3){
+            colors32.setImageResource(R.drawable.yellow1);
+            picker32 = findViewById(R.id.picker32);
+            picker32.setMaxValue(Math.min(draw-var3One-1, allballs3.get(index3)-1));
+            if(var3One+picker32.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==3){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==4){
+            colors32.setImageResource(R.drawable.white1);
+            picker32 = findViewById(R.id.picker32);
+            picker32.setMaxValue(Math.min(draw-var3One-1, allballs3.get(index3)-1));
+            if(var3One+picker32.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==4){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==5){
+            colors32.setImageResource(R.drawable.black1);
+            picker32 = findViewById(R.id.picker32);
+            picker32.setMaxValue(Math.min(draw-var3One-1, allballs3.get(index3)-1));
+            if(var3One+picker32.getValue()+1==draw){
+                plus3.setVisibility(View.GONE);
+            }
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==5){
+            index3++;
+            switchColor32 (null);
+        }
+    }
+    public void switchColor33(View view ){
+        if(index3==6){index3=0;}
+        if(allballs3.get(index3)!=0 & index3==0){
+            colors33.setImageResource(R.drawable.red1);
+            picker33 = findViewById(R.id.picker33);
+            picker33.setMaxValue(Math.min(draw-var3Two-var3One-1, allballs3.get(index3)-1));
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==0){
+            index3++;
+        }
+
+        if(allballs3.get(index3)!=0 & index3==1){
+            colors33.setImageResource(R.drawable.blue1);
+            picker33 = findViewById(R.id.picker33);
+            picker33.setMaxValue(Math.min(draw-var3Two-var3One-1, allballs3.get(index3)-1));            index2++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==1){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==2){
+            colors33.setImageResource(R.drawable.green1);
+            picker33 = findViewById(R.id.picker33);
+            picker33.setMaxValue(Math.min(draw-var3Two-var3One-1, allballs3.get(index3)-1));
+            index3++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==2){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==3){
+            colors33.setImageResource(R.drawable.yellow1);
+            picker33 = findViewById(R.id.picker33);
+            picker33.setMaxValue(Math.min(draw-var3Two-var3One-1, allballs3.get(index3)-1));            index2++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==3){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==4){
+            colors33.setImageResource(R.drawable.white1);
+            picker33 = findViewById(R.id.picker33);
+            picker33.setMaxValue(Math.min(draw-var3Two-var3One-1, allballs3.get(index3)-1));            index2++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==4){
+            index3++;
+        }
+        if(allballs3.get(index3)!=0 & index3==5){
+            colors33.setImageResource(R.drawable.black1);
+            picker33 = findViewById(R.id.picker33);
+            picker33.setMaxValue(Math.min(draw-var3Two-var3One-1, allballs3.get(index3)-1));            index2++;
+            return;
+        }
+        if(allballs3.get(index3)==0 & index3==5){
+            index2++;
+            switchColor33 (null);
+        }
+    }
     public void for_max(View view){
         popUP2.dismiss();
         plus.setVisibility(View.GONE);
@@ -940,6 +1210,32 @@ public class togetherF extends AppCompatActivity {
         }
         picker22.setValue(0);
         allballs2 = new ArrayList<>(allballsB);
+        hadita_two.setVisibility(View.GONE);
+        numberOfPart=1;
+    }
+    public void reset3(View view){
+        second_line3.setVisibility(View.GONE);
+        third_line3.setVisibility(View.GONE);
+        numberOfLines3=1;
+        index=0;
+        colors31.setImageResource(R.drawable.click);
+        colors32.setImageResource(R.drawable.click);
+        colors33.setImageResource(R.drawable.click);
+        plus3.setVisibility(View.GONE);
+        other.setVisibility(View.GONE);
+        for (int i = 0; i < first_line3.getChildCount(); i++) {
+            View child = first_line3.getChildAt(i);
+            child.setEnabled(true);
+        }
+        picker31.setValue(0);
+        for (int i = 0; i < second_line3.getChildCount(); i++) {
+            View child = second_line3.getChildAt(i);
+            child.setEnabled(true);
+        }
+        picker32.setValue(0);
+        allballs3 = new ArrayList<>(allballsB);
+        hadita_three.setVisibility(View.GONE);
+        numberOfPart=2;
     }
     public void showParts(View view){
         if(numberOfPart==1){
@@ -959,6 +1255,27 @@ public class togetherF extends AppCompatActivity {
             other.setVisibility(View.GONE);
             numberOfPart++;
         }
+        else if(numberOfPart==2){
+            for (int i = 0; i < first_line2.getChildCount(); i++) {
+                View child = first_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < second_line2.getChildCount(); i++) {
+                View child = second_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < third_line2.getChildCount(); i++) {
+                View child = third_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+            hadita_three.setVisibility(View.VISIBLE);
+            other.setVisibility(View.GONE);
+            numberOfPart++;
+        }
+    }
+    public void resultGo(View view){
+        Intent intent = new Intent(this, result.class);
+        startActivity(intent);
     }
 
 }
