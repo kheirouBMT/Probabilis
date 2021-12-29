@@ -52,11 +52,13 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
-                    android:layout_width="30dp"
+                    android:id="@+id/all_prob"
+                    android:layout_width="wrap_content"
                     android:layout_height="26dp"
-                    android:background="@drawable/layout_bg"
                     android:text="  "
+                    android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView5"
@@ -80,7 +82,9 @@
                     android:textColor="@color/white"
                     android:textSize="20sp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/A1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp">
@@ -166,6 +170,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
+
                     <TextView
                         android:id="@+id/C1"
                         android:layout_width="wrap_content"
@@ -175,8 +180,9 @@
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/line"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.125"
+                        app:layout_constraintHorizontal_bias="0.128"
                         app:layout_constraintStart_toStartOf="parent" />
+
                     <TextView
                         android:id="@+id/C11"
                         android:layout_width="wrap_content"
@@ -192,7 +198,6 @@
                         android:id="@+id/C12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
                         android:text="0"
                         android:textColor="@color/white"
                         android:textSize="9sp"
@@ -200,6 +205,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C1" />
+
                     <TextView
                         android:id="@+id/C2"
                         android:layout_width="wrap_content"
@@ -210,8 +216,9 @@
                         android:textSize="20sp"
                         app:layout_constraintBottom_toTopOf="@+id/line"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.125"
+                        app:layout_constraintHorizontal_bias="0.046"
                         app:layout_constraintStart_toEndOf="@+id/C1" />
+
                     <TextView
                         android:id="@+id/C21"
                         android:layout_width="wrap_content"
@@ -233,7 +240,7 @@
                         android:textSize="9sp"
                         app:layout_constraintBottom_toBottomOf="@+id/C2"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.083"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C2" />
                     <TextView
                         android:id="@+id/C3"
@@ -271,6 +278,41 @@
                         app:layout_constraintHorizontal_bias="0.083"
                         app:layout_constraintStart_toEndOf="@+id/C3" />
                     <TextView
+                        android:id="@+id/C4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" + C"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/line"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.125"
+                        app:layout_constraintStart_toEndOf="@+id/C3" />
+                    <TextView
+                        android:id="@+id/C41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/C4"
+                        app:layout_constraintTop_toTopOf="@+id/C4" />
+                    <TextView
+                        android:id="@+id/C42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/C4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/C4" />
+                    <TextView
                         android:id="@+id/C0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -303,6 +345,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C0" />
+
                     <ImageView
                         android:id="@+id/line"
                         android:layout_width="50dp"
@@ -310,8 +353,10 @@
                         android:background="@drawable/line"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.35"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.505" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Re2"
@@ -396,12 +441,14 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
+                android:id="@+id/B2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent">
 
                 <TextView
                     android:id="@+id/inputsB"
@@ -428,10 +475,13 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/actionTwo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
                 <TextView
                     android:id="@+id/testing_sec"
                     android:layout_width="wrap_content"
@@ -445,6 +495,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/Re_sec"
                     app:layout_constraintVertical_bias="0.506" />
+
                 <TextView
                     android:id="@+id/textView8_sec"
                     android:layout_width="wrap_content"
@@ -458,6 +509,7 @@
                     app:layout_constraintStart_toEndOf="@+id/Re_sec"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.506" />
+
                 <TextView
                     android:id="@+id/textView9_sec"
                     android:layout_width="wrap_content"
@@ -471,6 +523,7 @@
                     app:layout_constraintStart_toEndOf="@+id/Re2_sec"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.506" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Re_sec"
                     android:layout_width="wrap_content"
@@ -481,6 +534,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
+
                     <TextView
                         android:id="@+id/C1_sec"
                         android:layout_width="wrap_content"
@@ -492,6 +546,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toStartOf="parent" />
+
                     <TextView
                         android:id="@+id/C11_sec"
                         android:layout_width="wrap_content"
@@ -503,6 +558,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C1_sec"
                         app:layout_constraintTop_toTopOf="@+id/C1_sec" />
+
                     <TextView
                         android:id="@+id/C12_sec"
                         android:layout_width="wrap_content"
@@ -515,6 +571,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C1_sec" />
+
                     <TextView
                         android:id="@+id/C2_sec"
                         android:layout_width="wrap_content"
@@ -527,6 +584,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toEndOf="@+id/C1_sec" />
+
                     <TextView
                         android:id="@+id/C21_sec"
                         android:layout_width="wrap_content"
@@ -538,6 +596,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C2_sec"
                         app:layout_constraintTop_toTopOf="@+id/C2_sec" />
+
                     <TextView
                         android:id="@+id/C22_sec"
                         android:layout_width="wrap_content"
@@ -548,8 +607,9 @@
                         android:textSize="9sp"
                         app:layout_constraintBottom_toBottomOf="@+id/C2_sec"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.083"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C2_sec" />
+
                     <TextView
                         android:id="@+id/C3_sec"
                         android:layout_width="wrap_content"
@@ -562,6 +622,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toEndOf="@+id/C2_sec" />
+
                     <TextView
                         android:id="@+id/C31_sec"
                         android:layout_width="wrap_content"
@@ -573,6 +634,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C3_sec"
                         app:layout_constraintTop_toTopOf="@+id/C3_sec" />
+
                     <TextView
                         android:id="@+id/C32_sec"
                         android:layout_width="wrap_content"
@@ -586,6 +648,42 @@
                         app:layout_constraintHorizontal_bias="0.083"
                         app:layout_constraintStart_toEndOf="@+id/C3_sec" />
                     <TextView
+                        android:id="@+id/C4_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" + C"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/line_sec"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.125"
+                        app:layout_constraintStart_toEndOf="@+id/C3_sec" />
+                    <TextView
+                        android:id="@+id/C41_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/C4_sec"
+                        app:layout_constraintTop_toTopOf="@+id/C4_sec" />
+                    <TextView
+                        android:id="@+id/C42_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/C4_sec"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/C4_sec" />
+
+                    <TextView
                         android:id="@+id/C0_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -595,6 +693,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line_sec" />
+
                     <TextView
                         android:id="@+id/C01_sec"
                         android:layout_width="wrap_content"
@@ -606,6 +705,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C0_sec"
                         app:layout_constraintTop_toTopOf="@+id/C0_sec" />
+
                     <TextView
                         android:id="@+id/C02_sec"
                         android:layout_width="wrap_content"
@@ -618,6 +718,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C0_sec" />
+
                     <ImageView
                         android:id="@+id/line_sec"
                         android:layout_width="50dp"
@@ -628,6 +729,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Re2_sec"
                     android:layout_width="wrap_content"
@@ -638,6 +740,7 @@
                     app:layout_constraintStart_toEndOf="@+id/textView8_sec"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
+
                     <ImageView
                         android:id="@+id/line2_sec"
                         android:layout_width="50dp"
@@ -647,6 +750,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/down1_sec"
                         android:layout_width="wrap_content"
@@ -657,6 +761,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line2_sec" />
+
                     <TextView
                         android:id="@+id/up1_sec"
                         android:layout_width="wrap_content"
@@ -668,6 +773,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Re3_sec"
                     android:layout_width="wrap_content"
@@ -678,6 +784,7 @@
                     app:layout_constraintStart_toEndOf="@+id/textView9_sec"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
+
                     <ImageView
                         android:id="@+id/line3_sec"
                         android:layout_width="50dp"
@@ -687,6 +794,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/down2_sec"
                         android:layout_width="wrap_content"
@@ -697,6 +805,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line3_sec" />
+
                     <TextView
                         android:id="@+id/up2_sec"
                         android:layout_width="wrap_content"
@@ -709,12 +818,14 @@
                         app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
+                android:id="@+id/C"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent">
 
                 <TextView
                     android:id="@+id/inputsC"
@@ -741,15 +852,18 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/actionThree"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
                 <TextView
                     android:id="@+id/testing_trd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="P(B) = "
+                    android:text="P(C) = "
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -758,6 +872,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/Re_trd"
                     app:layout_constraintVertical_bias="0.506" />
+
                 <TextView
                     android:id="@+id/textView8_trd"
                     android:layout_width="wrap_content"
@@ -771,6 +886,7 @@
                     app:layout_constraintStart_toEndOf="@+id/Re_trd"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.506" />
+
                 <TextView
                     android:id="@+id/textView9_trd"
                     android:layout_width="wrap_content"
@@ -784,6 +900,7 @@
                     app:layout_constraintStart_toEndOf="@+id/Re2_trd"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.506" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Re_trd"
                     android:layout_width="wrap_content"
@@ -794,6 +911,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
+
                     <TextView
                         android:id="@+id/C1_trd"
                         android:layout_width="wrap_content"
@@ -805,6 +923,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toStartOf="parent" />
+
                     <TextView
                         android:id="@+id/C11_trd"
                         android:layout_width="wrap_content"
@@ -816,6 +935,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C1_trd"
                         app:layout_constraintTop_toTopOf="@+id/C1_trd" />
+
                     <TextView
                         android:id="@+id/C12_trd"
                         android:layout_width="wrap_content"
@@ -828,6 +948,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C1_trd" />
+
                     <TextView
                         android:id="@+id/C2_trd"
                         android:layout_width="wrap_content"
@@ -840,6 +961,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toEndOf="@+id/C1_trd" />
+
                     <TextView
                         android:id="@+id/C21_trd"
                         android:layout_width="wrap_content"
@@ -851,6 +973,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C2_trd"
                         app:layout_constraintTop_toTopOf="@+id/C2_trd" />
+
                     <TextView
                         android:id="@+id/C22_trd"
                         android:layout_width="wrap_content"
@@ -861,8 +984,9 @@
                         android:textSize="9sp"
                         app:layout_constraintBottom_toBottomOf="@+id/C2_trd"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.083"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C2_trd" />
+
                     <TextView
                         android:id="@+id/C3_trd"
                         android:layout_width="wrap_content"
@@ -875,6 +999,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toEndOf="@+id/C2_trd" />
+
                     <TextView
                         android:id="@+id/C31_trd"
                         android:layout_width="wrap_content"
@@ -886,6 +1011,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C3_trd"
                         app:layout_constraintTop_toTopOf="@+id/C3_trd" />
+
                     <TextView
                         android:id="@+id/C32_trd"
                         android:layout_width="wrap_content"
@@ -899,6 +1025,42 @@
                         app:layout_constraintHorizontal_bias="0.083"
                         app:layout_constraintStart_toEndOf="@+id/C3_trd" />
                     <TextView
+                        android:id="@+id/C4_trd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" + C"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/line_trd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.125"
+                        app:layout_constraintStart_toEndOf="@+id/C3_trd" />
+                    <TextView
+                        android:id="@+id/C41_trd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/C4_trd"
+                        app:layout_constraintTop_toTopOf="@+id/C4_trd" />
+                    <TextView
+                        android:id="@+id/C42_trd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/C4_trd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/C4_trd" />
+
+                    <TextView
                         android:id="@+id/C0_trd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -908,6 +1070,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line_trd" />
+
                     <TextView
                         android:id="@+id/C01_trd"
                         android:layout_width="wrap_content"
@@ -919,6 +1082,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C0_trd"
                         app:layout_constraintTop_toTopOf="@+id/C0_trd" />
+
                     <TextView
                         android:id="@+id/C02_trd"
                         android:layout_width="wrap_content"
@@ -931,6 +1095,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C0_trd" />
+
                     <ImageView
                         android:id="@+id/line_trd"
                         android:layout_width="50dp"
@@ -941,6 +1106,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Re2_trd"
                     android:layout_width="wrap_content"
@@ -951,6 +1117,7 @@
                     app:layout_constraintStart_toEndOf="@+id/textView8_trd"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
+
                     <ImageView
                         android:id="@+id/line2_trd"
                         android:layout_width="50dp"
@@ -960,6 +1127,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/down1_trd"
                         android:layout_width="wrap_content"
@@ -970,6 +1138,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line2_trd" />
+
                     <TextView
                         android:id="@+id/up1_trd"
                         android:layout_width="wrap_content"
@@ -981,6 +1150,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/Re3_trd"
                     android:layout_width="wrap_content"
@@ -991,6 +1161,7 @@
                     app:layout_constraintStart_toEndOf="@+id/textView9_trd"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0">
+
                     <ImageView
                         android:id="@+id/line3_trd"
                         android:layout_width="50dp"
@@ -1000,6 +1171,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/down2_trd"
                         android:layout_width="wrap_content"
@@ -1010,6 +1182,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line3_trd" />
+
                     <TextView
                         android:id="@+id/up2_trd"
                         android:layout_width="wrap_content"
@@ -1022,7 +1195,6 @@
                         app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
-            
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
