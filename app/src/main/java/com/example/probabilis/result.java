@@ -23,6 +23,7 @@ public class result extends AppCompatActivity {
     androidx.constraintlayout.widget.ConstraintLayout actionOne,actionTwo,actionThree,B,C;
     ArrayList<String> Colors = new ArrayList<>();
     ArrayList<String> numbers = new ArrayList<>();
+    ImageView div2,div3;
     @SuppressLint({"CutPasteId", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,9 @@ public class result extends AppCompatActivity {
         inputsC = findViewById(R.id.inputsC);
         B=findViewById(R.id.B2);
         C=findViewById(R.id.C);
+        // dividers
+        div2 = findViewById(R.id.div2);
+        div3 = findViewById(R.id.div3);
         // start of the code
         C01 = findViewById(R.id.C01);
         C02 = findViewById(R.id.C02);
@@ -227,6 +231,7 @@ public class result extends AppCompatActivity {
         if(togetherF.numberOfPart>=2){
             actionTwo.setVisibility(View.VISIBLE);
             B.setVisibility(View.VISIBLE);
+            div2.setVisibility(View.VISIBLE);
         }
         if(numberOfLines2==1 & togetherF.numberOfPart==2){
             C2_sec.setVisibility(View.GONE);
@@ -313,7 +318,7 @@ public class result extends AppCompatActivity {
                 DOWN1_sec.setText(String.valueOf(down1_sec));
 
             }
-            inputsA.setText(numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
+            inputsB.setText(numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
                     + " و " + numbers.get((togetherF.var2Two)-1) + " تحمل " + Colors.get((togetherF.index22)-1)
                     + " و " + numbers.get((togetherF.var2Three)-1) + " تحمل " + Colors.get((togetherF.index23)-1));
         }
@@ -321,6 +326,7 @@ public class result extends AppCompatActivity {
             actionTwo.setVisibility(View.VISIBLE);
             actionThree.setVisibility(View.VISIBLE);
             C.setVisibility(View.VISIBLE);
+            div3.setVisibility(View.VISIBLE);
         }
         if(numberOfLines3==1 & togetherF.numberOfPart==3){
             C2_trd.setVisibility(View.GONE);

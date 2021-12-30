@@ -16,8 +16,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class inputs extends AppCompatActivity {
-    public static final String Re = "com.example.inputs.Re";
-    public static final String allballs = "com.example.inputs.allballs";
 
     EditText Red, Blue, Green, Yellow, White, Black;
     TextView re;
@@ -188,10 +186,6 @@ public class inputs extends AppCompatActivity {
         }
         else {
             Intent intent = new Intent(this, type.class);
-            intent.putExtra(Re, Result);
-            intent.putExtra(allballs, allBalls);
-
-
             startActivity(intent);
         }
 

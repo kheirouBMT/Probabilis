@@ -17,18 +17,16 @@ import javax.xml.transform.Result;
 
 public class type extends AppCompatActivity {
     TextView show;
-    int i=0, type, test, Result;
+    int i=0, type,Result;
     String[] choices;
     Dialog popUP;
     NumberPicker draws;
-    public static final String draw = "com.example.inputs.draw";
-    public static final String Re = "com.example.inputs.Re";
+    static int draw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type);
-        Intent intent = getIntent();
-        int Result = intent.getIntExtra(inputs.Re, 0);
+        Result = inputs.Result;
         popUP = new Dialog(this);
         show = findViewById(R.id.selector);
         draws = findViewById(R.id.draws);// num picker
@@ -52,10 +50,7 @@ public class type extends AppCompatActivity {
     public void next2(View view){
         if(type==1){
             Intent intent = new Intent(this, togetherF.class);
-            int drawss = (draws.getValue()+1);
-
-            intent.putExtra(draw, drawss);
-            intent.putExtra(Re, Result);
+            draw = draws.getValue()+1;
             startActivity(intent);
         }
         else if(type==2){
@@ -64,6 +59,10 @@ public class type extends AppCompatActivity {
         else if(type==3){
 
         }
+    }
+    public void previous2(View view){
+        Intent intent = new Intent(this, inputs.class);
+        startActivity(intent);
     }
     public void showPOP(View v) {
         TextView txtclose, show;

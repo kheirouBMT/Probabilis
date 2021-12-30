@@ -67,11 +67,20 @@ public class togetherF extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        index11=0;
+        index12=0;
+        index13=0;
+        index21=0;
+        index22=0;
+        index23=0;
+        index31=0;
+        index32=0;
+        index33=0;
         setContentView(R.layout.activity_together_f);
         Intent intent = getIntent();
         int Result = inputs.Result;
         // getting inputs
-
+        allballs.removeAll(allballs);
         allballs.add(inputs.red);
         allballs.add(inputs.blue);
         allballs.add(inputs.green);
@@ -82,9 +91,8 @@ public class togetherF extends AppCompatActivity {
         allballs2 = new ArrayList<>(allballsB);
         allballs3 = new ArrayList<>(allballsB);
         //    end of getting inputs
-
+        draw = type.draw;
         // number of draws
-        draw = intent.getIntExtra(type.draw, 0);
 
         colors1 = findViewById(R.id.color);
         colors2 = findViewById(R.id.color2);
@@ -534,6 +542,7 @@ public class togetherF extends AppCompatActivity {
         if(allballs.get(index12)!=0 & index12==1){
             colors2.setImageResource(R.drawable.blue1);
             picker2 = findViewById(R.id.picker2);
+            picker2.setMaxValue(Math.min(draw-varOne-1, allballs.get(index12)-1));
             if(varOne+picker2.getValue()+1==draw){
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
@@ -550,6 +559,7 @@ public class togetherF extends AppCompatActivity {
         if(allballs.get(index12)!=0 & index12==2){
             colors2.setImageResource(R.drawable.green1);
             picker2 = findViewById(R.id.picker2);
+            picker2.setMaxValue(Math.min(draw-varOne-1, allballs.get(index12)-1));
             if(varOne+picker2.getValue()+1==draw){
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
@@ -563,6 +573,7 @@ public class togetherF extends AppCompatActivity {
         if(allballs.get(index12)!=0 & index12==3){
             colors2.setImageResource(R.drawable.yellow1);
             picker2 = findViewById(R.id.picker2);
+            picker2.setMaxValue(Math.min(draw-varOne-1, allballs.get(index12)-1));
             if(varOne+picker2.getValue()+1==draw){
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
@@ -576,6 +587,7 @@ public class togetherF extends AppCompatActivity {
         if(allballs.get(index12)!=0 & index12==4){
             colors2.setImageResource(R.drawable.white1);
             picker2 = findViewById(R.id.picker2);
+            picker2.setMaxValue(Math.min(draw-varOne-1, allballs.get(index12)-1));
             if(varOne+picker2.getValue()+1==draw){
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
@@ -589,6 +601,7 @@ public class togetherF extends AppCompatActivity {
         if(allballs.get(index12)!=0 & index12==5){
             colors2.setImageResource(R.drawable.black1);
             picker2 = findViewById(R.id.picker2);
+            picker2.setMaxValue(Math.min(draw-varOne-1, allballs.get(index12)-1));
             if(varOne+picker2.getValue()+1==draw){
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
@@ -1218,21 +1231,25 @@ public class togetherF extends AppCompatActivity {
                         colors23.setImageResource(R.drawable.click);
                         plus2.setVisibility(View.GONE);
                         other.setVisibility(View.VISIBLE);
-                        for (int i = 0; i < first_line.getChildCount(); i++) {
-                            View child = first_line.getChildAt(i);
-                            child.setEnabled(true);
-                        }
                         picker21.setValue(0);
-                        for (int i = 0; i < second_line.getChildCount(); i++) {
-                            View child = second_line.getChildAt(i);
-                            child.setEnabled(true);
-                        }
                         picker22.setValue(0);
+                        allballs2.clear();
                         allballs2 = new ArrayList<>(allballsB);
                         hadita_two.setVisibility(View.GONE);
                         numberOfPart=1;
                         reset1 = findViewById(R.id.reset);
                         reset1.setVisibility(View.VISIBLE);
+                        for (int i = 0; i < first_line.getChildCount(); i++) {
+                            View child = first_line.getChildAt(i);
+                            child.setEnabled(true);
+                        }
+                        for (int i = 0; i < second_line.getChildCount(); i++) {
+                            View child = second_line.getChildAt(i);
+                            child.setEnabled(true);
+                        }
+                        for (int i = 0; i < third_line.getChildCount(); i++) {
+                            View child = third_line.getChildAt(i);
+                            child.setEnabled(true);}
                     }
                 })
                 .setNegativeButton("إلغاء", null)
@@ -1256,21 +1273,21 @@ public class togetherF extends AppCompatActivity {
                         colors33.setImageResource(R.drawable.click);
                         plus3.setVisibility(View.GONE);
                         other.setVisibility(View.VISIBLE);
-                        for (int i = 0; i < first_line3.getChildCount(); i++) {
-                            View child = first_line3.getChildAt(i);
-                            child.setEnabled(true);
-                        }
                         picker31.setValue(0);
-                        for (int i = 0; i < second_line2.getChildCount(); i++) {
-                            View child = second_line2.getChildAt(i);
-                            child.setEnabled(true);
-                        }
                         picker32.setValue(0);
                         allballs3 = new ArrayList<>(allballsB);
                         hadita_three.setVisibility(View.GONE);
                         numberOfPart=2;
                         reset2 = findViewById(R.id.reset2);
                         reset2.setVisibility(View.VISIBLE);
+                        for (int i = 0; i < first_line3.getChildCount(); i++) {
+                            View child = first_line3.getChildAt(i);
+                            child.setEnabled(true);
+                        }
+                        for (int i = 0; i < second_line2.getChildCount(); i++) {
+                            View child = second_line2.getChildAt(i);
+                            child.setEnabled(true);
+                        }
                     }
                 })
                 .setNegativeButton("إلغاء", null)
@@ -1338,5 +1355,9 @@ public class togetherF extends AppCompatActivity {
         Intent intent = new Intent(this, result.class);
         startActivity(intent);
 
+    }
+    public void previous(View view){
+        Intent prev = new Intent(this, type.class);
+        startActivity(prev);
     }
 }
