@@ -24,11 +24,26 @@ public class result extends AppCompatActivity {
     ArrayList<String> Colors = new ArrayList<>();
     ArrayList<String> numbers = new ArrayList<>();
     ImageView div2,div3;
+    androidx.constraintlayout.widget.ConstraintLayout Re3,Re3_sec, Re3_trd;
+    TextView equal,equal_sec,equal_trd;
     @SuppressLint({"CutPasteId", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        // reduction
+        UP2 = findViewById(R.id.up2);
+        UP2_sec = findViewById(R.id.up2_sec);
+        UP2_trd = findViewById(R.id.up2_trd);
+        DOWN2 = findViewById(R.id.down2);
+        DOWN2_sec = findViewById(R.id.down2_sec);
+        DOWN2_trd = findViewById(R.id.down2_trd);
+        Re3 = findViewById(R.id.Re3);
+        Re3_sec = findViewById(R.id.Re3_sec);
+        Re3_trd = findViewById(R.id.Re3_trd);
+        equal= findViewById(R.id.textView9);
+        equal_sec= findViewById(R.id.textView9_sec);
+        equal_sec= findViewById(R.id.textView9_sec);
         // fixing fraction problem
         mainRe2 = findViewById(R.id.Re);
         mainRe = findViewById(R.id.Re2);
@@ -110,7 +125,7 @@ public class result extends AppCompatActivity {
         C31_trd = findViewById(R.id.C31_trd);
         C32_trd = findViewById(R.id.C32_trd);
         C4_trd = findViewById(R.id.C4_trd);
-        C41_trd = findViewById(R.id.C1_trd);
+        C41_trd = findViewById(R.id.C41_trd);
         C42_trd = findViewById(R.id.C42_trd);
         //
         actionOne = findViewById(R.id.actionOne);
@@ -153,9 +168,15 @@ public class result extends AppCompatActivity {
                 C42.setText(String.valueOf((inputs.Result)-(togetherF.varOne)));
                 C41.setText(String.valueOf((togetherF.draw)-(togetherF.varOne)));
                 up1 = functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index11)-1)),(togetherF.varOne))
-                *functions.cardinal((inputs.Result)-(togetherF.varOne), (togetherF.draw)-(togetherF.varOne));
+                        *functions.cardinal((inputs.Result)-(togetherF.varOne), (togetherF.draw)-(togetherF.varOne));
                 UP1.setText(String.valueOf(up1));
                 DOWN1.setText(String.valueOf(down1));
+                if(functions.reduction(up1, down1)==1){
+                    Re3.setVisibility(View.GONE);
+                    equal.setVisibility(View.GONE);
+                }
+                else {UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
+                    DOWN2.setText(String.valueOf(down1 / (functions.reduction(up1, down1))));}
 
             }
             else{
@@ -165,9 +186,15 @@ public class result extends AppCompatActivity {
                 up1 = functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index11)-1)),(togetherF.varOne));
                 UP1.setText(String.valueOf(up1));
                 DOWN1.setText(String.valueOf(down1));
+                if(functions.reduction(up1, down1)==1){
+                    Re3.setVisibility(View.GONE);
+                    equal.setVisibility(View.GONE);
+                }
+                else {UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
+                    DOWN2.setText(String.valueOf(down1 / (functions.reduction(up1, down1))));}
             }
-            if(togetherF.varOne==2){inputsA.setText(numbers.get((togetherF.varOne)-1) + " تحملان " + Colors.get((togetherF.index11)-1));}
-            else{inputsA.setText(numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1));
+            if(togetherF.varOne==2){inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحملان " + Colors.get((togetherF.index11)-1)+"\"");}
+            else{inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)+"\"");
             }
         }
         if(numberOfLines1==2){
@@ -183,21 +210,33 @@ public class result extends AppCompatActivity {
                 C41.setText(String.valueOf((togetherF.draw)-(togetherF.varOne)-(togetherF.varTwo)));
                 up1 = functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index11)-1)),(togetherF.varOne))
                         *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index12)-1)),(togetherF.varTwo))
-                *functions.cardinal((inputs.Result)-(togetherF.varOne)-(togetherF.varTwo), (togetherF.draw)-(togetherF.varOne)-(togetherF.varTwo));
+                        *functions.cardinal((inputs.Result)-(togetherF.varOne)-(togetherF.varTwo), (togetherF.draw)-(togetherF.varOne)-(togetherF.varTwo));
                 UP1.setText(String.valueOf(up1));
                 DOWN1.setText(String.valueOf(down1));
+                if(functions.reduction(up1, down1)==1){
+                    Re3.setVisibility(View.GONE);
+                    equal.setVisibility(View.GONE);
+                }
+                else {UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
+                    DOWN2.setText(String.valueOf(down1 / (functions.reduction(up1, down1))));}
             }
             else{
                 C4.setVisibility(View.GONE);
                 C41.setVisibility(View.GONE);
                 C42.setVisibility(View.GONE);
                 up1 = functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index11)-1)),(togetherF.varOne))
-                *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index12)-1)),(togetherF.varTwo));
+                        *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index12)-1)),(togetherF.varTwo));
                 UP1.setText(String.valueOf(up1));
                 DOWN1.setText(String.valueOf(down1));
+                if(functions.reduction(up1, down1)==1){
+                    Re3.setVisibility(View.GONE);
+                    equal.setVisibility(View.GONE);
+                }
+                else {UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
+                    DOWN2.setText(String.valueOf(down1 / (functions.reduction(up1, down1))));}
             }
-            inputsA.setText(numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)
-            + " و " + numbers.get((togetherF.varTwo)-1) + " تحمل " + Colors.get((togetherF.index12)-1));
+            inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)
+                    + " و " + numbers.get((togetherF.varTwo)-1) + " تحمل " + Colors.get((togetherF.index12)-1)+"\"");
         }
         if(numberOfLines1==3){
             action1line3(null);
@@ -213,6 +252,12 @@ public class result extends AppCompatActivity {
                         *functions.cardinal((inputs.Result)-(togetherF.varOne)-(togetherF.varTwo)-(togetherF.varThree), (togetherF.draw)-(togetherF.varOne)-(togetherF.varTwo)-(togetherF.varThree));
                 UP1.setText(String.valueOf(up1));
                 DOWN1.setText(String.valueOf(down1));
+                if(functions.reduction(up1, down1)==1){
+                    Re3.setVisibility(View.GONE);
+                    equal.setVisibility(View.GONE);
+                }
+                else {UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
+                    DOWN2.setText(String.valueOf(down1 / (functions.reduction(up1, down1))));}
             }
             else{
                 C4.setVisibility(View.GONE);
@@ -220,20 +265,26 @@ public class result extends AppCompatActivity {
                 C42.setVisibility(View.GONE);
                 up1 = functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index11)-1)),(togetherF.varOne))
                         *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index12)-1)),(togetherF.varTwo))
-                *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index13)-1)),(togetherF.varThree));
+                        *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index13)-1)),(togetherF.varThree));
                 UP1.setText(String.valueOf(up1));
                 DOWN1.setText(String.valueOf(down1));
+                if(functions.reduction(up1, down1)==1){
+                    Re3.setVisibility(View.GONE);
+                    equal.setVisibility(View.GONE);
+                }
+                else {UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
+                    DOWN2.setText(String.valueOf(down1 / (functions.reduction(up1, down1))));}
             }
-            inputsA.setText(numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)
+            inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)
                     + " و " + numbers.get((togetherF.varTwo)-1) + " تحمل " + Colors.get((togetherF.index12)-1)
-                    + " و " + numbers.get((togetherF.varThree)-1) + " تحمل " + Colors.get((togetherF.index13)-1));
+                    + " و " + numbers.get((togetherF.varThree)-1) + " تحمل " + Colors.get((togetherF.index13)-1)+"\"");
         }
         if(togetherF.numberOfPart>=2){
             actionTwo.setVisibility(View.VISIBLE);
             B.setVisibility(View.VISIBLE);
             div2.setVisibility(View.VISIBLE);
         }
-        if(numberOfLines2==1 & togetherF.numberOfPart==2){
+        if(numberOfLines2==1 & togetherF.numberOfPart>=2){
             C2_sec.setVisibility(View.GONE);
             C21_sec.setVisibility(View.GONE);
             C22_sec.setVisibility(View.GONE);
@@ -251,6 +302,12 @@ public class result extends AppCompatActivity {
                         *functions.cardinal((inputs.Result)-(togetherF.var2One), (togetherF.draw)-(togetherF.var2One));
                 UP1_sec.setText(String.valueOf(up1_sec));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
+                if(functions.reduction(up1_sec, down1_sec)==1){
+                    Re3_sec.setVisibility(View.GONE);
+                    equal_sec.setVisibility(View.GONE);
+                }
+                else {UP2_sec.setText(String.valueOf(up1_sec / (functions.reduction(up1_sec, down1_sec))));
+                    DOWN2_sec.setText(String.valueOf(down1_sec / (functions.reduction(up1_sec, down1_sec))));}
             }
             else{
                 C4_sec.setVisibility(View.GONE);
@@ -259,8 +316,14 @@ public class result extends AppCompatActivity {
                 up1_sec = functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index21)-1)),(togetherF.var2One));
                 UP1_sec.setText(String.valueOf(up1_sec));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
+                if(functions.reduction(up1_sec, down1_sec)==1){
+                    Re3_sec.setVisibility(View.GONE);
+                    equal_sec.setVisibility(View.GONE);
+                }
+                else {UP2_sec.setText(String.valueOf(up1_sec / (functions.reduction(up1_sec, down1_sec))));
+                    DOWN2_sec.setText(String.valueOf(down1_sec / (functions.reduction(up1_sec, down1_sec))));}
             }
-            inputsB.setText(numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1));
+            inputsB.setText("\""+numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)+"\"");
 
         }
         if(numberOfLines2==2){
@@ -279,6 +342,12 @@ public class result extends AppCompatActivity {
                         *functions.cardinal((inputs.Result)-(togetherF.var2One)-(togetherF.var2Two), (togetherF.draw)-(togetherF.var2One)-(togetherF.var2Two));
                 UP1_sec.setText(String.valueOf(up1_sec));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
+                if(functions.reduction(up1_sec, down1_sec)==1){
+                    Re3_sec.setVisibility(View.GONE);
+                    equal_sec.setVisibility(View.GONE);
+                }
+                else {UP2_sec.setText(String.valueOf(up1_sec / (functions.reduction(up1_sec, down1_sec))));
+                    DOWN2_sec.setText(String.valueOf(down1_sec / (functions.reduction(up1_sec, down1_sec))));}
             }
             else{
                 C4_sec.setVisibility(View.GONE);
@@ -288,9 +357,15 @@ public class result extends AppCompatActivity {
                         *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index22)-1)),(togetherF.var2Two));
                 UP1_sec.setText(String.valueOf(up1_sec));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
+                if(functions.reduction(up1_sec, down1_sec)==1){
+                    Re3_sec.setVisibility(View.GONE);
+                    equal_sec.setVisibility(View.GONE);
+                }
+                else {UP2_sec.setText(String.valueOf(up1_sec / (functions.reduction(up1_sec, down1_sec))));
+                    DOWN2_sec.setText(String.valueOf(down1_sec / (functions.reduction(up1_sec, down1_sec))));}
             }
-            inputsB.setText(numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
-                    + " و " + numbers.get((togetherF.var2Two)-1) + " تحمل " + Colors.get((togetherF.index22)-1));
+            inputsB.setText("\""+numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
+                    + " و " + numbers.get((togetherF.var2Two)-1) + " تحمل " + Colors.get((togetherF.index22)-1)+"\"");
         }
         if(numberOfLines2==3){
             action2line3(null);
@@ -306,6 +381,12 @@ public class result extends AppCompatActivity {
                         *functions.cardinal((inputs.Result)-(togetherF.var2One)-(togetherF.var2Two)-(togetherF.var2Three), (togetherF.draw)-(togetherF.var2One)-(togetherF.var2Two)-(togetherF.var2Three));
                 UP1_sec.setText(String.valueOf(up1_sec));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
+                if(functions.reduction(up1_sec, down1_sec)==1){
+                    Re3_sec.setVisibility(View.GONE);
+                    equal_sec.setVisibility(View.GONE);
+                }
+                else {UP2_sec.setText(String.valueOf(up1_sec / (functions.reduction(up1_sec, down1_sec))));
+                    DOWN2_sec.setText(String.valueOf(down1_sec / (functions.reduction(up1_sec, down1_sec))));}
             }
             else{
                 C4_sec.setVisibility(View.GONE);
@@ -316,11 +397,17 @@ public class result extends AppCompatActivity {
                         *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index23)-1)),(togetherF.var2Three));
                 UP1_sec.setText(String.valueOf(up1_sec));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
+                if(functions.reduction(up1_sec, down1_sec)==1){
+                    Re3_sec.setVisibility(View.GONE);
+                    equal_sec.setVisibility(View.GONE);
+                }
+                else {UP2_sec.setText(String.valueOf(up1_sec / (functions.reduction(up1_sec, down1_sec))));
+                    DOWN2_sec.setText(String.valueOf(down1_sec / (functions.reduction(up1_sec, down1_sec))));}
 
             }
-            inputsB.setText(numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
+            inputsB.setText("\""+numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
                     + " و " + numbers.get((togetherF.var2Two)-1) + " تحمل " + Colors.get((togetherF.index22)-1)
-                    + " و " + numbers.get((togetherF.var2Three)-1) + " تحمل " + Colors.get((togetherF.index23)-1));
+                    + " و " + numbers.get((togetherF.var2Three)-1) + " تحمل " + Colors.get((togetherF.index23)-1)+"\"");
         }
         if(togetherF.numberOfPart==3){
             actionTwo.setVisibility(View.VISIBLE);
@@ -346,6 +433,12 @@ public class result extends AppCompatActivity {
                         *functions.cardinal((inputs.Result)-(togetherF.var3One), (togetherF.draw)-(togetherF.var3One));
                 UP1_trd.setText(String.valueOf(up1_trd));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
+                if(functions.reduction(up1_trd, down1_trd)==1){
+                    Re3_trd.setVisibility(View.GONE);
+                    equal_trd.setVisibility(View.GONE);
+                }
+                else {UP2_trd.setText(String.valueOf(up1_trd / (functions.reduction(up1_trd, down1_trd))));
+                    DOWN2_trd.setText(String.valueOf(down1_trd / (functions.reduction(up1_trd, down1_trd))));}
             }
             else{
                 C4_trd.setVisibility(View.GONE);
@@ -354,8 +447,14 @@ public class result extends AppCompatActivity {
                 up1_trd = functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index31)-1)),(togetherF.var3One));
                 UP1_trd.setText(String.valueOf(up1_trd));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
+                if(functions.reduction(up1_trd, down1_trd)==1){
+                    Re3_trd.setVisibility(View.GONE);
+                    equal_trd.setVisibility(View.GONE);
+                }
+                else {UP2_trd.setText(String.valueOf(up1_trd / (functions.reduction(up1_trd, down1_trd))));
+                    DOWN2_trd.setText(String.valueOf(down1_trd / (functions.reduction(up1_trd, down1_trd))));}
             }
-            inputsC.setText(numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1));
+            inputsC.setText("\""+numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)+"\"");
         }
         if(numberOfLines3==2){
             C3_trd.setVisibility(View.GONE);
@@ -373,7 +472,12 @@ public class result extends AppCompatActivity {
                         *functions.cardinal((inputs.Result)-(togetherF.var3One)-(togetherF.var3Two), (togetherF.draw)-(togetherF.var3One)-(togetherF.var3Two));
                 UP1_trd.setText(String.valueOf(up1_trd));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
-
+                if(functions.reduction(up1_trd, down1_trd)==1){
+                    Re3_trd.setVisibility(View.GONE);
+                    equal_trd.setVisibility(View.GONE);
+                }
+                else {UP2_trd.setText(String.valueOf(up1_trd / (functions.reduction(up1_trd, down1_trd))));
+                    DOWN2_trd.setText(String.valueOf(down1_trd / (functions.reduction(up1_trd, down1_trd))));}
             }
             else{
                 C4_trd.setVisibility(View.GONE);
@@ -383,9 +487,15 @@ public class result extends AppCompatActivity {
                         *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index32)-1)),(togetherF.var3Two));
                 UP1_trd.setText(String.valueOf(up1_trd));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
+                if(functions.reduction(up1_trd, down1_trd)==1){
+                    Re3_trd.setVisibility(View.GONE);
+                    equal_trd.setVisibility(View.GONE);
+                }
+                else {UP2_trd.setText(String.valueOf(up1_trd / (functions.reduction(up1_trd, down1_trd))));
+                    DOWN2_trd.setText(String.valueOf(down1_trd / (functions.reduction(up1_trd, down1_trd))));}
             }
-            inputsC.setText(numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)
-                    + " و " + numbers.get((togetherF.var3Two)-1) + " تحمل " + Colors.get((togetherF.index32)-1));
+            inputsC.setText("\""+numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)
+                    + " و " + numbers.get((togetherF.var3Two)-1) + " تحمل " + Colors.get((togetherF.index32)-1)+"\"");
         }
         if(numberOfLines3==3){
             action3line3(null);
@@ -401,6 +511,12 @@ public class result extends AppCompatActivity {
                         *functions.cardinal((inputs.Result)-(togetherF.var3One)-(togetherF.var3Two)-(togetherF.var3Three), (togetherF.draw)-(togetherF.var3One)-(togetherF.var3Two)-(togetherF.var3Three));
                 UP1_trd.setText(String.valueOf(up1_trd));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
+                if(functions.reduction(up1_trd, down1_trd)==1){
+                    Re3_trd.setVisibility(View.GONE);
+                    equal_trd.setVisibility(View.GONE);
+                }
+                else {UP2_trd.setText(String.valueOf(up1_trd / (functions.reduction(up1_trd, down1_trd))));
+                    DOWN2_trd.setText(String.valueOf(down1_trd / (functions.reduction(up1_trd, down1_trd))));}
             }
             else{
                 C4_trd.setVisibility(View.GONE);
@@ -411,11 +527,17 @@ public class result extends AppCompatActivity {
                         *functions.cardinal(Long.valueOf(togetherF.allballsB.get((togetherF.index33)-1)),(togetherF.var3Three));
                 UP1_trd.setText(String.valueOf(up1_trd));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
+                if(functions.reduction(up1_trd, down1_trd)==1){
+                    Re3_trd.setVisibility(View.GONE);
+                    equal_trd.setVisibility(View.GONE);
+                }
+                else {UP2_trd.setText(String.valueOf(up1_trd / (functions.reduction(up1_trd, down1_trd))));
+                    DOWN2_trd.setText(String.valueOf(down1_trd / (functions.reduction(up1_trd, down1_trd))));}
             }
 
-            inputsC.setText(numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)
+            inputsC.setText("\""+numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)
                     + " و " + numbers.get((togetherF.var3Two)-1) + " تحمل " + Colors.get((togetherF.index32)-1)
-                    + " و " + numbers.get((togetherF.var3Three)-1) + " تحمل " + Colors.get((togetherF.index33)-1));
+                    + " و " + numbers.get((togetherF.var3Three)-1) + " تحمل " + Colors.get((togetherF.index33)-1)+"\"");
         }
     }
     public void action1line1(View view){
@@ -460,8 +582,5 @@ public class result extends AppCompatActivity {
         action3line2(null);
         C31_trd.setText(String.valueOf(togetherF.var3Three));
         C32_trd.setText(String.valueOf(togetherF.allballsB.get((togetherF.index33)-1)));
-    }
-    public void calcUp(View view){
-
     }
 }

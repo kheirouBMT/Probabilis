@@ -190,5 +190,8 @@ public class inputs extends AppCompatActivity {
         }
 
     }
+    public void onBackPressed() {
+
+    }
 
 }

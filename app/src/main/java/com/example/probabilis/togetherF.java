@@ -29,7 +29,7 @@ import java.util.Collections;
 
 public class togetherF extends AppCompatActivity {
     String[] choices;
-    static int draw;
+    static int draw,typeOfDraw1=1,typeOfDraw2=1,typeOfDraw3=1;
     static int numberOfPart=1, varOne, varTwo,varThree, var2One, var2Two,var2Three, var3One, var3Two,var3Three;
     static int index11=0,index12=0,index13=0, Result, numberOfLines=1;//7adita lewla
     NumberPicker picker1,picker2,picker3;
@@ -48,6 +48,7 @@ public class togetherF extends AppCompatActivity {
     TextView other;
     static ImageView colors1, colors2, colors3;
     static ImageView colors21, colors22, colors23;
+    @SuppressLint("StaticFieldLeak")
     static ImageView colors31, colors32, colors33;
     androidx.constraintlayout.widget.ConstraintLayout first_line;
     androidx.constraintlayout.widget.ConstraintLayout second_line;
@@ -67,6 +68,7 @@ public class togetherF extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_together_f);
         index11=0;
         index12=0;
         index13=0;
@@ -76,11 +78,9 @@ public class togetherF extends AppCompatActivity {
         index31=0;
         index32=0;
         index33=0;
-        setContentView(R.layout.activity_together_f);
-        Intent intent = getIntent();
         int Result = inputs.Result;
         // getting inputs
-        allballs.removeAll(allballs);
+        allballs.clear();
         allballs.add(inputs.red);
         allballs.add(inputs.blue);
         allballs.add(inputs.green);
@@ -140,22 +140,20 @@ public class togetherF extends AppCompatActivity {
         picker1.setDisplayedValues(choices);
         picker1.setMinValue(0);
         picker1.setMaxValue(Math.min(Result-1, draw-1));
-        picker1.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-                if(picker1.getValue()==draw-1){
-                    plus.setVisibility(View.GONE);
-                    other.setVisibility(View.VISIBLE);
-                }
-                else{
-                    plus.setVisibility(View.VISIBLE);
-                    other.setVisibility(View.GONE);
-                }
-                if(Collections.frequency(allballs, 0)==5){
-                    plus.setVisibility(View.GONE);
-                    other.setVisibility(View.VISIBLE);
-                }
+        picker1.setOnValueChangedListener((picker, oldVal, newVal) -> {
+            if(picker1.getValue()==draw-1){
+                plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);
             }
+            else{
+                plus.setVisibility(View.VISIBLE);
+                other.setVisibility(View.GONE);
+            }
+            if(Collections.frequency(allballs, 0)==5){
+                plus.setVisibility(View.GONE);
+                other.setVisibility(View.VISIBLE);
+            }
+            if(index11==0){plus.setVisibility(View.GONE);}
         });
         picker2.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
@@ -171,6 +169,7 @@ public class togetherF extends AppCompatActivity {
                 if(Collections.frequency(allballs, 0)==5){
                     plus.setVisibility(View.GONE);
                     other.setVisibility(View.VISIBLE);}
+                if(index12==0){plus.setVisibility(View.GONE);}
             }
         });
         picker21.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
@@ -191,6 +190,7 @@ public class togetherF extends AppCompatActivity {
                 if(Collections.frequency(allballs2, 0)==5){
                     plus2.setVisibility(View.GONE);
                     other.setVisibility(View.VISIBLE);}
+                if(index21==0){plus2.setVisibility(View.GONE);}
             }
         });
         picker22.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
@@ -207,6 +207,7 @@ public class togetherF extends AppCompatActivity {
                 if(Collections.frequency(allballs2, 0)==5){
                     plus2.setVisibility(View.GONE);
                     other.setVisibility(View.VISIBLE);}
+                if(index22==0){plus2.setVisibility(View.GONE);}
             }
         });
         //
@@ -226,6 +227,7 @@ public class togetherF extends AppCompatActivity {
                 }
                 if(Collections.frequency(allballs3, 0)==5){
                     plus3.setVisibility(View.GONE);}
+                if(index31==0){plus3.setVisibility(View.GONE);}
             }
         });
         picker32.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
@@ -240,6 +242,7 @@ public class togetherF extends AppCompatActivity {
                 }
                 if(Collections.frequency(allballs3, 0)==5){
                     plus3.setVisibility(View.GONE);}
+                if(index32==0){plus3.setVisibility(View.GONE);}
             }
         });
 
@@ -1153,38 +1156,128 @@ public class togetherF extends AppCompatActivity {
 
     public void for_max(View view){
         popUP2.dismiss();
-        plus.setVisibility(View.GONE);
         other.setVisibility(View.VISIBLE);
-        if(numberOfLines==1){
+        if(numberOfPart==1){
+            plus.setVisibility(View.GONE);
+            typeOfDraw1=2;
             first_line = findViewById(R.id.first_line);
+            second_line = findViewById(R.id.second);
+            third_line = findViewById(R.id.third);
             for (int i = 0; i < first_line.getChildCount(); i++) {
                 View child = first_line.getChildAt(i);
                 child.setEnabled(false);
             }
-        }
-        else if(numberOfLines==2){
-            second_line = findViewById(R.id.second);
+
             for (int i = 0; i < second_line.getChildCount(); i++) {
                 View child = second_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < third_line.getChildCount(); i++) {
+                View child = third_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+        if(numberOfPart==2){
+            plus2.setVisibility(View.GONE);
+            typeOfDraw2=2;
+            first_line2 = findViewById(R.id.first_line2);
+            second_line2 = findViewById(R.id.second2);
+            third_line2 = findViewById(R.id.third2);
+            for (int i = 0; i < first_line2.getChildCount(); i++) {
+                View child = first_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+
+            for (int i = 0; i < second_line2.getChildCount(); i++) {
+                View child = second_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < third_line2.getChildCount(); i++) {
+                View child = third_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+        if(numberOfPart==3){
+            plus3.setVisibility(View.GONE);
+            typeOfDraw3=2;
+            first_line3 = findViewById(R.id.first_line3);
+            second_line3 = findViewById(R.id.second3);
+            third_line3 = findViewById(R.id.third3);
+            for (int i = 0; i < first_line3.getChildCount(); i++) {
+                View child = first_line3.getChildAt(i);
+                child.setEnabled(false);
+            }
+
+            for (int i = 0; i < second_line3.getChildCount(); i++) {
+                View child = second_line3.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < third_line3.getChildCount(); i++) {
+                View child = third_line3.getChildAt(i);
                 child.setEnabled(false);
             }
         }
     }
     public void for_min(View view){
         popUP2.dismiss();
-        plus.setVisibility(View.GONE);
         other.setVisibility(View.VISIBLE);
-        if(numberOfLines==1){
+        if(numberOfPart==1){
+            plus.setVisibility(View.GONE);
+            typeOfDraw1=3;
             first_line = findViewById(R.id.first_line);
+            second_line = findViewById(R.id.second);
+            third_line = findViewById(R.id.third);
             for (int i = 0; i < first_line.getChildCount(); i++) {
                 View child = first_line.getChildAt(i);
                 child.setEnabled(false);
             }
-        }
-        if(numberOfLines==2){
-            second_line = findViewById(R.id.second);
+
             for (int i = 0; i < second_line.getChildCount(); i++) {
                 View child = second_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < third_line.getChildCount(); i++) {
+                View child = third_line.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+        if(numberOfPart==2){
+            plus2.setVisibility(View.GONE);
+            typeOfDraw2=3;
+            first_line2 = findViewById(R.id.first_line2);
+            second_line2 = findViewById(R.id.second2);
+            third_line2 = findViewById(R.id.third2);
+            for (int i = 0; i < first_line2.getChildCount(); i++) {
+                View child = first_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+
+            for (int i = 0; i < second_line2.getChildCount(); i++) {
+                View child = second_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < third_line2.getChildCount(); i++) {
+                View child = third_line2.getChildAt(i);
+                child.setEnabled(false);
+            }
+        }
+        if(numberOfPart==3){
+            plus3.setVisibility(View.GONE);
+            typeOfDraw3=3;
+            first_line3 = findViewById(R.id.first_line3);
+            second_line3 = findViewById(R.id.second3);
+            third_line3 = findViewById(R.id.third3);
+            for (int i = 0; i < first_line3.getChildCount(); i++) {
+                View child = first_line3.getChildAt(i);
+                child.setEnabled(false);
+            }
+
+            for (int i = 0; i < second_line3.getChildCount(); i++) {
+                View child = second_line3.getChildAt(i);
+                child.setEnabled(false);
+            }
+            for (int i = 0; i < third_line3.getChildCount(); i++) {
+                View child = third_line3.getChildAt(i);
                 child.setEnabled(false);
             }
         }
@@ -1235,7 +1328,6 @@ public class togetherF extends AppCompatActivity {
                         picker22.setValue(0);
                         allballs2.clear();
                         allballs2 = new ArrayList<>(allballsB);
-                        hadita_two.setVisibility(View.GONE);
                         numberOfPart=1;
                         reset1 = findViewById(R.id.reset);
                         reset1.setVisibility(View.VISIBLE);
@@ -1250,6 +1342,18 @@ public class togetherF extends AppCompatActivity {
                         for (int i = 0; i < third_line.getChildCount(); i++) {
                             View child = third_line.getChildAt(i);
                             child.setEnabled(true);}
+                        for (int i = 0; i < first_line2.getChildCount(); i++) {
+                            View child = first_line2.getChildAt(i);
+                            child.setEnabled(true);
+                        }
+                        for (int i = 0; i < second_line2.getChildCount(); i++) {
+                            View child = second_line2.getChildAt(i);
+                            child.setEnabled(true);
+                        }
+                        for (int i = 0; i < third_line2.getChildCount(); i++) {
+                            View child = third_line2.getChildAt(i);
+                            child.setEnabled(true);}
+                        hadita_two.setVisibility(View.GONE);
                     }
                 })
                 .setNegativeButton("إلغاء", null)
@@ -1288,6 +1392,20 @@ public class togetherF extends AppCompatActivity {
                             View child = second_line2.getChildAt(i);
                             child.setEnabled(true);
                         }
+                        for (int i = 0; i < third_line2.getChildCount(); i++) {
+                            View child = third_line.getChildAt(i);
+                            child.setEnabled(true);}
+                        for (int i = 0; i < first_line3.getChildCount(); i++) {
+                            View child = first_line3.getChildAt(i);
+                            child.setEnabled(true);
+                        }
+                        for (int i = 0; i < second_line3.getChildCount(); i++) {
+                            View child = second_line3.getChildAt(i);
+                            child.setEnabled(true);
+                        }
+                        for (int i = 0; i < third_line3.getChildCount(); i++) {
+                            View child = third_line3.getChildAt(i);
+                            child.setEnabled(true);}
                     }
                 })
                 .setNegativeButton("إلغاء", null)
@@ -1343,21 +1461,52 @@ public class togetherF extends AppCompatActivity {
                 .show();
     }
     public void resultGo(View view){
-        varOne = picker1.getValue()+1;
-        varTwo = picker2.getValue()+1;
-        varThree = picker3.getValue()+1;
-        var2One = picker21.getValue()+1;
-        var2Two = picker22.getValue()+1;
-        var2Three = picker23.getValue()+1;
-        var3One = picker31.getValue()+1;
-        var3Two = picker32.getValue()+1;
-        var3Three = picker33.getValue()+1;
-        Intent intent = new Intent(this, result.class);
-        startActivity(intent);
-
+        if(index11==0){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index12==0 & numberOfLines==2){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index13==0 & numberOfLines==3){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index21==0 & numberOfPart==2){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index22==0 & numberOfLines2==2){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index23==0 & numberOfLines2==3){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index31==0 & numberOfPart==3){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index32==0 & numberOfLines3==2){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else if(index33==0 & numberOfLines3==3){
+            Toast.makeText(togetherF.this, "يرجى التأكد من صحة التجربة",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            varOne = picker1.getValue()+1;
+            varTwo = picker2.getValue()+1;
+            varThree = picker3.getValue()+1;
+            var2One = picker21.getValue()+1;
+            var2Two = picker22.getValue()+1;
+            var2Three = picker23.getValue()+1;
+            var3One = picker31.getValue()+1;
+            var3Two = picker32.getValue()+1;
+            var3Three = picker33.getValue()+1;
+            Intent intent = new Intent(this, result.class);
+            startActivity(intent);
+        }
     }
     public void previous(View view){
         Intent prev = new Intent(this, type.class);
         startActivity(prev);
+    }
+    public void onBackPressed() {
+        Toast.makeText(togetherF.this, "إذا أردت الرجوع إضغط على  \"السابق\"",Toast.LENGTH_SHORT).show();
     }
 }

@@ -9,4 +9,8 @@ public class functions {
         return fac;}
     static long cardinal(long a, long b){
         return (factorial(a) / (factorial(a-b)*factorial(b)));}
+    static long reduction(long a, long b){
+        if(b==0) return a;
+        return reduction(b, a%b);
+    }
 }

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import javax.xml.transform.Result;
 
@@ -116,6 +117,9 @@ public class type extends AppCompatActivity {
         });
         popUP.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         popUP.show();
+    }
+    public void onBackPressed() {
+        Toast.makeText(type.this, "إذا أردت الرجوع إضغط على  \"السابق\"",Toast.LENGTH_SHORT).show();
     }
 
 }

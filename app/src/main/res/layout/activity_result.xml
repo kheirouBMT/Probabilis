@@ -20,6 +20,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:id="@+id/result_text"
                     android:layout_width="wrap_content"
@@ -28,7 +29,7 @@
                     android:gravity="center"
                     android:text=" الحل : "
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/teal_200"
                     android:textSize="50sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -39,6 +40,7 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -47,29 +49,33 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:text="1- عدد السحبات الممكنة هو : "
-                    android:textColor="#FDFDFD"
+                    android:text=" عدد السحبات الممكنة هو : "
+                    android:textColor="@color/teal_200"
                     android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/all_prob"
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dp"
                     android:layout_height="26dp"
+                    android:background="@drawable/box_re"
                     android:text="  "
+                    android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView5"
                     app:layout_constraintHorizontal_bias="0.938"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp"/>
+                android:layout_height="35dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -80,17 +86,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:text="2- حساب إحتمال الحصول على الحادثة : "
+                    android:text=" حساب إحتمال الحصول على الحادثة : "
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/dividing2"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/A1"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="right"
                 android:paddingHorizontal="5dp"
                 android:paddingVertical="10dp">
 
@@ -223,7 +237,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line"
@@ -261,7 +275,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line"
@@ -299,7 +313,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line"
@@ -339,8 +353,8 @@
                         android:text="C"
                         android:textColor="@color/white"
                         android:textSize="17sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/line"
+                        app:layout_constraintStart_toStartOf="@+id/line"
                         app:layout_constraintTop_toBottomOf="@+id/line" />
 
                     <TextView
@@ -370,12 +384,13 @@
 
                     <ImageView
                         android:id="@+id/line"
-                        android:layout_width="50dp"
+                        android:layout_width="30dp"
                         android:layout_height="5dp"
                         android:background="@drawable/line"
+                        android:textDirection="ltr"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.35"
+                        app:layout_constraintHorizontal_bias="0.065"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.505" />
@@ -478,6 +493,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp"
+                android:paddingHorizontal="5dp"
+                android:layout_gravity="right"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent">
 
@@ -511,6 +528,7 @@
                 android:id="@+id/actionTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
                 android:visibility="gone">
 
                 <TextView
@@ -519,7 +537,7 @@
                     android:layout_height="wrap_content"
                     android:text="P(B) = "
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Re_sec"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -533,7 +551,7 @@
                     android:layout_height="wrap_content"
                     android:text=" = "
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
@@ -547,7 +565,7 @@
                     android:layout_height="wrap_content"
                     android:text=" = "
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
@@ -572,7 +590,7 @@
                         android:layout_height="wrap_content"
                         android:text="C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_sec"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
@@ -608,9 +626,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_sec"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
@@ -646,9 +664,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_sec"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
@@ -678,18 +696,20 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.083"
                         app:layout_constraintStart_toEndOf="@+id/C3_sec" />
+
                     <TextView
                         android:id="@+id/C4_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_sec"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toEndOf="@+id/C3_sec" />
+
                     <TextView
                         android:id="@+id/C41_sec"
                         android:layout_width="wrap_content"
@@ -701,6 +721,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C4_sec"
                         app:layout_constraintTop_toTopOf="@+id/C4_sec" />
+
                     <TextView
                         android:id="@+id/C42_sec"
                         android:layout_width="wrap_content"
@@ -720,7 +741,7 @@
                         android:layout_height="wrap_content"
                         android:text="C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line_sec" />
@@ -788,7 +809,7 @@
                         android:layout_height="wrap_content"
                         android:text="DOWN"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line2_sec" />
@@ -799,7 +820,7 @@
                         android:layout_height="wrap_content"
                         android:text="UP"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line2_sec"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -832,7 +853,7 @@
                         android:layout_height="wrap_content"
                         android:text="DOWN"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line3_sec" />
@@ -843,12 +864,13 @@
                         android:layout_height="wrap_content"
                         android:text="UP"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line3_sec"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
                 android:id="@+id/div3"
                 android:layout_width="match_parent"
@@ -860,6 +882,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp"
+                android:paddingHorizontal="5dp"
+                android:layout_gravity="right"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent">
 
@@ -893,6 +917,7 @@
                 android:id="@+id/actionThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
                 android:visibility="gone">
 
                 <TextView
@@ -901,7 +926,7 @@
                     android:layout_height="wrap_content"
                     android:text="P(C) = "
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/Re_trd"
                     app:layout_constraintHorizontal_bias="1.0"
@@ -915,7 +940,7 @@
                     android:layout_height="wrap_content"
                     android:text=" = "
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
@@ -929,7 +954,7 @@
                     android:layout_height="wrap_content"
                     android:text=" = "
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0"
@@ -954,7 +979,7 @@
                         android:layout_height="wrap_content"
                         android:text="C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_trd"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
@@ -990,9 +1015,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_trd"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
@@ -1028,9 +1053,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_trd"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
@@ -1060,18 +1085,20 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.083"
                         app:layout_constraintStart_toEndOf="@+id/C3_trd" />
+
                     <TextView
                         android:id="@+id/C4_trd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text=" + C"
+                        android:text=" x C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line_trd"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.125"
                         app:layout_constraintStart_toEndOf="@+id/C3_trd" />
+
                     <TextView
                         android:id="@+id/C41_trd"
                         android:layout_width="wrap_content"
@@ -1083,6 +1110,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/C4_trd"
                         app:layout_constraintTop_toTopOf="@+id/C4_trd" />
+
                     <TextView
                         android:id="@+id/C42_trd"
                         android:layout_width="wrap_content"
@@ -1102,7 +1130,7 @@
                         android:layout_height="wrap_content"
                         android:text="C"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line_trd" />
@@ -1170,7 +1198,7 @@
                         android:layout_height="wrap_content"
                         android:text="DOWN"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line2_trd" />
@@ -1181,7 +1209,7 @@
                         android:layout_height="wrap_content"
                         android:text="UP"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line2_trd"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -1214,7 +1242,7 @@
                         android:layout_height="wrap_content"
                         android:text="DOWN"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/line3_trd" />
@@ -1225,12 +1253,14 @@
                         android:layout_height="wrap_content"
                         android:text="UP"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         app:layout_constraintBottom_toTopOf="@+id/line3_trd"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
+
