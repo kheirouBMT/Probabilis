@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -272,7 +273,8 @@ public class result extends AppCompatActivity {
                     Re3.setVisibility(View.GONE);
                     equal.setVisibility(View.GONE);
                 }
-                else {UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
+                else {
+                    UP2.setText(String.valueOf(up1 / (functions.reduction(up1, down1))));
                     DOWN2.setText(String.valueOf(down1 / (functions.reduction(up1, down1))));}
             }
             inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)

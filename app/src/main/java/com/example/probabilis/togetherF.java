@@ -78,6 +78,9 @@ public class togetherF extends AppCompatActivity {
         index31=0;
         index32=0;
         index33=0;
+        numberOfLines=1;
+        numberOfLines2=1;
+        numberOfLines3=1;
         int Result = inputs.Result;
         // getting inputs
         allballs.clear();
@@ -531,6 +534,7 @@ public class togetherF extends AppCompatActivity {
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);
             }
+            else{plus.setVisibility(View.VISIBLE);}
             if(Collections.frequency(allballs, 0)==5){
                 plus.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);}
@@ -783,6 +787,7 @@ public class togetherF extends AppCompatActivity {
             if(var2One+picker22.getValue()+1==draw){
                 plus2.setVisibility(View.GONE);
             }
+            else{plus2.setVisibility(View.VISIBLE);}
             if(Collections.frequency(allballs2, 0)==5){
                 plus2.setVisibility(View.GONE);
                 other.setVisibility(View.VISIBLE);}
