@@ -70,9 +70,9 @@
 
     <TextView
         android:id="@+id/selector"
-        android:layout_width="126dp"
-        android:layout_height="50dp"
-        android:background="@drawable/box"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:background="@drawable/choose"
         android:cursorVisible="true"
         android:onClick="showPOP"
         android:paddingVertical="7dp"

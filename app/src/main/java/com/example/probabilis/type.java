@@ -18,7 +18,8 @@ import javax.xml.transform.Result;
 
 public class type extends AppCompatActivity {
     TextView show;
-    int i=0, type,Result;
+    static int type;
+    int i=0,Result;
     String[] choices;
     Dialog popUP;
     NumberPicker draws;
@@ -40,13 +41,15 @@ public class type extends AppCompatActivity {
     }
     public void togetherT(View v){
         show.setText("في آن واحد");
+        show.setBackgroundResource(R.drawable.box);
     }
     public void irja3T(View v){
         show.setText("بإرجاع");
+        show.setBackgroundResource(R.drawable.box);
     }
     public void withoutT(View v){
         show.setText("بدون إرجاع");
-
+        show.setBackgroundResource(R.drawable.box);
     }
     public void next2(View view){
         if(type==1){
@@ -58,7 +61,9 @@ public class type extends AppCompatActivity {
 
         }
         else if(type==3){
-
+            Intent intent = new Intent(this, togetherF.class);
+            draw = draws.getValue()+1;
+            startActivity(intent);
         }
     }
     public void previous2(View view){

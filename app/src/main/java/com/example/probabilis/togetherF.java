@@ -81,6 +81,9 @@ public class togetherF extends AppCompatActivity {
         numberOfLines=1;
         numberOfLines2=1;
         numberOfLines3=1;
+        typeOfDraw1=1;
+        typeOfDraw2=1;
+        typeOfDraw3=1;
         int Result = inputs.Result;
         // getting inputs
         allballs.clear();
@@ -1192,7 +1195,6 @@ public class togetherF extends AppCompatActivity {
                 View child = first_line2.getChildAt(i);
                 child.setEnabled(false);
             }
-
             for (int i = 0; i < second_line2.getChildCount(); i++) {
                 View child = second_line2.getChildAt(i);
                 child.setEnabled(false);
@@ -1212,7 +1214,6 @@ public class togetherF extends AppCompatActivity {
                 View child = first_line3.getChildAt(i);
                 child.setEnabled(false);
             }
-
             for (int i = 0; i < second_line3.getChildCount(); i++) {
                 View child = second_line3.getChildAt(i);
                 child.setEnabled(false);
@@ -1236,7 +1237,6 @@ public class togetherF extends AppCompatActivity {
                 View child = first_line.getChildAt(i);
                 child.setEnabled(false);
             }
-
             for (int i = 0; i < second_line.getChildCount(); i++) {
                 View child = second_line.getChildAt(i);
                 child.setEnabled(false);
@@ -1256,7 +1256,6 @@ public class togetherF extends AppCompatActivity {
                 View child = first_line2.getChildAt(i);
                 child.setEnabled(false);
             }
-
             for (int i = 0; i < second_line2.getChildCount(); i++) {
                 View child = second_line2.getChildAt(i);
                 child.setEnabled(false);
@@ -1276,7 +1275,6 @@ public class togetherF extends AppCompatActivity {
                 View child = first_line3.getChildAt(i);
                 child.setEnabled(false);
             }
-
             for (int i = 0; i < second_line3.getChildCount(); i++) {
                 View child = second_line3.getChildAt(i);
                 child.setEnabled(false);
@@ -1503,8 +1501,15 @@ public class togetherF extends AppCompatActivity {
             var3One = picker31.getValue()+1;
             var3Two = picker32.getValue()+1;
             var3Three = picker33.getValue()+1;
-            Intent intent = new Intent(this, result.class);
-            startActivity(intent);
+            if(type.type==1){
+                Intent intent = new Intent(this, result.class);
+                startActivity(intent);
+            }
+            else if(type.type==3){
+                Intent intent = new Intent(this, Result_without.class);
+                startActivity(intent);
+            }
+
         }
     }
     public void previous(View view){
