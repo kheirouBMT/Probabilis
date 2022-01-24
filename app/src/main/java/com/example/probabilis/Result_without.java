@@ -229,8 +229,14 @@ public class Result_without extends AppCompatActivity {
             long deno = functions.factorial(vars[i]);
             denok=denok*deno;
             restk=restk-vars[i];
-            ((TextView) findViewById(facts[i])).setVisibility(View.VISIBLE);
-            ((TextView) findViewById(facts[i])).setText(String.valueOf(vars[i]) +"! ");
+            if(i==0){
+                ((TextView) findViewById(facts[i])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(facts[i])).setText(String.valueOf(vars[i]) +"! ");
+            }
+            else{
+                ((TextView) findViewById(facts[i])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(facts[i])).setText("x " +String.valueOf(vars[i]) +"! ");
+            }
             if(i+1==togetherF.numberOfLines){
                 if(restk==0){}
                 else{
