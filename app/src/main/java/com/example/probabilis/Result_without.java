@@ -55,10 +55,13 @@ public class Result_without extends AppCompatActivity {
         // fixing fraction problem
         mainRe2 = findViewById(R.id.Re);
         mainRe = findViewById(R.id.Re2);
+        mainRe0 = findViewById(R.id.Re0);
+        line0 = findViewById(R.id.line0);
         line = findViewById(R.id.line);
         line2 = findViewById(R.id.line2);
         line.getLayoutParams().width = mainRe.getWidth();
         line2.getLayoutParams().width = mainRe2.getWidth();
+        line0.getLayoutParams().width = mainRe0.getWidth();
         //
         mainRe2_sec = findViewById(R.id.Re_sec);
         mainRe_sec = findViewById(R.id.Re2_sec);

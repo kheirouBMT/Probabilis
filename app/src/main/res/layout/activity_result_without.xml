@@ -167,7 +167,7 @@
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
+                        app:layout_constraintStart_toEndOf="@+id/Re"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -184,83 +184,79 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
 
+
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/constraintLayout4"
+                        android:id="@+id/Re0"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/testing"
                         app:layout_constraintTop_toTopOf="parent">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:id="@+id/Re0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                        <ImageView
+                            android:id="@+id/line0"
+                            android:layout_width="30dp"
+                            android:layout_height="5dp"
+                            android:background="@drawable/line"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.09"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.505" />
 
-                            <ImageView
-                                android:id="@+id/line0"
-                                android:layout_width="30dp"
-                                android:layout_height="5dp"
-                                android:layout_marginStart="1dp"
-                                android:background="@drawable/line"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/nmrk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/line0"
+                            app:layout_constraintEnd_toEndOf="@+id/line0"
+                            app:layout_constraintStart_toStartOf="@+id/line0" />
 
-                            <TextView
-                                android:id="@+id/nmrk"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" ! "
-                                android:textColor="@color/white"
-                                android:textSize="17sp"
-                                app:layout_constraintBottom_toTopOf="@+id/line0"
-                                app:layout_constraintEnd_toEndOf="@+id/line0"
-                                app:layout_constraintStart_toStartOf="@+id/line0" />
+                        <TextView
+                            android:id="@+id/denok1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintEnd_toEndOf="@+id/line0"
+                            app:layout_constraintStart_toStartOf="@+id/line0"
+                            app:layout_constraintTop_toBottomOf="@+id/line0" />
 
-                            <TextView
-                                android:id="@+id/denok1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" ! "
-                                android:textColor="@color/white"
-                                android:textSize="17sp"
-                                app:layout_constraintStart_toStartOf="@+id/line0"
-                                app:layout_constraintTop_toBottomOf="@+id/line0" />
+                        <TextView
+                            android:id="@+id/denok2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toEndOf="@+id/denok1"
+                            app:layout_constraintTop_toTopOf="@+id/denok1" />
 
-                            <TextView
-                                android:id="@+id/denok2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" ! "
-                                android:textColor="@color/white"
-                                android:textSize="17sp"
-                                app:layout_constraintStart_toEndOf="@+id/denok1"
-                                app:layout_constraintTop_toTopOf="@+id/denok1" />
+                        <TextView
+                            android:id="@+id/denok3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toEndOf="@+id/denok2"
+                            app:layout_constraintTop_toTopOf="@+id/denok2" />
 
-                            <TextView
-                                android:id="@+id/denok3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" ! "
-                                android:textColor="@color/white"
-                                android:textSize="17sp"
-                                app:layout_constraintStart_toEndOf="@+id/denok2"
-                                app:layout_constraintTop_toTopOf="@+id/denok2" />
-
-                            <TextView
-                                android:id="@+id/denok4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text=" ! "
-                                android:textColor="@color/white"
-                                android:textSize="17sp"
-                                app:layout_constraintStart_toEndOf="@+id/denok3"
-                                app:layout_constraintTop_toTopOf="@+id/denok3" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <TextView
+                            android:id="@+id/denok4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toEndOf="@+id/denok3"
+                            app:layout_constraintTop_toTopOf="@+id/denok3" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
                             android:id="@+id/equal0"
@@ -774,9 +770,6 @@
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:layout_constraintVertical_bias="0.505" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re2"
                         android:layout_width="wrap_content"
