@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Result_without extends AppCompatActivity {
     androidx.constraintlayout.widget.ConstraintLayout mainRe,mainRe0, mainRe2,mainRe_sec,mainRe2_sec,mainRe_trd,mainRe2_trd;
     ImageView line0,line,line2,line_sec,line2_sec,line_trd,line2_trd;
+    TextView nmrk_show,denok1,denok2,denok3,denok4;
     TextView allProbT,inputsA,inputsB,inputsC;
     TextView UP1,UP2,DOWN2,DOWN1,UP1_sec,UP2_sec,DOWN2_sec,DOWN1_sec,UP1_trd,UP2_trd,DOWN2_trd,DOWN1_trd;
     TextView C1_trd,C2_trd,C21_trd,C22_trd,C3_trd,C31_trd,C32_trd,C11_trd,C12_trd,C4_trd,C41_trd,C42_trd;
@@ -29,6 +30,7 @@ public class Result_without extends AppCompatActivity {
     private int[] C_trd_id = {
             R.id.C1_trd ,R.id.C11_trd ,R.id.C12_trd ,R.id.C1b_trd ,R.id.C11b_trd ,R.id.C12b_trd ,R.id.C2b_trd ,R.id.C21b_trd ,R.id.C22b_trd ,R.id.C2_trd ,R.id.C21_trd ,R.id.C22_trd ,R.id.C3b_trd ,R.id.C31b_trd ,R.id.C32b_trd ,R.id.C3_trd ,R.id.C31_trd ,R.id.C32_trd ,R.id.C4b_trd ,R.id.C41b_trd ,R.id.C42b_trd ,R.id.C4_trd ,R.id.C41_trd ,R.id.C42_trd ,R.id.C5b_trd ,R.id.C51b_trd ,R.id.C52b_trd ,R.id.C5_trd ,R.id.C51_trd ,R.id.C52_trd ,R.id.C6b_trd ,R.id.C61b_trd ,R.id.C62b_trd ,R.id.C6_trd ,R.id.C61_trd ,R.id.C62_trd };
     private int [] vars = {togetherF.varOne, togetherF.varTwo, togetherF.varThree};
+    private int [] facts = {R.id.denok1,R.id.denok2,R.id.denok3,R.id.denok4};
     ImageView div2,div3;
     androidx.constraintlayout.widget.ConstraintLayout Re3,Re3_sec, Re3_trd;
     TextView equal,equal_sec,equal_trd;
@@ -210,6 +212,7 @@ public class Result_without extends AppCompatActivity {
         DOWN1_trd = findViewById(R.id.down1_trd);
         down1_trd = functions.cardinal(inputs.Result, togetherF.draw);
         UP1_trd = findViewById(R.id.up1_trd);
+        nmrk_show = findViewById(R.id.nmrk);
         // testing
         long nmrk = functions.factorial(type.draw);
         for (int i=0;i<3; i++){
@@ -217,6 +220,7 @@ public class Result_without extends AppCompatActivity {
             long deno = functions.factorial(vars[i]);
             denok=denok*deno;
             restk=restk-vars[i];
+
             if(i+1==togetherF.numberOfLines){
                 if(restk==0){}
                 else{
