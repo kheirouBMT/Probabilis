@@ -3,6 +3,7 @@ package com.example.probabilis;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
@@ -213,17 +214,27 @@ public class Result_without extends AppCompatActivity {
         down1_trd = functions.cardinal(inputs.Result, togetherF.draw);
         UP1_trd = findViewById(R.id.up1_trd);
         nmrk_show = findViewById(R.id.nmrk);
+        denok1 = findViewById(R.id.denok1);
+        denok2 = findViewById(R.id.denok2);
+        denok3 = findViewById(R.id.denok3);
+        denok4 = findViewById(R.id.denok4);
+        denok4.setVisibility(View.GONE);
+        denok3.setVisibility(View.GONE);
+        denok2.setVisibility(View.GONE);
         // testing
         long nmrk = functions.factorial(type.draw);
+        nmrk_show.setText(String.valueOf(type.draw) +"! ");
         for (int i=0;i<3; i++){
             int restk = type.draw;
             long deno = functions.factorial(vars[i]);
             denok=denok*deno;
             restk=restk-vars[i];
-
+            ((TextView) findViewById(facts[i])).setVisibility(View.VISIBLE);
+            ((TextView) findViewById(facts[i])).setText(String.valueOf(vars[i]) +"! ");
             if(i+1==togetherF.numberOfLines){
                 if(restk==0){}
                 else{
+                    denok4.setText(String.valueOf(restk) +"!");
                     denok=denok*functions.factorial(restk);
                 }
                 break;
