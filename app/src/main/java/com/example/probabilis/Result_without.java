@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Result_without extends AppCompatActivity {
     androidx.constraintlayout.widget.ConstraintLayout mainRe,mainRe0, mainRe2,mainRe_sec,mainRe2_sec,mainRe_trd,mainRe2_trd;
     ImageView line0,line,line2,line_sec,line2_sec,line_trd,line2_trd;
-    TextView nmrk_show,denok1,denok2,denok3,denok4;
+    TextView nmrk_show,denok1,denok2,denok3,denok4,equal0;
     TextView allProbT,inputsA,inputsB,inputsC;
     TextView UP1,UP2,DOWN2,DOWN1,UP1_sec,UP2_sec,DOWN2_sec,DOWN1_sec,UP1_trd,UP2_trd,DOWN2_trd,DOWN1_trd;
     TextView C1_trd,C2_trd,C21_trd,C22_trd,C3_trd,C31_trd,C32_trd,C11_trd,C12_trd,C4_trd,C41_trd,C42_trd;
@@ -221,6 +221,7 @@ public class Result_without extends AppCompatActivity {
         denok4.setVisibility(View.GONE);
         denok3.setVisibility(View.GONE);
         denok2.setVisibility(View.GONE);
+        equal0 = findViewById(R.id.equal0);
         // testing
         long nmrk = functions.factorial(type.draw);
         nmrk_show.setText(String.valueOf(type.draw) +"! ");
@@ -229,18 +230,24 @@ public class Result_without extends AppCompatActivity {
             long deno = functions.factorial(vars[i]);
             denok=denok*deno;
             restk=restk-vars[i];
+            if(togetherF.varOne+togetherF.varTwo+togetherF.varThree==type.draw || togetherF.varOne+togetherF.varTwo
+                    ==type.draw || togetherF.varOne==type.draw ){
+                equal0.setVisibility(View.GONE);
+                mainRe0.setVisibility(View.GONE);
+                break;}
             if(i==0){
                 ((TextView) findViewById(facts[i])).setVisibility(View.VISIBLE);
                 ((TextView) findViewById(facts[i])).setText(String.valueOf(vars[i]) +"! ");
             }
             else{
                 ((TextView) findViewById(facts[i])).setVisibility(View.VISIBLE);
-                ((TextView) findViewById(facts[i])).setText("x " +String.valueOf(vars[i]) +"! ");
+                ((TextView) findViewById(facts[i])).setText(" x " +String.valueOf(vars[i]) +"! ");
             }
             if(i+1==togetherF.numberOfLines){
                 if(restk==0){}
                 else{
-                    denok4.setText(String.valueOf(restk) +"!");
+                    denok4.setVisibility(View.VISIBLE);
+                    denok4.setText(" x " +String.valueOf(restk) +"!");
                     denok=denok*functions.factorial(restk);
                 }
                 break;
