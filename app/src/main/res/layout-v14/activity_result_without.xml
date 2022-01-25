@@ -700,6 +700,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.505" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re2"
                         android:layout_width="wrap_content"
@@ -710,6 +711,18 @@
                         app:layout_constraintStart_toEndOf="@+id/textView8"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
+
+                        <TextView
+                            android:id="@+id/mo3aml"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" "
+                            android:textColor="#FFFFFF"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <ImageView
                             android:id="@+id/line2"
                             android:layout_width="50dp"
@@ -717,18 +730,21 @@
                             android:background="@drawable/line"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/mo3aml"
                             app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/down1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="1dp"
                             android:text="DOWN"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/line2" />
+                            app:layout_constraintEnd_toEndOf="@+id/line2"
+                            app:layout_constraintStart_toEndOf="@+id/mo3aml"
+                            app:layout_constraintTop_toBottomOf="@+id/up1" />
+
                         <TextView
                             android:id="@+id/up1"
                             android:layout_width="wrap_content"
@@ -737,8 +753,8 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintBottom_toTopOf="@+id/line2"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
+                            app:layout_constraintEnd_toEndOf="@+id/line2"
+                            app:layout_constraintStart_toStartOf="@+id/line2" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re3"
@@ -817,24 +833,30 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp">
+                android:layout_height="100dp"
+                android:visibility="visible">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/actionTwo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp">
+                    android:paddingHorizontal="5dp"
+                    android:visibility="gone">
+
                     <TextView
                         android:id="@+id/testing_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="P(A) = "
+                        android:text="P(B) = "
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/textView8_sec"
                         android:layout_width="wrap_content"
@@ -845,6 +867,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/Re_sec"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/textView9_sec"
                         android:layout_width="wrap_content"
@@ -858,6 +881,7 @@
                         app:layout_constraintStart_toEndOf="@+id/Re2_sec"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re0_sec"
                         android:layout_width="wrap_content"
@@ -865,6 +889,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/testing_sec"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/line0_sec"
                             android:layout_width="50dp"
@@ -876,6 +901,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.505" />
+
                         <TextView
                             android:id="@+id/nmrk_sec"
                             android:layout_width="wrap_content"
@@ -886,6 +912,7 @@
                             app:layout_constraintBottom_toTopOf="@+id/line0_sec"
                             app:layout_constraintEnd_toEndOf="@+id/line0_sec"
                             app:layout_constraintStart_toStartOf="@+id/line0_sec" />
+
                         <TextView
                             android:id="@+id/denok1_sec"
                             android:layout_width="wrap_content"
@@ -895,6 +922,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="@+id/line0_sec"
                             app:layout_constraintTop_toBottomOf="@+id/line0_sec" />
+
                         <TextView
                             android:id="@+id/denok2_sec"
                             android:layout_width="wrap_content"
@@ -904,6 +932,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/denok1_sec"
                             app:layout_constraintTop_toTopOf="@+id/denok1_sec" />
+
                         <TextView
                             android:id="@+id/denok3_sec"
                             android:layout_width="wrap_content"
@@ -913,6 +942,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/denok2_sec"
                             app:layout_constraintTop_toTopOf="@+id/denok2_sec" />
+
                         <TextView
                             android:id="@+id/denok4_sec"
                             android:layout_width="wrap_content"
@@ -924,6 +954,7 @@
                             app:layout_constraintStart_toEndOf="@+id/denok3_sec"
                             app:layout_constraintTop_toTopOf="@+id/denok2_sec" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <TextView
                         android:id="@+id/equal0_sec"
                         android:layout_width="wrap_content"
@@ -934,6 +965,7 @@
                         app:layout_constraintStart_toEndOf="@+id/Re0_sec"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re_sec"
                         android:layout_width="wrap_content"
@@ -942,6 +974,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/equal0_sec"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <TextView
                             android:id="@+id/A1_sec"
                             android:layout_width="wrap_content"
@@ -953,6 +986,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/A12_sec"
                             android:layout_width="wrap_content"
@@ -962,6 +996,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A1_sec"
                             app:layout_constraintStart_toEndOf="@+id/A1_sec" />
+
                         <TextView
                             android:id="@+id/A11_sec"
                             android:layout_width="wrap_content"
@@ -971,6 +1006,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A1_sec"
                             app:layout_constraintTop_toTopOf="@+id/A1_sec" />
+
                         <TextView
                             android:id="@+id/A1b_sec"
                             android:layout_width="wrap_content"
@@ -982,6 +1018,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A11_sec"
                             app:layout_constraintTop_toTopOf="@+id/A1_sec" />
+
                         <TextView
                             android:id="@+id/A11b_sec"
                             android:layout_width="wrap_content"
@@ -992,6 +1029,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A1b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A1b_sec" />
+
                         <TextView
                             android:id="@+id/A12b_sec"
                             android:layout_width="wrap_content"
@@ -1002,6 +1040,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A1b_sec"
                             app:layout_constraintStart_toEndOf="@+id/A1b_sec" />
+
                         <TextView
                             android:id="@+id/A2b_sec"
                             android:layout_width="wrap_content"
@@ -1013,6 +1052,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A11b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A1b_sec" />
+
                         <TextView
                             android:id="@+id/A21b_sec"
                             android:layout_width="wrap_content"
@@ -1023,6 +1063,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A2b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A2b_sec" />
+
                         <TextView
                             android:id="@+id/A22b_sec"
                             android:layout_width="wrap_content"
@@ -1033,6 +1074,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A2b_sec"
                             app:layout_constraintStart_toEndOf="@+id/A2b_sec" />
+
                         <TextView
                             android:id="@+id/A2_sec"
                             android:layout_width="wrap_content"
@@ -1043,6 +1085,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/A21b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A2b_sec" />
+
                         <TextView
                             android:id="@+id/A21_sec"
                             android:layout_width="wrap_content"
@@ -1052,6 +1095,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A2_sec"
                             app:layout_constraintTop_toTopOf="@+id/A2_sec" />
+
                         <TextView
                             android:id="@+id/A22_sec"
                             android:layout_width="wrap_content"
@@ -1061,6 +1105,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A2_sec"
                             app:layout_constraintStart_toEndOf="@+id/A2_sec" />
+
                         <TextView
                             android:id="@+id/A3b_sec"
                             android:layout_width="wrap_content"
@@ -1072,6 +1117,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A21_sec"
                             app:layout_constraintTop_toTopOf="@+id/A2_sec" />
+
                         <TextView
                             android:id="@+id/A31b_sec"
                             android:layout_width="wrap_content"
@@ -1082,6 +1128,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A3b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A3b_sec" />
+
                         <TextView
                             android:id="@+id/A32b_sec"
                             android:layout_width="wrap_content"
@@ -1092,6 +1139,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A3b_sec"
                             app:layout_constraintStart_toEndOf="@+id/A3b_sec" />
+
                         <TextView
                             android:id="@+id/A3_sec"
                             android:layout_width="wrap_content"
@@ -1102,6 +1150,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/A31b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A3b_sec" />
+
                         <TextView
                             android:id="@+id/A31_sec"
                             android:layout_width="wrap_content"
@@ -1111,6 +1160,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A3_sec"
                             app:layout_constraintTop_toTopOf="@+id/A3_sec" />
+
                         <TextView
                             android:id="@+id/A32_sec"
                             android:layout_width="wrap_content"
@@ -1120,6 +1170,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A3_sec"
                             app:layout_constraintStart_toEndOf="@+id/A3_sec" />
+
                         <TextView
                             android:id="@+id/A4b_sec"
                             android:layout_width="wrap_content"
@@ -1131,6 +1182,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A31_sec"
                             app:layout_constraintTop_toTopOf="@+id/A3_sec" />
+
                         <TextView
                             android:id="@+id/A41b_sec"
                             android:layout_width="wrap_content"
@@ -1141,6 +1193,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A4b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A4b_sec" />
+
                         <TextView
                             android:id="@+id/A42b_sec"
                             android:layout_width="wrap_content"
@@ -1151,6 +1204,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A4b_sec"
                             app:layout_constraintStart_toEndOf="@+id/A4b_sec" />
+
                         <TextView
                             android:id="@+id/A4_sec"
                             android:layout_width="wrap_content"
@@ -1161,6 +1215,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/A41b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A4b_sec" />
+
                         <TextView
                             android:id="@+id/A41_sec"
                             android:layout_width="wrap_content"
@@ -1170,6 +1225,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A4_sec"
                             app:layout_constraintTop_toTopOf="@+id/A4_sec" />
+
                         <TextView
                             android:id="@+id/A42_sec"
                             android:layout_width="wrap_content"
@@ -1179,6 +1235,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A4_sec"
                             app:layout_constraintStart_toEndOf="@+id/A4_sec" />
+
                         <TextView
                             android:id="@+id/A5b_sec"
                             android:layout_width="wrap_content"
@@ -1190,6 +1247,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A41_sec"
                             app:layout_constraintTop_toTopOf="@+id/A4_sec" />
+
                         <TextView
                             android:id="@+id/A51b_sec"
                             android:layout_width="wrap_content"
@@ -1200,6 +1258,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A5b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A5b_sec" />
+
                         <TextView
                             android:id="@+id/A52b_sec"
                             android:layout_width="wrap_content"
@@ -1210,6 +1269,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A5b_sec"
                             app:layout_constraintStart_toEndOf="@+id/A5b_sec" />
+
                         <TextView
                             android:id="@+id/A5_sec"
                             android:layout_width="wrap_content"
@@ -1221,6 +1281,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A51b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A5b_sec" />
+
                         <TextView
                             android:id="@+id/A51_sec"
                             android:layout_width="wrap_content"
@@ -1231,6 +1292,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A5_sec"
                             app:layout_constraintTop_toTopOf="@+id/A5_sec" />
+
                         <TextView
                             android:id="@+id/A52_sec"
                             android:layout_width="wrap_content"
@@ -1241,6 +1303,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A5_sec"
                             app:layout_constraintStart_toEndOf="@+id/A5_sec" />
+
                         <TextView
                             android:id="@+id/threePoints_sec"
                             android:layout_width="wrap_content"
@@ -1252,6 +1315,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A51_sec"
                             app:layout_constraintTop_toTopOf="@+id/A5_sec" />
+
                         <TextView
                             android:id="@+id/A6b_sec"
                             android:layout_width="wrap_content"
@@ -1263,6 +1327,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/threePoints_sec"
                             app:layout_constraintTop_toTopOf="@+id/threePoints_sec" />
+
                         <TextView
                             android:id="@+id/A61b_sec"
                             android:layout_width="wrap_content"
@@ -1273,6 +1338,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A6b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A6b_sec" />
+
                         <TextView
                             android:id="@+id/A62b_sec"
                             android:layout_width="wrap_content"
@@ -1283,6 +1349,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A6b_sec"
                             app:layout_constraintStart_toEndOf="@+id/A6b_sec" />
+
                         <TextView
                             android:id="@+id/A6_sec"
                             android:layout_width="wrap_content"
@@ -1294,6 +1361,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A61b_sec"
                             app:layout_constraintTop_toTopOf="@+id/A6b_sec" />
+
                         <TextView
                             android:id="@+id/A61_sec"
                             android:layout_width="wrap_content"
@@ -1304,6 +1372,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A6_sec"
                             app:layout_constraintTop_toTopOf="@+id/A6_sec" />
+
                         <TextView
                             android:id="@+id/A62_sec"
                             android:layout_width="wrap_content"
@@ -1314,6 +1383,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A6_sec"
                             app:layout_constraintStart_toEndOf="@+id/A6_sec" />
+
                         <TextView
                             android:id="@+id/A7_sec"
                             android:layout_width="wrap_content"
@@ -1325,6 +1395,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A61_sec"
                             app:layout_constraintTop_toTopOf="@+id/A6_sec" />
+
                         <TextView
                             android:id="@+id/A71_sec"
                             android:layout_width="wrap_content"
@@ -1335,6 +1406,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A7_sec"
                             app:layout_constraintTop_toTopOf="@+id/A7_sec" />
+
                         <TextView
                             android:id="@+id/A72_sec"
                             android:layout_width="wrap_content"
@@ -1345,6 +1417,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A7_sec"
                             app:layout_constraintStart_toEndOf="@+id/A7_sec" />
+
                         <TextView
                             android:id="@+id/A0_sec"
                             android:layout_width="wrap_content"
@@ -1355,6 +1428,7 @@
                             app:layout_constraintEnd_toEndOf="@+id/line_sec"
                             app:layout_constraintStart_toStartOf="@+id/line_sec"
                             app:layout_constraintTop_toBottomOf="@+id/line_sec" />
+
                         <TextView
                             android:id="@+id/A01_sec"
                             android:layout_width="wrap_content"
@@ -1366,6 +1440,7 @@
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toEndOf="@+id/A0_sec"
                             app:layout_constraintTop_toTopOf="@+id/A0_sec" />
+
                         <TextView
                             android:id="@+id/A02_sec"
                             android:layout_width="wrap_content"
@@ -1378,6 +1453,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toEndOf="@+id/A0_sec" />
+
                         <ImageView
                             android:id="@+id/line_sec"
                             android:layout_width="30dp"
@@ -1391,6 +1467,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.505" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re2_sec"
                         android:layout_width="wrap_content"
@@ -1401,6 +1478,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView8_sec"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
+
                         <ImageView
                             android:id="@+id/line2_sec"
                             android:layout_width="50dp"
@@ -1410,6 +1488,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/down1_sec"
                             android:layout_width="wrap_content"
@@ -1420,6 +1499,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line2_sec" />
+
                         <TextView
                             android:id="@+id/up1_sec"
                             android:layout_width="wrap_content"
@@ -1431,6 +1511,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re3_sec"
                         android:layout_width="wrap_content"
@@ -1438,6 +1519,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/textView9_sec"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/line3_sec"
                             android:layout_width="50dp"
@@ -1447,6 +1529,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/down2_sec"
                             android:layout_width="wrap_content"
@@ -1457,6 +1540,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line3_sec" />
+
                         <TextView
                             android:id="@+id/up2_sec"
                             android:layout_width="wrap_content"
@@ -1477,7 +1561,7 @@
                 android:visibility="gone"
                 android:background="@drawable/dividing2"/>
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/A"
+                android:id="@+id/C"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp"
@@ -1508,24 +1592,30 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="100dp">
+                android:layout_height="100dp"
+                android:visibility="visible">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/actionThree"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp">
+                    android:paddingHorizontal="5dp"
+                    android:visibility="gone">
+
                     <TextView
                         android:id="@+id/testing_trd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="P(A) = "
+                        android:text="P(C) = "
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/textView8_trd"
                         android:layout_width="wrap_content"
@@ -1536,6 +1626,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/Re_trd"
                         app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/textView9_trd"
                         android:layout_width="wrap_content"
@@ -1549,6 +1640,7 @@
                         app:layout_constraintStart_toEndOf="@+id/Re2_trd"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re0_trd"
                         android:layout_width="wrap_content"
@@ -1556,6 +1648,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/testing_trd"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/line0_trd"
                             android:layout_width="50dp"
@@ -1567,6 +1660,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.505" />
+
                         <TextView
                             android:id="@+id/nmrk_trd"
                             android:layout_width="wrap_content"
@@ -1577,6 +1671,7 @@
                             app:layout_constraintBottom_toTopOf="@+id/line0_trd"
                             app:layout_constraintEnd_toEndOf="@+id/line0_trd"
                             app:layout_constraintStart_toStartOf="@+id/line0_trd" />
+
                         <TextView
                             android:id="@+id/denok1_trd"
                             android:layout_width="wrap_content"
@@ -1586,6 +1681,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="@+id/line0_trd"
                             app:layout_constraintTop_toBottomOf="@+id/line0_trd" />
+
                         <TextView
                             android:id="@+id/denok2_trd"
                             android:layout_width="wrap_content"
@@ -1595,6 +1691,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/denok1_trd"
                             app:layout_constraintTop_toTopOf="@+id/denok1_trd" />
+
                         <TextView
                             android:id="@+id/denok3_trd"
                             android:layout_width="wrap_content"
@@ -1604,6 +1701,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/denok2_trd"
                             app:layout_constraintTop_toTopOf="@+id/denok2_trd" />
+
                         <TextView
                             android:id="@+id/denok4_trd"
                             android:layout_width="wrap_content"
@@ -1615,6 +1713,7 @@
                             app:layout_constraintStart_toEndOf="@+id/denok3_trd"
                             app:layout_constraintTop_toTopOf="@+id/denok2_trd" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <TextView
                         android:id="@+id/equal0_trd"
                         android:layout_width="wrap_content"
@@ -1625,6 +1724,7 @@
                         app:layout_constraintStart_toEndOf="@+id/Re0_trd"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re_trd"
                         android:layout_width="wrap_content"
@@ -1633,6 +1733,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/equal0_trd"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <TextView
                             android:id="@+id/A1_trd"
                             android:layout_width="wrap_content"
@@ -1644,6 +1745,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/A12_trd"
                             android:layout_width="wrap_content"
@@ -1653,6 +1755,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A1_trd"
                             app:layout_constraintStart_toEndOf="@+id/A1_trd" />
+
                         <TextView
                             android:id="@+id/A11_trd"
                             android:layout_width="wrap_content"
@@ -1662,6 +1765,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A1_trd"
                             app:layout_constraintTop_toTopOf="@+id/A1_trd" />
+
                         <TextView
                             android:id="@+id/A1b_trd"
                             android:layout_width="wrap_content"
@@ -1673,6 +1777,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A11_trd"
                             app:layout_constraintTop_toTopOf="@+id/A1_trd" />
+
                         <TextView
                             android:id="@+id/A11b_trd"
                             android:layout_width="wrap_content"
@@ -1683,6 +1788,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A1b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A1b_trd" />
+
                         <TextView
                             android:id="@+id/A12b_trd"
                             android:layout_width="wrap_content"
@@ -1693,6 +1799,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A1b_trd"
                             app:layout_constraintStart_toEndOf="@+id/A1b_trd" />
+
                         <TextView
                             android:id="@+id/A2b_trd"
                             android:layout_width="wrap_content"
@@ -1704,6 +1811,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A11b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A1b_trd" />
+
                         <TextView
                             android:id="@+id/A21b_trd"
                             android:layout_width="wrap_content"
@@ -1714,6 +1822,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A2b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A2b_trd" />
+
                         <TextView
                             android:id="@+id/A22b_trd"
                             android:layout_width="wrap_content"
@@ -1724,6 +1833,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A2b_trd"
                             app:layout_constraintStart_toEndOf="@+id/A2b_trd" />
+
                         <TextView
                             android:id="@+id/A2_trd"
                             android:layout_width="wrap_content"
@@ -1734,6 +1844,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/A21b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A2b_trd" />
+
                         <TextView
                             android:id="@+id/A21_trd"
                             android:layout_width="wrap_content"
@@ -1743,6 +1854,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A2_trd"
                             app:layout_constraintTop_toTopOf="@+id/A2_trd" />
+
                         <TextView
                             android:id="@+id/A22_trd"
                             android:layout_width="wrap_content"
@@ -1752,6 +1864,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A2_trd"
                             app:layout_constraintStart_toEndOf="@+id/A2_trd" />
+
                         <TextView
                             android:id="@+id/A3b_trd"
                             android:layout_width="wrap_content"
@@ -1763,6 +1876,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A21_trd"
                             app:layout_constraintTop_toTopOf="@+id/A2_trd" />
+
                         <TextView
                             android:id="@+id/A31b_trd"
                             android:layout_width="wrap_content"
@@ -1773,6 +1887,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A3b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A3b_trd" />
+
                         <TextView
                             android:id="@+id/A32b_trd"
                             android:layout_width="wrap_content"
@@ -1783,6 +1898,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A3b_trd"
                             app:layout_constraintStart_toEndOf="@+id/A3b_trd" />
+
                         <TextView
                             android:id="@+id/A3_trd"
                             android:layout_width="wrap_content"
@@ -1793,6 +1909,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/A31b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A3b_trd" />
+
                         <TextView
                             android:id="@+id/A31_trd"
                             android:layout_width="wrap_content"
@@ -1802,6 +1919,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A3_trd"
                             app:layout_constraintTop_toTopOf="@+id/A3_trd" />
+
                         <TextView
                             android:id="@+id/A32_trd"
                             android:layout_width="wrap_content"
@@ -1811,6 +1929,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A3_trd"
                             app:layout_constraintStart_toEndOf="@+id/A3_trd" />
+
                         <TextView
                             android:id="@+id/A4b_trd"
                             android:layout_width="wrap_content"
@@ -1822,6 +1941,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A31_trd"
                             app:layout_constraintTop_toTopOf="@+id/A3_trd" />
+
                         <TextView
                             android:id="@+id/A41b_trd"
                             android:layout_width="wrap_content"
@@ -1832,6 +1952,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A4b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A4b_trd" />
+
                         <TextView
                             android:id="@+id/A42b_trd"
                             android:layout_width="wrap_content"
@@ -1842,6 +1963,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A4b_trd"
                             app:layout_constraintStart_toEndOf="@+id/A4b_trd" />
+
                         <TextView
                             android:id="@+id/A4_trd"
                             android:layout_width="wrap_content"
@@ -1852,6 +1974,7 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/A41b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A4b_trd" />
+
                         <TextView
                             android:id="@+id/A41_trd"
                             android:layout_width="wrap_content"
@@ -1861,6 +1984,7 @@
                             android:textSize="9sp"
                             app:layout_constraintStart_toEndOf="@+id/A4_trd"
                             app:layout_constraintTop_toTopOf="@+id/A4_trd" />
+
                         <TextView
                             android:id="@+id/A42_trd"
                             android:layout_width="wrap_content"
@@ -1870,6 +1994,7 @@
                             android:textSize="9sp"
                             app:layout_constraintBottom_toBottomOf="@+id/A4_trd"
                             app:layout_constraintStart_toEndOf="@+id/A4_trd" />
+
                         <TextView
                             android:id="@+id/A5b_trd"
                             android:layout_width="wrap_content"
@@ -1881,6 +2006,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A41_trd"
                             app:layout_constraintTop_toTopOf="@+id/A4_trd" />
+
                         <TextView
                             android:id="@+id/A51b_trd"
                             android:layout_width="wrap_content"
@@ -1891,6 +2017,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A5b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A5b_trd" />
+
                         <TextView
                             android:id="@+id/A52b_trd"
                             android:layout_width="wrap_content"
@@ -1901,6 +2028,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A5b_trd"
                             app:layout_constraintStart_toEndOf="@+id/A5b_trd" />
+
                         <TextView
                             android:id="@+id/A5_trd"
                             android:layout_width="wrap_content"
@@ -1912,6 +2040,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A51b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A5b_trd" />
+
                         <TextView
                             android:id="@+id/A51_trd"
                             android:layout_width="wrap_content"
@@ -1922,6 +2051,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A5_trd"
                             app:layout_constraintTop_toTopOf="@+id/A5_trd" />
+
                         <TextView
                             android:id="@+id/A52_trd"
                             android:layout_width="wrap_content"
@@ -1932,6 +2062,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A5_trd"
                             app:layout_constraintStart_toEndOf="@+id/A5_trd" />
+
                         <TextView
                             android:id="@+id/threePoints_trd"
                             android:layout_width="wrap_content"
@@ -1943,6 +2074,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A51_trd"
                             app:layout_constraintTop_toTopOf="@+id/A5_trd" />
+
                         <TextView
                             android:id="@+id/A6b_trd"
                             android:layout_width="wrap_content"
@@ -1954,6 +2086,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/threePoints_trd"
                             app:layout_constraintTop_toTopOf="@+id/threePoints_trd" />
+
                         <TextView
                             android:id="@+id/A61b_trd"
                             android:layout_width="wrap_content"
@@ -1964,6 +2097,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A6b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A6b_trd" />
+
                         <TextView
                             android:id="@+id/A62b_trd"
                             android:layout_width="wrap_content"
@@ -1974,6 +2108,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A6b_trd"
                             app:layout_constraintStart_toEndOf="@+id/A6b_trd" />
+
                         <TextView
                             android:id="@+id/A6_trd"
                             android:layout_width="wrap_content"
@@ -1985,6 +2120,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A61b_trd"
                             app:layout_constraintTop_toTopOf="@+id/A6b_trd" />
+
                         <TextView
                             android:id="@+id/A61_trd"
                             android:layout_width="wrap_content"
@@ -1995,6 +2131,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A6_trd"
                             app:layout_constraintTop_toTopOf="@+id/A6_trd" />
+
                         <TextView
                             android:id="@+id/A62_trd"
                             android:layout_width="wrap_content"
@@ -2005,6 +2142,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A6_trd"
                             app:layout_constraintStart_toEndOf="@+id/A6_trd" />
+
                         <TextView
                             android:id="@+id/A7_trd"
                             android:layout_width="wrap_content"
@@ -2016,6 +2154,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A61_trd"
                             app:layout_constraintTop_toTopOf="@+id/A6_trd" />
+
                         <TextView
                             android:id="@+id/A71_trd"
                             android:layout_width="wrap_content"
@@ -2026,6 +2165,7 @@
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/A7_trd"
                             app:layout_constraintTop_toTopOf="@+id/A7_trd" />
+
                         <TextView
                             android:id="@+id/A72_trd"
                             android:layout_width="wrap_content"
@@ -2036,6 +2176,7 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="@+id/A7_trd"
                             app:layout_constraintStart_toEndOf="@+id/A7_trd" />
+
                         <TextView
                             android:id="@+id/A0_trd"
                             android:layout_width="wrap_content"
@@ -2046,6 +2187,7 @@
                             app:layout_constraintEnd_toEndOf="@+id/line_trd"
                             app:layout_constraintStart_toStartOf="@+id/line_trd"
                             app:layout_constraintTop_toBottomOf="@+id/line_trd" />
+
                         <TextView
                             android:id="@+id/A01_trd"
                             android:layout_width="wrap_content"
@@ -2057,6 +2199,7 @@
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toEndOf="@+id/A0_trd"
                             app:layout_constraintTop_toTopOf="@+id/A0_trd" />
+
                         <TextView
                             android:id="@+id/A02_trd"
                             android:layout_width="wrap_content"
@@ -2069,6 +2212,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toEndOf="@+id/A0_trd" />
+
                         <ImageView
                             android:id="@+id/line_trd"
                             android:layout_width="30dp"
@@ -2082,6 +2226,7 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.505" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re2_trd"
                         android:layout_width="wrap_content"
@@ -2092,6 +2237,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView8_trd"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
+
                         <ImageView
                             android:id="@+id/line2_trd"
                             android:layout_width="50dp"
@@ -2101,6 +2247,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/down1_trd"
                             android:layout_width="wrap_content"
@@ -2111,6 +2258,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line2_trd" />
+
                         <TextView
                             android:id="@+id/up1_trd"
                             android:layout_width="wrap_content"
@@ -2122,6 +2270,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re3_trd"
                         android:layout_width="wrap_content"
@@ -2129,6 +2278,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/textView9_trd"
                         app:layout_constraintTop_toTopOf="parent">
+
                         <ImageView
                             android:id="@+id/line3_trd"
                             android:layout_width="50dp"
@@ -2138,6 +2288,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
+
                         <TextView
                             android:id="@+id/down2_trd"
                             android:layout_width="wrap_content"
@@ -2148,6 +2299,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line3_trd" />
+
                         <TextView
                             android:id="@+id/up2_trd"
                             android:layout_width="wrap_content"
