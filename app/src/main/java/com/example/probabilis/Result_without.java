@@ -194,7 +194,7 @@ public class Result_without extends AppCompatActivity {
         actionOne = findViewById(R.id.actionOne);
         actionTwo = findViewById(R.id.actionTwo);
         actionThree = findViewById(R.id.actionThree);
-        long allProb = functions.cardinal(inputs.Result, togetherF.draw);
+        long allProb = functions.permutation(inputs.Result, togetherF.draw);
         allProbT = findViewById(R.id.all_prob);
         allProbT.setText(String.valueOf(allProb));
         numberOfLines1 = togetherF.numberOfLines;
