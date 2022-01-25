@@ -21,7 +21,6 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <TextView
                     android:id="@+id/result_text"
                     android:layout_width="wrap_content"
@@ -41,11 +40,9 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp"/>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
@@ -57,7 +54,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/all_prob"
                     android:layout_width="wrap_content"
@@ -72,16 +68,13 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="35dp" />
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingVertical="10dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -92,7 +85,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />
@@ -102,13 +94,12 @@
                 android:background="@drawable/dividing2"
                 android:contentDescription="TODO" />
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/A1"
+                android:id="@+id/A_1"
                 android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:paddingHorizontal="5dp"
                 android:paddingVertical="10dp">
-
                 <TextView
                     android:id="@+id/A_"
                     android:layout_width="wrap_content"
@@ -122,7 +113,6 @@
                     app:layout_constraintHorizontal_bias="0.959"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/inputsA"
                     android:layout_width="wrap_content"
@@ -135,19 +125,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="100dp">
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/actionOne"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="5dp">
-
                     <TextView
                         android:id="@+id/testing"
                         android:layout_width="wrap_content"
@@ -158,7 +144,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
@@ -169,7 +154,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/Re"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <TextView
                         android:id="@+id/textView9"
                         android:layout_width="wrap_content"
@@ -183,8 +167,6 @@
                         app:layout_constraintStart_toEndOf="@+id/Re2"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
-
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re0"
                         android:layout_width="wrap_content"
@@ -192,7 +174,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/testing"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <ImageView
                             android:id="@+id/line0"
                             android:layout_width="50dp"
@@ -204,7 +185,6 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.505" />
-
                         <TextView
                             android:id="@+id/nmrk"
                             android:layout_width="wrap_content"
@@ -215,7 +195,6 @@
                             app:layout_constraintBottom_toTopOf="@+id/line0"
                             app:layout_constraintEnd_toEndOf="@+id/line0"
                             app:layout_constraintStart_toStartOf="@+id/line0" />
-
                         <TextView
                             android:id="@+id/denok1"
                             android:layout_width="wrap_content"
@@ -225,7 +204,6 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="@+id/line0"
                             app:layout_constraintTop_toBottomOf="@+id/line0" />
-
                         <TextView
                             android:id="@+id/denok2"
                             android:layout_width="wrap_content"
@@ -235,7 +213,6 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/denok1"
                             app:layout_constraintTop_toTopOf="@+id/denok1" />
-
                         <TextView
                             android:id="@+id/denok3"
                             android:layout_width="wrap_content"
@@ -245,7 +222,6 @@
                             android:textSize="17sp"
                             app:layout_constraintStart_toEndOf="@+id/denok2"
                             app:layout_constraintTop_toTopOf="@+id/denok2" />
-
                         <TextView
                             android:id="@+id/denok4"
                             android:layout_width="wrap_content"
@@ -257,7 +233,6 @@
                             app:layout_constraintStart_toEndOf="@+id/denok3"
                             app:layout_constraintTop_toTopOf="@+id/denok2" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <TextView
                         android:id="@+id/equal0"
                         android:layout_width="wrap_content"
@@ -268,7 +243,6 @@
                         app:layout_constraintStart_toEndOf="@+id/Re0"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re"
                         android:layout_width="wrap_content"
@@ -277,336 +251,305 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/equal0"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <TextView
-                            android:id="@+id/C1"
+                            android:id="@+id/A1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
                             android:layout_marginTop="24dp"
-                            android:text="C"
+                            android:text="A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
-
                         <TextView
-                            android:id="@+id/C12"
+                            android:id="@+id/A12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C1"
-                            app:layout_constraintStart_toEndOf="@+id/C1" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A1"
+                            app:layout_constraintStart_toEndOf="@+id/A1" />
                         <TextView
-                            android:id="@+id/C11"
+                            android:id="@+id/A11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C1"
-                            app:layout_constraintTop_toTopOf="@+id/C1" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A1"
+                            app:layout_constraintTop_toTopOf="@+id/A1" />
                         <TextView
-                            android:id="@+id/C1b"
+                            android:id="@+id/A1b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C11"
-                            app:layout_constraintTop_toTopOf="@+id/C1" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A11"
+                            app:layout_constraintTop_toTopOf="@+id/A1" />
                         <TextView
-                            android:id="@+id/C11b"
+                            android:id="@+id/A11b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C1b"
-                            app:layout_constraintTop_toTopOf="@+id/C1b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A1b"
+                            app:layout_constraintTop_toTopOf="@+id/A1b" />
                         <TextView
-                            android:id="@+id/C12b"
+                            android:id="@+id/A12b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C1b"
-                            app:layout_constraintStart_toEndOf="@+id/C1b" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A1b"
+                            app:layout_constraintStart_toEndOf="@+id/A1b" />
                         <TextView
-                            android:id="@+id/C2b"
+                            android:id="@+id/A2b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C11b"
-                            app:layout_constraintTop_toTopOf="@+id/C1b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A11b"
+                            app:layout_constraintTop_toTopOf="@+id/A1b" />
                         <TextView
-                            android:id="@+id/C21b"
+                            android:id="@+id/A21b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C2b"
-                            app:layout_constraintTop_toTopOf="@+id/C2b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A2b"
+                            app:layout_constraintTop_toTopOf="@+id/A2b" />
                         <TextView
-                            android:id="@+id/C22b"
+                            android:id="@+id/A22b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C2b"
-                            app:layout_constraintStart_toEndOf="@+id/C2b" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A2b"
+                            app:layout_constraintStart_toEndOf="@+id/A2b" />
                         <TextView
-                            android:id="@+id/C2"
+                            android:id="@+id/A2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C21b"
-                            app:layout_constraintTop_toTopOf="@+id/C2b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A21b"
+                            app:layout_constraintTop_toTopOf="@+id/A2b" />
                         <TextView
-                            android:id="@+id/C21"
+                            android:id="@+id/A21"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C2"
-                            app:layout_constraintTop_toTopOf="@+id/C2" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A2"
+                            app:layout_constraintTop_toTopOf="@+id/A2" />
                         <TextView
-                            android:id="@+id/C22"
+                            android:id="@+id/A22"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C2"
-                            app:layout_constraintStart_toEndOf="@+id/C2" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A2"
+                            app:layout_constraintStart_toEndOf="@+id/A2" />
                         <TextView
-                            android:id="@+id/C3b"
+                            android:id="@+id/A3b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C21"
-                            app:layout_constraintTop_toTopOf="@+id/C2" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A21"
+                            app:layout_constraintTop_toTopOf="@+id/A2" />
                         <TextView
-                            android:id="@+id/C31b"
+                            android:id="@+id/A31b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C3b"
-                            app:layout_constraintTop_toTopOf="@+id/C3b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A3b"
+                            app:layout_constraintTop_toTopOf="@+id/A3b" />
                         <TextView
-                            android:id="@+id/C32b"
+                            android:id="@+id/A32b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C3b"
-                            app:layout_constraintStart_toEndOf="@+id/C3b" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A3b"
+                            app:layout_constraintStart_toEndOf="@+id/A3b" />
                         <TextView
-                            android:id="@+id/C3"
+                            android:id="@+id/A3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C31b"
-                            app:layout_constraintTop_toTopOf="@+id/C3b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A31b"
+                            app:layout_constraintTop_toTopOf="@+id/A3b" />
                         <TextView
-                            android:id="@+id/C31"
+                            android:id="@+id/A31"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C3"
-                            app:layout_constraintTop_toTopOf="@+id/C3" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A3"
+                            app:layout_constraintTop_toTopOf="@+id/A3" />
                         <TextView
-                            android:id="@+id/C32"
+                            android:id="@+id/A32"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C3"
-                            app:layout_constraintStart_toEndOf="@+id/C3" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A3"
+                            app:layout_constraintStart_toEndOf="@+id/A3" />
                         <TextView
-                            android:id="@+id/C4b"
+                            android:id="@+id/A4b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C31"
-                            app:layout_constraintTop_toTopOf="@+id/C3" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A31"
+                            app:layout_constraintTop_toTopOf="@+id/A3" />
                         <TextView
-                            android:id="@+id/C41b"
+                            android:id="@+id/A41b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C4b"
-                            app:layout_constraintTop_toTopOf="@+id/C4b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A4b"
+                            app:layout_constraintTop_toTopOf="@+id/A4b" />
                         <TextView
-                            android:id="@+id/C42b"
+                            android:id="@+id/A42b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C4b"
-                            app:layout_constraintStart_toEndOf="@+id/C4b" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A4b"
+                            app:layout_constraintStart_toEndOf="@+id/A4b" />
                         <TextView
-                            android:id="@+id/C4"
+                            android:id="@+id/A4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C41b"
-                            app:layout_constraintTop_toTopOf="@+id/C4b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A41b"
+                            app:layout_constraintTop_toTopOf="@+id/A4b" />
                         <TextView
-                            android:id="@+id/C41"
+                            android:id="@+id/A41"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C4"
-                            app:layout_constraintTop_toTopOf="@+id/C4" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A4"
+                            app:layout_constraintTop_toTopOf="@+id/A4" />
                         <TextView
-                            android:id="@+id/C42"
+                            android:id="@+id/A42"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C4"
-                            app:layout_constraintStart_toEndOf="@+id/C4" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A4"
+                            app:layout_constraintStart_toEndOf="@+id/A4" />
                         <TextView
-                            android:id="@+id/C5b"
+                            android:id="@+id/A5b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C41"
-                            app:layout_constraintTop_toTopOf="@+id/C4" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A41"
+                            app:layout_constraintTop_toTopOf="@+id/A4" />
                         <TextView
-                            android:id="@+id/C51b"
+                            android:id="@+id/A51b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C5b"
-                            app:layout_constraintTop_toTopOf="@+id/C5b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A5b"
+                            app:layout_constraintTop_toTopOf="@+id/A5b" />
                         <TextView
-                            android:id="@+id/C52b"
+                            android:id="@+id/A52b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C5b"
-                            app:layout_constraintStart_toEndOf="@+id/C5b" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A5b"
+                            app:layout_constraintStart_toEndOf="@+id/A5b" />
                         <TextView
-                            android:id="@+id/C5"
+                            android:id="@+id/A5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C51b"
-                            app:layout_constraintTop_toTopOf="@+id/C5b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A51b"
+                            app:layout_constraintTop_toTopOf="@+id/A5b" />
                         <TextView
-                            android:id="@+id/C51"
+                            android:id="@+id/A51"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C5"
-                            app:layout_constraintTop_toTopOf="@+id/C5" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A5"
+                            app:layout_constraintTop_toTopOf="@+id/A5" />
                         <TextView
-                            android:id="@+id/C52"
+                            android:id="@+id/A52"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C5"
-                            app:layout_constraintStart_toEndOf="@+id/C5" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A5"
+                            app:layout_constraintStart_toEndOf="@+id/A5" />
                         <TextView
                             android:id="@+id/threePoints"
                             android:layout_width="wrap_content"
@@ -616,124 +559,113 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C51"
-                            app:layout_constraintTop_toTopOf="@+id/C5" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A51"
+                            app:layout_constraintTop_toTopOf="@+id/A5" />
                         <TextView
-                            android:id="@+id/C6b"
+                            android:id="@+id/A6b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/threePoints"
                             app:layout_constraintTop_toTopOf="@+id/threePoints" />
-
                         <TextView
-                            android:id="@+id/C61b"
+                            android:id="@+id/A61b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C6b"
-                            app:layout_constraintTop_toTopOf="@+id/C6b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A6b"
+                            app:layout_constraintTop_toTopOf="@+id/A6b" />
                         <TextView
-                            android:id="@+id/C62b"
+                            android:id="@+id/A62b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C6b"
-                            app:layout_constraintStart_toEndOf="@+id/C6b" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A6b"
+                            app:layout_constraintStart_toEndOf="@+id/A6b" />
                         <TextView
-                            android:id="@+id/C6"
+                            android:id="@+id/A6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C61b"
-                            app:layout_constraintTop_toTopOf="@+id/C6b" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A61b"
+                            app:layout_constraintTop_toTopOf="@+id/A6b" />
                         <TextView
-                            android:id="@+id/C61"
+                            android:id="@+id/A61"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C6"
-                            app:layout_constraintTop_toTopOf="@+id/C6" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A6"
+                            app:layout_constraintTop_toTopOf="@+id/A6" />
                         <TextView
-                            android:id="@+id/C62"
+                            android:id="@+id/A62"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C6"
-                            app:layout_constraintStart_toEndOf="@+id/C6" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A6"
+                            app:layout_constraintStart_toEndOf="@+id/A6" />
                         <TextView
-                            android:id="@+id/C7"
+                            android:id="@+id/A7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C61"
-                            app:layout_constraintTop_toTopOf="@+id/C6" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A61"
+                            app:layout_constraintTop_toTopOf="@+id/A6" />
                         <TextView
-                            android:id="@+id/C71"
+                            android:id="@+id/A71"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C7"
-                            app:layout_constraintTop_toTopOf="@+id/C7" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A7"
+                            app:layout_constraintTop_toTopOf="@+id/A7" />
                         <TextView
-                            android:id="@+id/C72"
+                            android:id="@+id/A72"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C7"
-                            app:layout_constraintStart_toEndOf="@+id/C7" />
-
+                            app:layout_constraintBottom_toBottomOf="@+id/A7"
+                            app:layout_constraintStart_toEndOf="@+id/A7" />
                         <TextView
-                            android:id="@+id/C0"
+                            android:id="@+id/A0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="C"
+                            android:text="A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintEnd_toEndOf="@+id/line"
                             app:layout_constraintStart_toStartOf="@+id/line"
                             app:layout_constraintTop_toBottomOf="@+id/line" />
-
                         <TextView
-                            android:id="@+id/C01"
+                            android:id="@+id/A01"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
@@ -741,22 +673,20 @@
                             android:textSize="9sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/C0"
-                            app:layout_constraintTop_toTopOf="@+id/C0" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A0"
+                            app:layout_constraintTop_toTopOf="@+id/A0" />
                         <TextView
-                            android:id="@+id/C02"
+                            android:id="@+id/A02"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="16dp"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C0"
+                            app:layout_constraintBottom_toBottomOf="@+id/A0"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/C0" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A0" />
                         <ImageView
                             android:id="@+id/line"
                             android:layout_width="30dp"
@@ -780,7 +710,6 @@
                         app:layout_constraintStart_toEndOf="@+id/textView8"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
-
                         <ImageView
                             android:id="@+id/line2"
                             android:layout_width="50dp"
@@ -790,7 +719,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
-
                         <TextView
                             android:id="@+id/down1"
                             android:layout_width="wrap_content"
@@ -801,7 +729,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line2" />
-
                         <TextView
                             android:id="@+id/up1"
                             android:layout_width="wrap_content"
@@ -813,7 +740,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re3"
                         android:layout_width="wrap_content"
@@ -821,7 +747,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/textView9"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <ImageView
                             android:id="@+id/line3"
                             android:layout_width="50dp"
@@ -831,7 +756,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
-
                         <TextView
                             android:id="@+id/down2"
                             android:layout_width="wrap_content"
@@ -842,7 +766,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line3" />
-
                         <TextView
                             android:id="@+id/up2"
                             android:layout_width="wrap_content"
@@ -856,7 +779,6 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
-
             <ImageView
                 android:id="@+id/div2"
                 android:layout_width="match_parent"
@@ -872,7 +794,6 @@
                 android:layout_gravity="right"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent">
-
                 <TextView
                     android:id="@+id/inputsB"
                     android:layout_width="wrap_content"
@@ -884,7 +805,6 @@
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/B_"
                     android:layout_width="wrap_content"
@@ -896,23 +816,20 @@
                     android:textDirection="rtl"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="100dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/actionTwo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
-                    android:visibility="gone">
-
+                    android:paddingHorizontal="5dp">
                     <TextView
                         android:id="@+id/testing_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="P(B) = "
+                        android:text="P(A) = "
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -922,20 +839,17 @@
                         android:id="@+id/textView8_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" = "
+                        android:text="@string/equal"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0"
                         app:layout_constraintStart_toEndOf="@+id/Re_sec"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.506" />
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
                         android:id="@+id/textView9_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" = "
+                        android:text="@string/equal"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -945,311 +859,388 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/Re_sec"
+                        android:id="@+id/Re0_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/testing_sec"
                         app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:id="@+id/line0_sec"
+                            android:layout_width="50dp"
+                            android:layout_height="5dp"
+                            android:background="@drawable/line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.09"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.505" />
                         <TextView
-                            android:id="@+id/C1_sec"
+                            android:id="@+id/nmrk_sec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/line0_sec"
+                            app:layout_constraintEnd_toEndOf="@+id/line0_sec"
+                            app:layout_constraintStart_toStartOf="@+id/line0_sec" />
+                        <TextView
+                            android:id="@+id/denok1_sec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toStartOf="@+id/line0_sec"
+                            app:layout_constraintTop_toBottomOf="@+id/line0_sec" />
+                        <TextView
+                            android:id="@+id/denok2_sec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toEndOf="@+id/denok1_sec"
+                            app:layout_constraintTop_toTopOf="@+id/denok1_sec" />
+                        <TextView
+                            android:id="@+id/denok3_sec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toEndOf="@+id/denok2_sec"
+                            app:layout_constraintTop_toTopOf="@+id/denok2_sec" />
+                        <TextView
+                            android:id="@+id/denok4_sec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintEnd_toEndOf="@+id/line0_sec"
+                            app:layout_constraintStart_toEndOf="@+id/denok3_sec"
+                            app:layout_constraintTop_toTopOf="@+id/denok2_sec" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/equal0_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/Re0_sec"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/Re_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/equal0_sec"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <TextView
+                            android:id="@+id/A1_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
                             android:layout_marginTop="24dp"
-                            android:text="C"
+                            android:text="A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
                         <TextView
-                            android:id="@+id/C12_sec"
+                            android:id="@+id/A12_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C1_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C1_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A1_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A1_sec" />
                         <TextView
-                            android:id="@+id/C11_sec"
+                            android:id="@+id/A11_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C1_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C1_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A1_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A1_sec" />
                         <TextView
-                            android:id="@+id/C1b_sec"
+                            android:id="@+id/A1b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C11_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C1_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A11_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A1_sec" />
                         <TextView
-                            android:id="@+id/C11b_sec"
+                            android:id="@+id/A11b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C1b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C1b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A1b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A1b_sec" />
                         <TextView
-                            android:id="@+id/C12b_sec"
+                            android:id="@+id/A12b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C1b_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C1b_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A1b_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A1b_sec" />
                         <TextView
-                            android:id="@+id/C2b_sec"
+                            android:id="@+id/A2b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C11b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C1b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A11b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A1b_sec" />
                         <TextView
-                            android:id="@+id/C21b_sec"
+                            android:id="@+id/A21b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C2b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C2b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A2b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A2b_sec" />
                         <TextView
-                            android:id="@+id/C22b_sec"
+                            android:id="@+id/A22b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C2b_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C2b_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A2b_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A2b_sec" />
                         <TextView
-                            android:id="@+id/C2_sec"
+                            android:id="@+id/A2_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C21b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C2b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A21b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A2b_sec" />
                         <TextView
-                            android:id="@+id/C21_sec"
+                            android:id="@+id/A21_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C2_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C2_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A2_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A2_sec" />
                         <TextView
-                            android:id="@+id/C22_sec"
+                            android:id="@+id/A22_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C2_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C2_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A2_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A2_sec" />
                         <TextView
-                            android:id="@+id/C3b_sec"
+                            android:id="@+id/A3b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C21_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C2_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A21_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A2_sec" />
                         <TextView
-                            android:id="@+id/C31b_sec"
+                            android:id="@+id/A31b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C3b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C3b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A3b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A3b_sec" />
                         <TextView
-                            android:id="@+id/C32b_sec"
+                            android:id="@+id/A32b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C3b_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C3b_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A3b_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A3b_sec" />
                         <TextView
-                            android:id="@+id/C3_sec"
+                            android:id="@+id/A3_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C31b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C3b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A31b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A3b_sec" />
                         <TextView
-                            android:id="@+id/C31_sec"
+                            android:id="@+id/A31_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C3_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C3_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A3_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A3_sec" />
                         <TextView
-                            android:id="@+id/C32_sec"
+                            android:id="@+id/A32_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C3_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C3_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A3_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A3_sec" />
                         <TextView
-                            android:id="@+id/C4b_sec"
+                            android:id="@+id/A4b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C31_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C3_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A31_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A3_sec" />
                         <TextView
-                            android:id="@+id/C41b_sec"
+                            android:id="@+id/A41b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C4b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C4b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A4b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A4b_sec" />
                         <TextView
-                            android:id="@+id/C42b_sec"
+                            android:id="@+id/A42b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C4b_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C4b_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A4b_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A4b_sec" />
                         <TextView
-                            android:id="@+id/C4_sec"
+                            android:id="@+id/A4_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C41b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C4b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A41b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A4b_sec" />
                         <TextView
-                            android:id="@+id/C41_sec"
+                            android:id="@+id/A41_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C4_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C4_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A4_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A4_sec" />
                         <TextView
-                            android:id="@+id/C42_sec"
+                            android:id="@+id/A42_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C4_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C4_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A4_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A4_sec" />
                         <TextView
-                            android:id="@+id/C5b_sec"
+                            android:id="@+id/A5b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C41_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C4_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A41_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A4_sec" />
                         <TextView
-                            android:id="@+id/C51b_sec"
+                            android:id="@+id/A51b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C5b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C5b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A5b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A5b_sec" />
                         <TextView
-                            android:id="@+id/C52b_sec"
+                            android:id="@+id/A52b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C5b_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C5b_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A5b_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A5b_sec" />
                         <TextView
-                            android:id="@+id/C5_sec"
+                            android:id="@+id/A5_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C51b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C5b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A51b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A5b_sec" />
                         <TextView
-                            android:id="@+id/C51_sec"
+                            android:id="@+id/A51_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C5_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C5_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A5_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A5_sec" />
                         <TextView
-                            android:id="@+id/C52_sec"
+                            android:id="@+id/A52_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C5_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C5_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A5_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A5_sec" />
                         <TextView
                             android:id="@+id/threePoints_sec"
                             android:layout_width="wrap_content"
@@ -1259,116 +1250,113 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C51_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C5_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A51_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A5_sec" />
                         <TextView
-                            android:id="@+id/C6b_sec"
+                            android:id="@+id/A6b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/threePoints_sec"
                             app:layout_constraintTop_toTopOf="@+id/threePoints_sec" />
                         <TextView
-                            android:id="@+id/C61b_sec"
+                            android:id="@+id/A61b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C6b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C6b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A6b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A6b_sec" />
                         <TextView
-                            android:id="@+id/C62b_sec"
+                            android:id="@+id/A62b_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C6b_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C6b_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A6b_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A6b_sec" />
                         <TextView
-                            android:id="@+id/C6_sec"
+                            android:id="@+id/A6_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C61b_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C6b_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A61b_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A6b_sec" />
                         <TextView
-                            android:id="@+id/C61_sec"
+                            android:id="@+id/A61_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C6_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C6_sec" />
+                            app:layout_constraintStart_toEndOf="@+id/A6_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A6_sec" />
                         <TextView
-                            android:id="@+id/C62_sec"
+                            android:id="@+id/A62_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C6_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C6_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A6_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A6_sec" />
                         <TextView
-                            android:id="@+id/C7_sec"
+                            android:id="@+id/A7_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C61_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C6_sec" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A61_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A6_sec" />
                         <TextView
-                            android:id="@+id/C71_sec"
+                            android:id="@+id/A71_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C7_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C7_sec" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A7_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A7_sec" />
                         <TextView
-                            android:id="@+id/C72_sec"
+                            android:id="@+id/A72_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C7_sec"
-                            app:layout_constraintStart_toEndOf="@+id/C7_sec" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A7_sec"
+                            app:layout_constraintStart_toEndOf="@+id/A7_sec" />
                         <TextView
-                            android:id="@+id/C0_sec"
+                            android:id="@+id/A0_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="C"
+                            android:text="A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/line_sec"
+                            app:layout_constraintStart_toStartOf="@+id/line_sec"
                             app:layout_constraintTop_toBottomOf="@+id/line_sec" />
-
                         <TextView
-                            android:id="@+id/C01_sec"
+                            android:id="@+id/A01_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
@@ -1376,33 +1364,33 @@
                             android:textSize="9sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/C0_sec"
-                            app:layout_constraintTop_toTopOf="@+id/C0_sec" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A0_sec"
+                            app:layout_constraintTop_toTopOf="@+id/A0_sec" />
                         <TextView
-                            android:id="@+id/C02_sec"
+                            android:id="@+id/A02_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="16dp"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C0_sec"
+                            app:layout_constraintBottom_toBottomOf="@+id/A0_sec"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/C0_sec" />
-
+                            app:layout_constraintStart_toEndOf="@+id/A0_sec" />
                         <ImageView
                             android:id="@+id/line_sec"
-                            android:layout_width="50dp"
+                            android:layout_width="30dp"
                             android:layout_height="5dp"
                             android:background="@drawable/line"
+                            android:textDirection="ltr"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.057"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.505" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re2_sec"
                         android:layout_width="wrap_content"
@@ -1413,7 +1401,6 @@
                         app:layout_constraintStart_toEndOf="@+id/textView8_sec"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
-
                         <ImageView
                             android:id="@+id/line2_sec"
                             android:layout_width="50dp"
@@ -1423,7 +1410,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
-
                         <TextView
                             android:id="@+id/down1_sec"
                             android:layout_width="wrap_content"
@@ -1434,7 +1420,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line2_sec" />
-
                         <TextView
                             android:id="@+id/up1_sec"
                             android:layout_width="wrap_content"
@@ -1446,18 +1431,13 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re3_sec"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/textView9_sec"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0">
-
+                        app:layout_constraintTop_toTopOf="parent">
                         <ImageView
                             android:id="@+id/line3_sec"
                             android:layout_width="50dp"
@@ -1467,7 +1447,6 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
-
                         <TextView
                             android:id="@+id/down2_sec"
                             android:layout_width="wrap_content"
@@ -1478,12 +1457,11 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/line3_sec" />
-
                         <TextView
                             android:id="@+id/up2_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="UP"
+                            android:text="UP2"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintBottom_toTopOf="@+id/line3_sec"
@@ -1499,7 +1477,7 @@
                 android:visibility="gone"
                 android:background="@drawable/dividing2"/>
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/C"
+                android:id="@+id/A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp"
@@ -1507,7 +1485,6 @@
                 android:layout_gravity="right"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent">
-
                 <TextView
                     android:id="@+id/inputsC"
                     android:layout_width="wrap_content"
@@ -1519,7 +1496,6 @@
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/C_"
                     android:layout_width="wrap_content"
@@ -1531,23 +1507,20 @@
                     android:textDirection="rtl"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="100dp">
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/actionThree"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="5dp"
-                    android:visibility="gone">
-
+                    android:paddingHorizontal="5dp">
                     <TextView
                         android:id="@+id/testing_trd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="P(C) = "
+                        android:text="P(A) = "
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1557,20 +1530,17 @@
                         android:id="@+id/textView8_trd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" = "
+                        android:text="@string/equal"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0"
                         app:layout_constraintStart_toEndOf="@+id/Re_trd"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.506" />
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
                         android:id="@+id/textView9_trd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" = "
+                        android:text="@string/equal"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1580,311 +1550,388 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.506" />
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/Re_trd"
+                        android:id="@+id/Re0_trd"
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/testing_trd"
                         app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:id="@+id/line0_trd"
+                            android:layout_width="50dp"
+                            android:layout_height="5dp"
+                            android:background="@drawable/line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.09"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.505" />
                         <TextView
-                            android:id="@+id/C1_trd"
+                            android:id="@+id/nmrk_trd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toTopOf="@+id/line0_trd"
+                            app:layout_constraintEnd_toEndOf="@+id/line0_trd"
+                            app:layout_constraintStart_toStartOf="@+id/line0_trd" />
+                        <TextView
+                            android:id="@+id/denok1_trd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toStartOf="@+id/line0_trd"
+                            app:layout_constraintTop_toBottomOf="@+id/line0_trd" />
+                        <TextView
+                            android:id="@+id/denok2_trd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toEndOf="@+id/denok1_trd"
+                            app:layout_constraintTop_toTopOf="@+id/denok1_trd" />
+                        <TextView
+                            android:id="@+id/denok3_trd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintStart_toEndOf="@+id/denok2_trd"
+                            app:layout_constraintTop_toTopOf="@+id/denok2_trd" />
+                        <TextView
+                            android:id="@+id/denok4_trd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ! "
+                            android:textColor="@color/white"
+                            android:textSize="17sp"
+                            app:layout_constraintEnd_toEndOf="@+id/line0_trd"
+                            app:layout_constraintStart_toEndOf="@+id/denok3_trd"
+                            app:layout_constraintTop_toTopOf="@+id/denok2_trd" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/equal0_trd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" x "
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/Re0_trd"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.506" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/Re_trd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/equal0_trd"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <TextView
+                            android:id="@+id/A1_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="4dp"
                             android:layout_marginTop="24dp"
-                            android:text="C"
+                            android:text="A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
                         <TextView
-                            android:id="@+id/C12_trd"
+                            android:id="@+id/A12_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C1_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C1_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A1_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A1_trd" />
                         <TextView
-                            android:id="@+id/C11_trd"
+                            android:id="@+id/A11_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C1_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C1_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A1_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A1_trd" />
                         <TextView
-                            android:id="@+id/C1b_trd"
+                            android:id="@+id/A1b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C11_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C1_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A11_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A1_trd" />
                         <TextView
-                            android:id="@+id/C11b_trd"
+                            android:id="@+id/A11b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C1b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C1b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A1b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A1b_trd" />
                         <TextView
-                            android:id="@+id/C12b_trd"
+                            android:id="@+id/A12b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C1b_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C1b_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A1b_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A1b_trd" />
                         <TextView
-                            android:id="@+id/C2b_trd"
+                            android:id="@+id/A2b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C11b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C1b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A11b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A1b_trd" />
                         <TextView
-                            android:id="@+id/C21b_trd"
+                            android:id="@+id/A21b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C2b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C2b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A2b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A2b_trd" />
                         <TextView
-                            android:id="@+id/C22b_trd"
+                            android:id="@+id/A22b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C2b_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C2b_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A2b_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A2b_trd" />
                         <TextView
-                            android:id="@+id/C2_trd"
+                            android:id="@+id/A2_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C21b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C2b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A21b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A2b_trd" />
                         <TextView
-                            android:id="@+id/C21_trd"
+                            android:id="@+id/A21_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C2_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C2_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A2_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A2_trd" />
                         <TextView
-                            android:id="@+id/C22_trd"
+                            android:id="@+id/A22_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C2_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C2_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A2_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A2_trd" />
                         <TextView
-                            android:id="@+id/C3b_trd"
+                            android:id="@+id/A3b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C21_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C2_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A21_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A2_trd" />
                         <TextView
-                            android:id="@+id/C31b_trd"
+                            android:id="@+id/A31b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C3b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C3b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A3b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A3b_trd" />
                         <TextView
-                            android:id="@+id/C32b_trd"
+                            android:id="@+id/A32b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C3b_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C3b_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A3b_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A3b_trd" />
                         <TextView
-                            android:id="@+id/C3_trd"
+                            android:id="@+id/A3_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C31b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C3b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A31b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A3b_trd" />
                         <TextView
-                            android:id="@+id/C31_trd"
+                            android:id="@+id/A31_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C3_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C3_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A3_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A3_trd" />
                         <TextView
-                            android:id="@+id/C32_trd"
+                            android:id="@+id/A32_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C3_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C3_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A3_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A3_trd" />
                         <TextView
-                            android:id="@+id/C4b_trd"
+                            android:id="@+id/A4b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C31_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C3_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A31_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A3_trd" />
                         <TextView
-                            android:id="@+id/C41b_trd"
+                            android:id="@+id/A41b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C4b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C4b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A4b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A4b_trd" />
                         <TextView
-                            android:id="@+id/C42b_trd"
+                            android:id="@+id/A42b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C4b_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C4b_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A4b_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A4b_trd" />
                         <TextView
-                            android:id="@+id/C4_trd"
+                            android:id="@+id/A4_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintStart_toEndOf="@+id/C41b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C4b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A41b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A4b_trd" />
                         <TextView
-                            android:id="@+id/C41_trd"
+                            android:id="@+id/A41_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintStart_toEndOf="@+id/C4_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C4_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A4_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A4_trd" />
                         <TextView
-                            android:id="@+id/C42_trd"
+                            android:id="@+id/A42_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C4_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C4_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A4_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A4_trd" />
                         <TextView
-                            android:id="@+id/C5b_trd"
+                            android:id="@+id/A5b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C41_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C4_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A41_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A4_trd" />
                         <TextView
-                            android:id="@+id/C51b_trd"
+                            android:id="@+id/A51b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C5b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C5b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A5b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A5b_trd" />
                         <TextView
-                            android:id="@+id/C52b_trd"
+                            android:id="@+id/A52b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C5b_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C5b_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A5b_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A5b_trd" />
                         <TextView
-                            android:id="@+id/C5_trd"
+                            android:id="@+id/A5_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C51b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C5b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A51b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A5b_trd" />
                         <TextView
-                            android:id="@+id/C51_trd"
+                            android:id="@+id/A51_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C5_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C5_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A5_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A5_trd" />
                         <TextView
-                            android:id="@+id/C52_trd"
+                            android:id="@+id/A52_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C5_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C5_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A5_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A5_trd" />
                         <TextView
                             android:id="@+id/threePoints_trd"
                             android:layout_width="wrap_content"
@@ -1894,113 +1941,113 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C51_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C5_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A51_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A5_trd" />
                         <TextView
-                            android:id="@+id/C6b_trd"
+                            android:id="@+id/A6b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
                             app:layout_constraintStart_toEndOf="@+id/threePoints_trd"
                             app:layout_constraintTop_toTopOf="@+id/threePoints_trd" />
                         <TextView
-                            android:id="@+id/C61b_trd"
+                            android:id="@+id/A61b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C6b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C6b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A6b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A6b_trd" />
                         <TextView
-                            android:id="@+id/C62b_trd"
+                            android:id="@+id/A62b_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C6b_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C6b_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A6b_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A6b_trd" />
                         <TextView
-                            android:id="@+id/C6_trd"
+                            android:id="@+id/A6_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" x C"
+                            android:text=" x A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C61b_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C6b_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A61b_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A6b_trd" />
                         <TextView
-                            android:id="@+id/C61_trd"
+                            android:id="@+id/A61_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C6_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C6_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A6_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A6_trd" />
                         <TextView
-                            android:id="@+id/C62_trd"
+                            android:id="@+id/A62_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C6_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C6_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A6_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A6_trd" />
                         <TextView
-                            android:id="@+id/C7_trd"
+                            android:id="@+id/A7_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text=" + C"
+                            android:text=" + A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C61_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C6_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A61_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A6_trd" />
                         <TextView
-                            android:id="@+id/C71_trd"
+                            android:id="@+id/A71_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintStart_toEndOf="@+id/C7_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C7_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A7_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A7_trd" />
                         <TextView
-                            android:id="@+id/C72_trd"
+                            android:id="@+id/A72_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
                             android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/C7_trd"
-                            app:layout_constraintStart_toEndOf="@+id/C7_trd" />
+                            app:layout_constraintBottom_toBottomOf="@+id/A7_trd"
+                            app:layout_constraintStart_toEndOf="@+id/A7_trd" />
                         <TextView
-                            android:id="@+id/C0_trd"
+                            android:id="@+id/A0_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="C"
+                            android:text="A"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/line_trd"
+                            app:layout_constraintStart_toStartOf="@+id/line_trd"
                             app:layout_constraintTop_toBottomOf="@+id/line_trd" />
                         <TextView
-                            android:id="@+id/C01_trd"
+                            android:id="@+id/A01_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
@@ -2008,29 +2055,32 @@
                             android:textSize="9sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/C0_trd"
-                            app:layout_constraintTop_toTopOf="@+id/C0_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A0_trd"
+                            app:layout_constraintTop_toTopOf="@+id/A0_trd" />
                         <TextView
-                            android:id="@+id/C02_trd"
+                            android:id="@+id/A02_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="16dp"
                             android:text="0"
                             android:textColor="@color/white"
                             android:textSize="9sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/C0_trd"
+                            app:layout_constraintBottom_toBottomOf="@+id/A0_trd"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/C0_trd" />
+                            app:layout_constraintStart_toEndOf="@+id/A0_trd" />
                         <ImageView
                             android:id="@+id/line_trd"
-                            android:layout_width="50dp"
+                            android:layout_width="30dp"
                             android:layout_height="5dp"
                             android:background="@drawable/line"
+                            android:textDirection="ltr"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.057"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.505" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/Re2_trd"
@@ -2077,11 +2127,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="100dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toEndOf="@+id/textView9_trd"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0">
+                        app:layout_constraintTop_toTopOf="parent">
                         <ImageView
                             android:id="@+id/line3_trd"
                             android:layout_width="50dp"
@@ -2105,7 +2152,7 @@
                             android:id="@+id/up2_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="UP"
+                            android:text="UP2"
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintBottom_toTopOf="@+id/line3_trd"

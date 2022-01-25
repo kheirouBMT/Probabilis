@@ -10,7 +10,7 @@ public class functions {
     static long cardinal(long a, long b){
         return (factorial(a) / (factorial(a-b)*factorial(b)));}
     static long permutation(long a, long b){
-        return cardinal(a, b)*factorial(a);
+        return cardinal(a, b)*factorial(b);
     }
     static long reduction(long a, long b){
         if(b==0) return a;
@@ -57,6 +57,19 @@ public class functions {
                 break;
             }
             long z= (cardinal(b1,a1))*(cardinal(d1,c1));
+            y=y+z;
+            a1--;
+            c1++;
+        }
+        return y;
+    }
+    static long for_max_plus_without(long a1, long b1,long c1, long d1){
+        long y = 0;
+        for(int i=0;a1!=-1;i++){
+            if(c1>d1){
+                break;
+            }
+            long z= (permutation(b1,a1))*(permutation(d1,c1));
             y=y+z;
             a1--;
             c1++;

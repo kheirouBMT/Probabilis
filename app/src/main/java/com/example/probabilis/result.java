@@ -470,7 +470,6 @@ public class result extends AppCompatActivity {
                         + " و " + numbers.get((togetherF.var2Three)-1) + " تحمل " + Colors.get((togetherF.index23)-1)+"\"");
             }
         }
-
         if(togetherF.numberOfPart==3 & togetherF.typeOfDraw3==1){
             actionTwo.setVisibility(View.VISIBLE);
             actionThree.setVisibility(View.VISIBLE);
