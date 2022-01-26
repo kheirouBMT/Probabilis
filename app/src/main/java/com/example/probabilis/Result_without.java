@@ -21,7 +21,7 @@ public class Result_without extends AppCompatActivity {
     TextView mo3aml,mo3aml_sec, mo3aml_trd;
     int numberOfLines1,numberOfLines2,numberOfLines3;
     long up1,up2,down1,down2,up1_sec,up2_sec,down1_sec,down2_sec,up1_trd,up2_trd,down1_trd,down2_trd;
-    double nmrk,denok,denok_sec,denok_trd;
+    double nmrk,denok=1,denok_sec=1,denok_trd=1;
     androidx.constraintlayout.widget.ConstraintLayout actionOne,actionTwo,actionThree,B,C;
     ArrayList<String> Colors = new ArrayList<>();
     ArrayList<String> numbers = new ArrayList<>();
@@ -277,7 +277,7 @@ public class Result_without extends AppCompatActivity {
                 ((TextView) findViewById(facts[i])).setText(" x " +String.valueOf(vars[i]) +"! ");
             }
             if(i+1==togetherF.numberOfLines){
-                if(restk==0){}
+                if(restk==0){break;}
                 else{
                     denok4.setVisibility(View.VISIBLE);
                     denok4.setText(" x " +String.valueOf(restk) +"!");
@@ -287,7 +287,7 @@ public class Result_without extends AppCompatActivity {
             }
         }
         double mo3aml_final = nmrk/denok;
-        mo3aml.setText(" "+String.valueOf(mo3aml_final)+" x ");
+        mo3aml.setText(" "+String.valueOf(Math.round(mo3aml_final))+" x ");
         restk = type.draw;
         for (int i=0;i<3; i++){
             double deno = functions.factorial(vars_sec[i]);
@@ -366,12 +366,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation(Long.valueOf((inputs.Result)-(togetherF.varOne)), Long.valueOf((togetherF.draw)-(togetherF.varOne)));
                     UP1.setText(String.valueOf(up1));
                     DOWN1.setText(String.valueOf(down1));
-                    if(functions.reduction_double(up1*nmrk, down1*denok)==1){
+                    if(functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))==1){
                         Re3.setVisibility(View.GONE);
                         equal.setVisibility(View.GONE);
                     }
-                    else {UP2.setText(String.valueOf(up1*nmrk / (functions.reduction_double(up1*nmrk, down1*denok))));
-                        DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(up1*nmrk, down1*denok))));}
+                    else {UP2.setText(String.valueOf(Math.round(Math.round(up1*nmrk) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));
+                        DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));}
                 }
                 else{
                     A4.setVisibility(View.GONE);
@@ -380,12 +380,12 @@ public class Result_without extends AppCompatActivity {
                     up1 = functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index11)-1)),(togetherF.varOne));
                     UP1.setText(String.valueOf(up1));
                     DOWN1.setText(String.valueOf(down1));
-                    if(functions.reduction_double(up1*nmrk, down1*denok)==1){
+                    if(functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))==1){
                         Re3.setVisibility(View.GONE);
                         equal.setVisibility(View.GONE);
                     }
-                    else {UP2.setText(String.valueOf(up1*nmrk / (functions.reduction_double(up1*nmrk, down1*denok))));
-                        DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(up1*nmrk, down1*denok))));}
+                    else {UP2.setText(String.valueOf(Math.round(Math.round(up1*nmrk) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));
+                        DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));}
                 }
                 if(togetherF.varOne==2){inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحملان " + Colors.get((togetherF.index11)-1)+"\"");}
                 else{inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)+"\"");
@@ -407,12 +407,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.varOne)-(togetherF.varTwo), (togetherF.draw)-(togetherF.varOne)-(togetherF.varTwo));
                     UP1.setText(String.valueOf(up1));
                     DOWN1.setText(String.valueOf(down1));
-                    if(functions.reduction_double(up1*nmrk, down1*denok)==1){
+                    if(functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))==1){
                         Re3.setVisibility(View.GONE);
                         equal.setVisibility(View.GONE);
                     }
-                    else {UP2.setText(String.valueOf(up1*nmrk / (functions.reduction_double(up1*nmrk, down1*denok))));
-                        DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(up1*nmrk, down1*denok))));}
+                    else {UP2.setText(String.valueOf(Math.round(Math.round(up1*nmrk) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));
+                        DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));}
                 }
                 else{
                     A4.setVisibility(View.GONE);
@@ -422,12 +422,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index12)-1)),(togetherF.varTwo));
                     UP1.setText(String.valueOf(up1));
                     DOWN1.setText(String.valueOf(down1));
-                    if(functions.reduction_double(up1*nmrk, down1*denok)==1){
+                    if(functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))==1){
                         Re3.setVisibility(View.GONE);
                         equal.setVisibility(View.GONE);
                     }
-                    else {UP2.setText(String.valueOf(up1*nmrk / (functions.reduction_double(up1*nmrk, down1*denok))));
-                        DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(up1*nmrk, down1*denok))));}
+                    else {UP2.setText(String.valueOf(Math.round(Math.round(up1*nmrk) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));
+                        DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));}
                 }
                 inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)
                         + " و " + numbers.get((togetherF.varTwo)-1) + " تحمل " + Colors.get((togetherF.index12)-1)+"\"");
@@ -446,12 +446,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.varOne)-(togetherF.varTwo)-(togetherF.varThree), (togetherF.draw)-(togetherF.varOne)-(togetherF.varTwo)-(togetherF.varThree));
                     UP1.setText(String.valueOf(up1));
                     DOWN1.setText(String.valueOf(down1));
-                    if(functions.reduction_double(up1*nmrk, down1*denok)==1){
+                    if(functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))==1){
                         Re3.setVisibility(View.GONE);
                         equal.setVisibility(View.GONE);
                     }
-                    else{UP2.setText(String.valueOf(up1*nmrk / (functions.reduction_double(up1*nmrk, down1*denok))));
-                        DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(up1*nmrk, down1*denok))));}
+                    else{UP2.setText(String.valueOf(Math.round(Math.round(up1*nmrk) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));
+                        DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));}
                 }
                 else{
                     A4.setVisibility(View.GONE);
@@ -462,12 +462,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index13)-1)),(togetherF.varThree));
                     UP1.setText(String.valueOf(up1));
                     DOWN1.setText(String.valueOf(down1));
-                    if(functions.reduction_double(up1*nmrk, down1*denok)==1){
+                    if(functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))==1){
                         Re3.setVisibility(View.GONE);
                         equal.setVisibility(View.GONE);
                     }
-                    else {UP2.setText(String.valueOf(up1*nmrk / (functions.reduction_double(up1*nmrk, down1*denok))));
-                        DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(up1*nmrk, down1*denok))));}
+                    else {UP2.setText(String.valueOf(Math.round(Math.round(up1*nmrk) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));
+                        DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(Math.round(up1*nmrk), Math.round(down1*denok))))));}
                 }
                 inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)
                         + " و " + numbers.get((togetherF.varTwo)-1) + " تحمل " + Colors.get((togetherF.index12)-1)
@@ -496,12 +496,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.var2One), (togetherF.draw)-(togetherF.var2One));
                     UP1_sec.setText(String.valueOf(up1_sec));
                     DOWN1_sec.setText(String.valueOf(down1_sec));
-                    if(functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec)==1){
+                    if(functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec))==1){
                         Re3_sec.setVisibility(View.GONE);
                         equal_sec.setVisibility(View.GONE);
                     }
-                    else {UP2_sec.setText(String.valueOf(up1_sec*nmrk / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));
-                        DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));}
+                    else {UP2_sec.setText(String.valueOf(Math.round(up1_sec*nmrk) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));
+                        DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));}
                 }
                 else{
                     A4_sec.setVisibility(View.GONE);
@@ -510,12 +510,12 @@ public class Result_without extends AppCompatActivity {
                     up1_sec = functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index21)-1)),(togetherF.var2One));
                     UP1_sec.setText(String.valueOf(up1_sec));
                     DOWN1_sec.setText(String.valueOf(down1_sec));
-                    if(functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec)==1){
+                    if(functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec))==1){
                         Re3_sec.setVisibility(View.GONE);
                         equal_sec.setVisibility(View.GONE);
                     }
-                    else {UP2_sec.setText(String.valueOf(up1_sec*nmrk / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));
-                        DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));}
+                    else {UP2_sec.setText(String.valueOf(Math.round(up1_sec*nmrk) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));
+                        DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));}
                 }
                 inputsB.setText("\""+numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)+"\"");
 
@@ -536,12 +536,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.var2One)-(togetherF.var2Two), (togetherF.draw)-(togetherF.var2One)-(togetherF.var2Two));
                     UP1_sec.setText(String.valueOf(up1_sec));
                     DOWN1_sec.setText(String.valueOf(down1_sec));
-                    if(functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec)==1){
+                    if(functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec))==1){
                         Re3_sec.setVisibility(View.GONE);
                         equal_sec.setVisibility(View.GONE);
                     }
-                    else {UP2_sec.setText(String.valueOf(up1_sec*nmrk / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));
-                        DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));}
+                    else {UP2_sec.setText(String.valueOf(Math.round(up1_sec*nmrk) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));
+                        DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));}
                 }
                 else{
                     A4_sec.setVisibility(View.GONE);
@@ -551,12 +551,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index22)-1)),(togetherF.var2Two));
                     UP1_sec.setText(String.valueOf(up1_sec));
                     DOWN1_sec.setText(String.valueOf(down1_sec));
-                    if(functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec)==1){
+                    if(functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec))==1){
                         Re3_sec.setVisibility(View.GONE);
                         equal_sec.setVisibility(View.GONE);
                     }
-                    else {UP2_sec.setText(String.valueOf(up1_sec*nmrk / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));
-                        DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));}
+                    else {UP2_sec.setText(String.valueOf(Math.round(up1_sec*nmrk) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));
+                        DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));}
                 }
                 inputsB.setText("\""+numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
                         + " و " + numbers.get((togetherF.var2Two)-1) + " تحمل " + Colors.get((togetherF.index22)-1)+"\"");
@@ -575,12 +575,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.var2One)-(togetherF.var2Two)-(togetherF.var2Three), (togetherF.draw)-(togetherF.var2One)-(togetherF.var2Two)-(togetherF.var2Three));
                     UP1_sec.setText(String.valueOf(up1_sec));
                     DOWN1_sec.setText(String.valueOf(down1_sec));
-                    if(functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec)==1){
+                    if(functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec))==1){
                         Re3_sec.setVisibility(View.GONE);
                         equal_sec.setVisibility(View.GONE);
                     }
-                    else {UP2_sec.setText(String.valueOf(up1_sec*nmrk / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));
-                        DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));}
+                    else {UP2_sec.setText(String.valueOf(Math.round(up1_sec*nmrk) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));
+                        DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));}
                 }
                 else{
                     A4_sec.setVisibility(View.GONE);
@@ -591,12 +591,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index23)-1)),(togetherF.var2Three));
                     UP1_sec.setText(String.valueOf(up1_sec));
                     DOWN1_sec.setText(String.valueOf(down1_sec));
-                    if(functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec)==1){
+                    if(functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec))==1){
                         Re3_sec.setVisibility(View.GONE);
                         equal_sec.setVisibility(View.GONE);
                     }
-                    else {UP2_sec.setText(String.valueOf(up1_sec*nmrk / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));
-                        DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(up1_sec*nmrk, down1_sec*denok_sec))));}
+                    else {UP2_sec.setText(String.valueOf(Math.round(up1_sec*nmrk) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));
+                        DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(Math.round(up1_sec*nmrk), Math.round(down1_sec*denok_sec)))));}
                 }
                 inputsB.setText("\""+numbers.get((togetherF.var2One)-1) + " تحمل " + Colors.get((togetherF.index21)-1)
                         + " و " + numbers.get((togetherF.var2Two)-1) + " تحمل " + Colors.get((togetherF.index22)-1)
@@ -626,12 +626,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.var3One), (togetherF.draw)-(togetherF.var3One));
                     UP1_trd.setText(String.valueOf(up1_trd));
                     DOWN1_trd.setText(String.valueOf(down1_trd));
-                    if(functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd)==1){
+                    if(functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd))==1){
                         Re3_trd.setVisibility(View.GONE);
                         equal_trd.setVisibility(View.GONE);
                     }
-                    else {UP2_trd.setText(String.valueOf(up1_trd*nmrk / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));
-                        DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));}
+                    else {UP2_trd.setText(String.valueOf(Math.round(up1_trd*nmrk) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));
+                        DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));}
                 }
                 else{
                     A4_trd.setVisibility(View.GONE);
@@ -640,12 +640,12 @@ public class Result_without extends AppCompatActivity {
                     up1_trd = functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index31)-1)),(togetherF.var3One));
                     UP1_trd.setText(String.valueOf(up1_trd));
                     DOWN1_trd.setText(String.valueOf(down1_trd));
-                    if(functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd)==1){
+                    if(functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd))==1){
                         Re3_trd.setVisibility(View.GONE);
                         equal_trd.setVisibility(View.GONE);
                     }
-                    else {UP2_trd.setText(String.valueOf(up1_trd*nmrk / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));
-                        DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));}
+                    else {UP2_trd.setText(String.valueOf(Math.round(up1_trd*nmrk) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));
+                        DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));}
                 }
                 inputsC.setText("\""+numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)+"\"");
             }
@@ -665,12 +665,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.var3One)-(togetherF.var3Two), (togetherF.draw)-(togetherF.var3One)-(togetherF.var3Two));
                     UP1_trd.setText(String.valueOf(up1_trd));
                     DOWN1_trd.setText(String.valueOf(down1_trd));
-                    if(functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd)==1){
+                    if(functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd))==1){
                         Re3_trd.setVisibility(View.GONE);
                         equal_trd.setVisibility(View.GONE);
                     }
-                    else {UP2_trd.setText(String.valueOf(up1_trd*nmrk / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));
-                        DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));}
+                    else {UP2_trd.setText(String.valueOf(Math.round(up1_trd*nmrk) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));
+                        DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));}
                 }
                 else{
                     A4_trd.setVisibility(View.GONE);
@@ -680,12 +680,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index32)-1)),(togetherF.var3Two));
                     UP1_trd.setText(String.valueOf(up1_trd));
                     DOWN1_trd.setText(String.valueOf(down1_trd));
-                    if(functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd)==1){
+                    if(functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd))==1){
                         Re3_trd.setVisibility(View.GONE);
                         equal_trd.setVisibility(View.GONE);
                     }
-                    else {UP2_trd.setText(String.valueOf(up1_trd*nmrk / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));
-                        DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));}
+                    else {UP2_trd.setText(String.valueOf(Math.round(up1_trd*nmrk) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));
+                        DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));}
                 }
                 inputsC.setText("\""+numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)
                         + " و " + numbers.get((togetherF.var3Two)-1) + " تحمل " + Colors.get((togetherF.index32)-1)+"\"");
@@ -704,12 +704,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation((inputs.Result)-(togetherF.var3One)-(togetherF.var3Two)-(togetherF.var3Three), (togetherF.draw)-(togetherF.var3One)-(togetherF.var3Two)-(togetherF.var3Three));
                     UP1_trd.setText(String.valueOf(up1_trd));
                     DOWN1_trd.setText(String.valueOf(down1_trd));
-                    if(functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd)==1){
+                    if(functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd))==1){
                         Re3_trd.setVisibility(View.GONE);
                         equal_trd.setVisibility(View.GONE);
                     }
-                    else {UP2_trd.setText(String.valueOf(up1_trd*nmrk / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));
-                        DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));}
+                    else {UP2_trd.setText(String.valueOf(Math.round(up1_trd*nmrk) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));
+                        DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));}
                 }
                 else{
                     A4_trd.setVisibility(View.GONE);
@@ -720,12 +720,12 @@ public class Result_without extends AppCompatActivity {
                             *functions.permutation(Long.valueOf(togetherF.allballsB.get((togetherF.index33)-1)),(togetherF.var3Three));
                     UP1_trd.setText(String.valueOf(up1_trd));
                     DOWN1_trd.setText(String.valueOf(down1_trd));
-                    if(functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd)==1){
+                    if(functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd))==1){
                         Re3_trd.setVisibility(View.GONE);
                         equal_trd.setVisibility(View.GONE);
                     }
-                    else {UP2_trd.setText(String.valueOf(up1_trd*nmrk / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));
-                        DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(up1_trd*nmrk, down1_trd*denok_trd))));}
+                    else {UP2_trd.setText(String.valueOf(Math.round(up1_trd*nmrk) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));
+                        DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(Math.round(up1_trd*nmrk), Math.round(down1_trd*denok_trd)))));}
                 }
 
                 inputsC.setText("\""+numbers.get((togetherF.var3One)-1) + " تحمل " + Colors.get((togetherF.index31)-1)
@@ -811,12 +811,12 @@ public class Result_without extends AppCompatActivity {
                 }
                 UP1.setText(String.valueOf(x));
                 DOWN1.setText(String.valueOf(down1));
-                if(functions.reduction_double(x*nmrk, down1*denok)==1){
+                if(functions.reduction_double(x*nmrk, Math.round(down1*denok))==1){
                     Re3.setVisibility(View.GONE);
                     equal.setVisibility(View.GONE);
                 }
-                else {UP2.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, down1*denok))));
-                    DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(x*nmrk, down1*denok))));}
+                else {UP2.setText(String.valueOf(Math.round(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));
+                    DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));}
             }
             if(numberOfLines1==1 & functions.index_max(togetherF.varOne, inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)), togetherF.draw)>6){
                 threePoints.setVisibility(View.VISIBLE);
@@ -860,12 +860,12 @@ public class Result_without extends AppCompatActivity {
                     A72.setVisibility(View.VISIBLE);
                     A72.setText(String.valueOf(inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1))));
                 }
-                if(functions.reduction_double(x*nmrk, down1*denok)==1){
+                if(functions.reduction_double(x*nmrk, Math.round(down1*denok))==1){
                     Re3.setVisibility(View.GONE);
                     equal.setVisibility(View.GONE);
                 }
-                else {UP2.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, down1*denok))));
-                    DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(x*nmrk, down1*denok))));}
+                else {UP2.setText(String.valueOf(Math.round(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));
+                    DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));}
             }
         }
 // max2
@@ -949,12 +949,12 @@ public class Result_without extends AppCompatActivity {
                 }
                 UP1_sec.setText(String.valueOf(x));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
-                if(functions.reduction_double(x*nmrk, down1_sec*denok_sec)==1){
+                if(functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec))==1){
                     Re3_sec.setVisibility(View.GONE);
                     equal_sec.setVisibility(View.GONE);
                 }
-                else {UP2_sec.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, down1_sec*denok_sec))));
-                    DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(x*nmrk, down1_sec*denok_sec))));}
+                else {UP2_sec.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));
+                    DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));}
             }
             if(numberOfLines2==1 & functions.index_max(togetherF.var2One, inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)), togetherF.draw)>6){
                 threePoints_sec.setVisibility(View.VISIBLE);
@@ -998,12 +998,12 @@ public class Result_without extends AppCompatActivity {
                     A72_sec.setVisibility(View.VISIBLE);
                     A72_sec.setText(String.valueOf(inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1))));
                 }
-                if(functions.reduction_double(x*nmrk, down1_sec*denok_sec)==1){
+                if(functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec))==1){
                     Re3_sec.setVisibility(View.GONE);
                     equal_sec.setVisibility(View.GONE);
                 }
-                else {UP2_sec.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, down1_sec*denok_sec))));
-                    DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(x*nmrk, down1_sec*denok_sec))));}
+                else {UP2_sec.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));
+                    DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));}
             }
         }
         if(togetherF.typeOfDraw3==2){
@@ -1087,12 +1087,12 @@ public class Result_without extends AppCompatActivity {
                 }
                 UP1_trd.setText(String.valueOf(x));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
-                if(functions.reduction_double(x*nmrk, down1_trd*denok_trd)==1){
+                if(functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd))==1){
                     Re3_trd.setVisibility(View.GONE);
                     equal_trd.setVisibility(View.GONE);
                 }
-                else {UP2_trd.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, down1_trd*denok_trd))));
-                    DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(x*nmrk, down1_trd*denok_trd))));}
+                else {UP2_trd.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));
+                    DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));}
             }
             if(numberOfLines3==1 & functions.index_max(togetherF.var3One, inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)), togetherF.draw)>6){
                 threePoints_trd.setVisibility(View.VISIBLE);
@@ -1136,12 +1136,12 @@ public class Result_without extends AppCompatActivity {
                     A72_trd.setVisibility(View.VISIBLE);
                     A72_trd.setText(String.valueOf(inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1))));
                 }
-                if(functions.reduction_double(x*nmrk, down1_trd*denok_trd)==1){
+                if(functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd))==1){
                     Re3_trd.setVisibility(View.GONE);
                     equal_trd.setVisibility(View.GONE);
                 }
-                else {UP2_trd.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, down1_trd*denok_trd))));
-                    DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(x*nmrk, down1_trd*denok_trd))));}
+                else {UP2_trd.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));
+                    DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));}
             }
         }
         // for min
@@ -1233,12 +1233,12 @@ public class Result_without extends AppCompatActivity {
                 A62.setVisibility(View.GONE);
                 A6.setVisibility(View.GONE);
             }
-            if(functions.reduction_double(min_Re*nmrk, down1*denok)==1){
+            if(functions.reduction_double(min_Re*nmrk, Math.round(down1*denok))==1){
                 Re3.setVisibility(View.GONE);
                 equal.setVisibility(View.GONE);
             }
-            else {UP2.setText(String.valueOf(min_Re*nmrk / (functions.reduction_double(min_Re*nmrk, down1*denok))));
-                DOWN2.setText(String.valueOf(down1*denok / (functions.reduction_double(min_Re*nmrk, down1*denok))));}
+            else {UP2.setText(String.valueOf(Math.round(min_Re*nmrk / (functions.reduction_double(min_Re*nmrk, Math.round(down1*denok))))));
+                DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(min_Re*nmrk, Math.round(down1*denok))))));}
         }
         if(togetherF.typeOfDraw2==3) {
             actionTwo.setVisibility(View.VISIBLE);
@@ -1331,12 +1331,12 @@ public class Result_without extends AppCompatActivity {
                 A62_sec.setVisibility(View.GONE);
                 A6_sec.setVisibility(View.GONE);
             }
-            if(functions.reduction_double(min_Re_sec*nmrk, down1_sec*denok_sec)==1){
+            if(functions.reduction_double(min_Re_sec*nmrk, Math.round(down1_sec*denok_sec))==1){
                 Re3_sec.setVisibility(View.GONE);
                 equal_sec.setVisibility(View.GONE);
             }
-            else {UP2_sec.setText(String.valueOf(min_Re_sec*nmrk / (functions.reduction_double(min_Re_sec*nmrk, down1_sec*denok_sec))));
-                DOWN2_sec.setText(String.valueOf(down1_sec*denok_sec / (functions.reduction_double(min_Re_sec*nmrk, down1_sec*denok_sec))));}
+            else {UP2_sec.setText(String.valueOf(min_Re_sec*nmrk / (functions.reduction_double(min_Re_sec*nmrk, Math.round(down1_sec*denok_sec)))));
+                DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(min_Re_sec*nmrk, Math.round(down1_sec*denok_sec)))));}
         }
         if(togetherF.typeOfDraw3==3) {
             actionThree.setVisibility(View.VISIBLE);
@@ -1429,12 +1429,12 @@ public class Result_without extends AppCompatActivity {
                 A62_trd.setVisibility(View.GONE);
                 A6_trd.setVisibility(View.GONE);
             }
-            if(functions.reduction_double(min_Re_trd*nmrk, down1_trd*denok_trd)==1){
+            if(functions.reduction_double(min_Re_trd*nmrk, Math.round(down1_trd*denok_trd))==1){
                 Re3_trd.setVisibility(View.GONE);
                 equal_trd.setVisibility(View.GONE);
             }
-            else {UP2_trd.setText(String.valueOf(min_Re_trd*nmrk / (functions.reduction_double(min_Re_trd*nmrk, down1_trd*denok_trd))));
-                DOWN2_trd.setText(String.valueOf(down1_trd*denok_trd / (functions.reduction_double(min_Re_trd*nmrk, down1_trd*denok_trd))));}
+            else {UP2_trd.setText(String.valueOf(min_Re_trd*nmrk / (functions.reduction_double(min_Re_trd*nmrk, Math.round(down1_trd*denok_trd)))));
+                DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(min_Re_trd*nmrk, Math.round(down1_trd*denok_trd)))));}
         }
     }
     public void action1line1(View view){

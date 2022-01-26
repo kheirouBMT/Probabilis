@@ -6,7 +6,7 @@ public class functions {
         for (double i=1 ; i<=x ; i++){
             fac=fac*i;
         }
-        return fac;}
+        return Math.round(fac);}
     static long cardinal(long a, long b){
         return (long)(factorial(a) / (factorial(a-b)*factorial(b)));}
     static long permutation(long a, long b){
