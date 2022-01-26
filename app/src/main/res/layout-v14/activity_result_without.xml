@@ -1479,6 +1479,17 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
 
+                        <TextView
+                            android:id="@+id/mo3aml_sec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" "
+                            android:textColor="#FFFFFF"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <ImageView
                             android:id="@+id/line2_sec"
                             android:layout_width="50dp"
@@ -1486,19 +1497,20 @@
                             android:background="@drawable/line"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/mo3aml_sec"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/down1_sec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="1dp"
                             android:text="DOWN"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/line2_sec" />
+                            app:layout_constraintEnd_toEndOf="@+id/line2_sec"
+                            app:layout_constraintStart_toEndOf="@+id/mo3aml_sec"
+                            app:layout_constraintTop_toBottomOf="@+id/up1_sec" />
 
                         <TextView
                             android:id="@+id/up1_sec"
@@ -1508,8 +1520,8 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintBottom_toTopOf="@+id/line2_sec"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
+                            app:layout_constraintEnd_toEndOf="@+id/line2_sec"
+                            app:layout_constraintStart_toStartOf="@+id/line2_sec" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -2238,6 +2250,17 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
 
+                        <TextView
+                            android:id="@+id/mo3aml_trd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" "
+                            android:textColor="#FFFFFF"
+                            android:textSize="17sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
                         <ImageView
                             android:id="@+id/line2_trd"
                             android:layout_width="50dp"
@@ -2245,19 +2268,20 @@
                             android:background="@drawable/line"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/mo3aml_trd"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/down1_trd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="1dp"
                             android:text="DOWN"
                             android:textColor="@color/white"
                             android:textSize="17sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/line2_trd" />
+                            app:layout_constraintEnd_toEndOf="@+id/line2_trd"
+                            app:layout_constraintStart_toEndOf="@+id/mo3aml_trd"
+                            app:layout_constraintTop_toBottomOf="@+id/up1_trd" />
 
                         <TextView
                             android:id="@+id/up1_trd"
@@ -2267,8 +2291,8 @@
                             android:textColor="@color/white"
                             android:textSize="17sp"
                             app:layout_constraintBottom_toTopOf="@+id/line2_trd"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
+                            app:layout_constraintEnd_toEndOf="@+id/line2_trd"
+                            app:layout_constraintStart_toStartOf="@+id/line2_trd" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
