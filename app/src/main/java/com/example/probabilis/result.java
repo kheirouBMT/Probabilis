@@ -1106,6 +1106,202 @@ public class result extends AppCompatActivity {
             else {UP2.setText(String.valueOf(min_Re / (functions.reduction(min_Re, down1))));
                 DOWN2.setText(String.valueOf(down1 / (functions.reduction(min_Re, down1))));}
         }
+        if(togetherF.typeOfDraw2==3) {
+            actionTwo.setVisibility(View.VISIBLE);
+            B.setVisibility(View.VISIBLE);
+            div2.setVisibility(View.VISIBLE);
+            C1_sec.setVisibility(View.GONE);
+            C11_sec.setVisibility(View.GONE);
+            C12_sec.setVisibility(View.GONE);
+            C2_sec.setVisibility(View.GONE);
+            C21_sec.setVisibility(View.GONE);
+            C22_sec.setVisibility(View.GONE);
+            C3_sec.setVisibility(View.GONE);
+            C31_sec.setVisibility(View.GONE);
+            C32_sec.setVisibility(View.GONE);
+            C4_sec.setVisibility(View.GONE);
+            C41_sec.setVisibility(View.GONE);
+            C42_sec.setVisibility(View.GONE);
+            threePoints_sec = findViewById(R.id.threePoints_sec);
+            C1b_sec = findViewById(R.id.C1b_sec);
+            C11b_sec = findViewById(R.id.C11b_sec);
+            C12b_sec = findViewById(R.id.C12b_sec);
+            C2b_sec = findViewById(R.id.C2b_sec);
+            C21b_sec = findViewById(R.id.C21b_sec);
+            C22b_sec = findViewById(R.id.C22b_sec);
+            C3b_sec = findViewById(R.id.C3b_sec);
+            C31b_sec = findViewById(R.id.C31b_sec);
+            C32b_sec = findViewById(R.id.C32b_sec);
+            C4b_sec = findViewById(R.id.C4b_sec);
+            C41b_sec = findViewById(R.id.C41b_sec);
+            C42b_sec = findViewById(R.id.C42b_sec);
+            C5b_sec = findViewById(R.id.C5b_sec);
+            C51b_sec = findViewById(R.id.C51b_sec);
+            C52b_sec = findViewById(R.id.C52b_sec);
+            C6b_sec = findViewById(R.id.C6b_sec);
+            C61b_sec = findViewById(R.id.C61b_sec);
+            C62b_sec = findViewById(R.id.C62b_sec);
+            C5_sec = findViewById(R.id.C5_sec);
+            C51_sec = findViewById(R.id.C51_sec);
+            C52_sec = findViewById(R.id.C52_sec);
+            C6_sec = findViewById(R.id.C6_sec);
+            C61_sec = findViewById(R.id.C61_sec);
+            C62_sec = findViewById(R.id.C62_sec);
+            C6_sec = findViewById(R.id.C6_sec);
+            C61_sec = findViewById(R.id.C61_sec);
+            C62_sec = findViewById(R.id.C62_sec);
+            inputsB.setText("\"" + numbers.get((togetherF.var2One) - 1) + " تحمل " + Colors.get((togetherF.index21) - 1) + " على الأقل " + "\"");
+            long min_Re_sec;
+            min_Re_sec = functions.for_min(togetherF.var2One, (togetherF.allballsB.get((togetherF.index21) - 1)), (togetherF.draw) - (togetherF.var2One), (inputs.Result) - (togetherF.allballsB.get((togetherF.index21) - 1)));
+            UP1_sec.setText(String.valueOf(min_Re_sec));
+            DOWN1_sec.setText(String.valueOf(down1_sec));
+            long min_times = functions.index_min(togetherF.var2One, (togetherF.draw) - (togetherF.var2One), togetherF.draw, (inputs.Result) - (togetherF.allballsB.get((togetherF.index21) - 1)), (togetherF.allballsB.get((togetherF.index21) - 1)));
+            long in_a = togetherF.var2One;
+            long in_c = (togetherF.draw) - (togetherF.var2One);
+            if (((togetherF.draw) - (togetherF.var2One)) > ((inputs.Result) - (togetherF.allballsB.get((togetherF.index21) - 1)))) {
+                in_a = in_a + (togetherF.draw) - (togetherF.var2One);
+                in_c = (inputs.Result) - (togetherF.allballsB.get((togetherF.index21) - 1));
+                in_a = in_a - in_c;
+            }
+            for (int i = 0; i <= min_times*6 & i<36; i=i+6) {
+                ((TextView) findViewById(C_sec_id[i])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_sec_id[i + 1])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_sec_id[i + 1])).setText(String.valueOf(in_a));
+                ((TextView) findViewById(C_sec_id[i + 2])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_sec_id[i + 2])).setText(String.valueOf((togetherF.allballsB.get((togetherF.index21) - 1))));
+                ((TextView) findViewById(C_sec_id[i + 3])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_sec_id[i + 4])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_sec_id[i + 4])).setText(String.valueOf((togetherF.draw) - (in_a)));
+                ((TextView) findViewById(C_sec_id[i + 5])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_sec_id[i + 5])).setText(String.valueOf((inputs.Result) - (togetherF.allballsB.get((togetherF.index21) - 1))));
+                if (((togetherF.draw) - (in_a)) == 0) {
+                    ((TextView) findViewById(C_sec_id[i + 3])).setVisibility(View.GONE);
+                    ((TextView) findViewById(C_sec_id[i + 4])).setVisibility(View.GONE);
+                    ((TextView) findViewById(C_sec_id[i + 5])).setVisibility(View.GONE);
+                    break;
+                }
+                in_a++;
+            }
+            if (min_times >= 6 & togetherF.var2One + min_times - 1 == (togetherF.allballsB.get((togetherF.index21) - 1))) {
+                threePoints_sec.setVisibility(View.VISIBLE);
+                C61_sec.setText(String.valueOf((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index21) - 1)))));
+                C62_sec.setText(String.valueOf((inputs.Result - (togetherF.allballsB.get((togetherF.index21) - 1)))));
+                C61b_sec.setText(String.valueOf((togetherF.allballsB.get((togetherF.index21) - 1))));
+                C62b_sec.setText(String.valueOf((togetherF.allballsB.get((togetherF.index21) - 1))));
+            }
+            if (min_times >= 6 & ((togetherF.draw) - (in_a))==0){
+                threePoints_sec.setVisibility(View.VISIBLE);
+                C61b.setText(String.valueOf(togetherF.draw));
+                C62b_sec.setText(String.valueOf((togetherF.allballsB.get((togetherF.index21) - 1))));
+                C61_sec.setVisibility(View.GONE);
+                C62_sec.setVisibility(View.GONE);
+                C6_sec.setVisibility(View.GONE);
+            }
+            if(functions.reduction(min_Re_sec, down1_sec)==1){
+                Re3_sec.setVisibility(View.GONE);
+                equal_sec.setVisibility(View.GONE);
+            }
+            else {UP2_sec.setText(String.valueOf(min_Re_sec / (functions.reduction(min_Re_sec, down1_sec))));
+                DOWN2_sec.setText(String.valueOf(down1_sec / (functions.reduction(min_Re_sec, down1_sec))));}
+        }
+        if(togetherF.typeOfDraw2==3) {
+            actionTwo.setVisibility(View.VISIBLE);
+            B.setVisibility(View.VISIBLE);
+            div2.setVisibility(View.VISIBLE);
+            C1_trd.setVisibility(View.GONE);
+            C11_trd.setVisibility(View.GONE);
+            C12_trd.setVisibility(View.GONE);
+            C2_trd.setVisibility(View.GONE);
+            C21_trd.setVisibility(View.GONE);
+            C22_trd.setVisibility(View.GONE);
+            C3_trd.setVisibility(View.GONE);
+            C31_trd.setVisibility(View.GONE);
+            C32_trd.setVisibility(View.GONE);
+            C4_trd.setVisibility(View.GONE);
+            C41_trd.setVisibility(View.GONE);
+            C42_trd.setVisibility(View.GONE);
+            threePoints_trd = findViewById(R.id.threePoints_trd);
+            C1b_trd = findViewById(R.id.C1b_trd);
+            C11b_trd = findViewById(R.id.C11b_trd);
+            C12b_trd = findViewById(R.id.C12b_trd);
+            C2b_trd = findViewById(R.id.C2b_trd);
+            C21b_trd = findViewById(R.id.C21b_trd);
+            C22b_trd = findViewById(R.id.C22b_trd);
+            C3b_trd = findViewById(R.id.C3b_trd);
+            C31b_trd = findViewById(R.id.C31b_trd);
+            C32b_trd = findViewById(R.id.C32b_trd);
+            C4b_trd = findViewById(R.id.C4b_trd);
+            C41b_trd = findViewById(R.id.C41b_trd);
+            C42b_trd = findViewById(R.id.C42b_trd);
+            C5b_trd = findViewById(R.id.C5b_trd);
+            C51b_trd = findViewById(R.id.C51b_trd);
+            C52b_trd = findViewById(R.id.C52b_trd);
+            C6b_trd = findViewById(R.id.C6b_trd);
+            C61b_trd = findViewById(R.id.C61b_trd);
+            C62b_trd = findViewById(R.id.C62b_trd);
+            C5_trd = findViewById(R.id.C5_trd);
+            C51_trd = findViewById(R.id.C51_trd);
+            C52_trd = findViewById(R.id.C52_trd);
+            C6_trd = findViewById(R.id.C6_trd);
+            C61_trd = findViewById(R.id.C61_trd);
+            C62_trd = findViewById(R.id.C62_trd);
+            C6_trd = findViewById(R.id.C6_trd);
+            C61_trd = findViewById(R.id.C61_trd);
+            C62_trd = findViewById(R.id.C62_trd);
+            inputsC.setText("\"" + numbers.get((togetherF.var3One) - 1) + " تحمل " + Colors.get((togetherF.index31) - 1) + " على الأقل " + "\"");
+            long min_Re_trd;
+            min_Re_trd = functions.for_min(togetherF.var3One, (togetherF.allballsB.get((togetherF.index31) - 1)), (togetherF.draw) - (togetherF.var3One), (inputs.Result) - (togetherF.allballsB.get((togetherF.index31) - 1)));
+            UP1_trd.setText(String.valueOf(min_Re_trd));
+            DOWN1_trd.setText(String.valueOf(down1_trd));
+            long min_times = functions.index_min(togetherF.var3One, (togetherF.draw) - (togetherF.var3One), togetherF.draw, (inputs.Result) - (togetherF.allballsB.get((togetherF.index31) - 1)), (togetherF.allballsB.get((togetherF.index31) - 1)));
+            long in_a = togetherF.var3One;
+            long in_c = (togetherF.draw) - (togetherF.var3One);
+            if (((togetherF.draw) - (togetherF.var3One)) > ((inputs.Result) - (togetherF.allballsB.get((togetherF.index31) - 1)))) {
+                in_a = in_a + (togetherF.draw) - (togetherF.var3One);
+                in_c = (inputs.Result) - (togetherF.allballsB.get((togetherF.index31) - 1));
+                in_a = in_a - in_c;
+            }
+            for (int i = 0; i <= min_times*6 & i<36; i=i+6) {
+                ((TextView) findViewById(C_trd_id[i])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_trd_id[i + 1])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_trd_id[i + 1])).setText(String.valueOf(in_a));
+                ((TextView) findViewById(C_trd_id[i + 2])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_trd_id[i + 2])).setText(String.valueOf((togetherF.allballsB.get((togetherF.index31) - 1))));
+                ((TextView) findViewById(C_trd_id[i + 3])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_trd_id[i + 4])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_trd_id[i + 4])).setText(String.valueOf((togetherF.draw) - (in_a)));
+                ((TextView) findViewById(C_trd_id[i + 5])).setVisibility(View.VISIBLE);
+                ((TextView) findViewById(C_trd_id[i + 5])).setText(String.valueOf((inputs.Result) - (togetherF.allballsB.get((togetherF.index31) - 1))));
+                if (((togetherF.draw) - (in_a)) == 0) {
+                    ((TextView) findViewById(C_trd_id[i + 3])).setVisibility(View.GONE);
+                    ((TextView) findViewById(C_trd_id[i + 4])).setVisibility(View.GONE);
+                    ((TextView) findViewById(C_trd_id[i + 5])).setVisibility(View.GONE);
+                    break;
+                }
+                in_a++;
+            }
+            if (min_times >= 6 & togetherF.var3One + min_times - 1 == (togetherF.allballsB.get((togetherF.index31) - 1))) {
+                threePoints_trd.setVisibility(View.VISIBLE);
+                C61_trd.setText(String.valueOf((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index31) - 1)))));
+                C62_trd.setText(String.valueOf((inputs.Result - (togetherF.allballsB.get((togetherF.index31) - 1)))));
+                C61b_trd.setText(String.valueOf((togetherF.allballsB.get((togetherF.index31) - 1))));
+                C62b_trd.setText(String.valueOf((togetherF.allballsB.get((togetherF.index31) - 1))));
+            }
+            if (min_times >= 6 & ((togetherF.draw) - (in_a))==0){
+                threePoints_trd.setVisibility(View.VISIBLE);
+                C61b.setText(String.valueOf(togetherF.draw));
+                C62b_trd.setText(String.valueOf((togetherF.allballsB.get((togetherF.index31) - 1))));
+                C61_trd.setVisibility(View.GONE);
+                C62_trd.setVisibility(View.GONE);
+                C6_trd.setVisibility(View.GONE);
+            }
+            if(functions.reduction(min_Re_trd, down1_trd)==1){
+                Re3_trd.setVisibility(View.GONE);
+                equal_trd.setVisibility(View.GONE);
+            }
+            else {UP2_trd.setText(String.valueOf(min_Re_trd / (functions.reduction(min_Re_trd, down1_trd))));
+                DOWN2_trd.setText(String.valueOf(down1_trd / (functions.reduction(min_Re_trd, down1_trd))));}
+        }
     }
     public void action1line1(View view){
         C11.setText(String.valueOf(togetherF.varOne));

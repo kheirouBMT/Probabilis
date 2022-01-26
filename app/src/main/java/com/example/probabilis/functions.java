@@ -1,20 +1,24 @@
 package com.example.probabilis;
 
 public class functions {
-    static long factorial(long x){
-        long fac=1;
-        for (long i=1 ; i<=x ; i++){
+    static double factorial(long x){
+        double fac=1;
+        for (double i=1 ; i<=x ; i++){
             fac=fac*i;
         }
         return fac;}
     static long cardinal(long a, long b){
-        return (factorial(a) / (factorial(a-b)*factorial(b)));}
+        return (long)(factorial(a) / (factorial(a-b)*factorial(b)));}
     static long permutation(long a, long b){
-        return cardinal(a, b)*factorial(b);
+        return (long)(cardinal(a, b)*factorial(b));
     }
     static long reduction(long a, long b){
         if(b==0) return a;
         return reduction(b, a%b);
+    }
+    static double reduction_double(double a, double b){
+        if(b==0) return a;
+        return Math.round(reduction_double(b, a%b));
     }
     static long index_max(long x, long y, long z){
         long counter=z-x;
@@ -89,6 +93,25 @@ public class functions {
                     break;
                 }
                 long z= (cardinal(b,a))*(cardinal(d,c));
+                y=y+z;
+                a++;
+                c--;}
+        }
+        return y;
+    }
+    static long for_min_without(long a , long b, long c, long d){
+        long y = 0;
+        if(c>d){
+            a=a+c;
+            c=d;
+            a=a-c;
+        }
+        for(int i=0;c!=-1;i++){
+            if(c<=d){
+                if(a>b){
+                    break;
+                }
+                long z= (permutation(b,a))*(permutation(d,c));
                 y=y+z;
                 a++;
                 c--;}
