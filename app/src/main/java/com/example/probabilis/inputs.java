@@ -195,8 +195,14 @@ public class inputs extends AppCompatActivity {
 
     }
     public void hideKeyboard(View view) {
-        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
-
+        InputMethodManager imm=(InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+//Find the currently focused view, so we can grab the correct window token from it.
+        View view3=getCurrentFocus();
+//If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view3==null){
+            view3=new View(this);
+        }
+        assert imm != null;
+        imm.hideSoftInputFromWindow(view3.getWindowToken(), 0);
     }
 }

@@ -74,6 +74,8 @@ public class functions {
                 break;
             }
             long z= (permutation(b1,a1))*(permutation(d1,c1));
+            long mo3aml = Math.round(factorial(a1+c1)/(factorial(a1)*factorial(c1)));
+            z=z*mo3aml;
             y=y+z;
             a1--;
             c1++;
@@ -112,6 +114,8 @@ public class functions {
                     break;
                 }
                 long z= (permutation(b,a))*(permutation(d,c));
+                long mo3aml = Math.round(factorial(a+c)/(factorial(a)*factorial(c)));
+                z=z*mo3aml;
                 y=y+z;
                 a++;
                 c--;}

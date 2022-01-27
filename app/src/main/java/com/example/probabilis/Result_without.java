@@ -287,7 +287,11 @@ public class Result_without extends AppCompatActivity {
             }
         }
         double mo3aml_final = nmrk/denok;
-        mo3aml.setText(" "+String.valueOf(Math.round(mo3aml_final))+" x ");
+        if(togetherF.typeOfDraw1==1){mo3aml.setText(" "+String.valueOf(mo3aml_final)+" x ");}
+        else{
+            equal0.setVisibility(View.GONE);
+            mainRe0.setVisibility(View.GONE);
+        }
         restk = type.draw;
         for (int i=0;i<3; i++){
             double deno = functions.factorial(vars_sec[i]);
@@ -316,7 +320,11 @@ public class Result_without extends AppCompatActivity {
             }
         }
         mo3aml_final = nmrk/denok_sec;
-        mo3aml_sec.setText(" "+String.valueOf(mo3aml_final)+" x ");
+        if(togetherF.typeOfDraw2==1){mo3aml_sec.setText(" "+String.valueOf(mo3aml_final)+" x ");}
+        else{
+            equal0_sec.setVisibility(View.GONE);
+            mainRe0_sec.setVisibility(View.GONE);
+        }
         restk = type.draw;
         for (int i=0;i<3; i++){
             double deno = functions.factorial(vars_trd[i]);
@@ -345,7 +353,11 @@ public class Result_without extends AppCompatActivity {
             }
         }
         mo3aml_final = nmrk/denok_trd;
-        mo3aml_trd.setText(" "+String.valueOf(mo3aml_final)+" x ");
+        if(togetherF.typeOfDraw3==1){mo3aml_trd.setText(" "+String.valueOf(mo3aml_final)+" x ");}
+        else{
+            equal0_trd.setVisibility(View.GONE);
+            mainRe0_trd.setVisibility(View.GONE);
+        }
         inputsA.setText("\""+numbers.get((togetherF.varOne)-1) + " تحمل " + Colors.get((togetherF.index11)-1)+ " على الأكثر " +"\"");
         if(togetherF.typeOfDraw1==1){
             if(numberOfLines1==1){
@@ -782,6 +794,12 @@ public class Result_without extends AppCompatActivity {
                 x = functions.for_max_plus_without(togetherF.varOne, togetherF.allballsB.get((togetherF.index11)-1), togetherF.draw-togetherF.varOne, inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)));
                 for(int i=0; i<functions.index_max(togetherF.varOne, inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)), togetherF.draw)*6; i=i+6){
                     ((TextView) findViewById(A_id[i])).setVisibility(View.VISIBLE);
+                    double k = functions.factorial(type.draw)/(functions.factorial(in)*(functions.factorial(togetherF.draw-in)));
+                    if(i==0){
+                        ((TextView) findViewById(A_id[i])).setText(Math.round(k)+ " x A");}
+                    else{
+                        ((TextView) findViewById(A_id[i])).setText(" + " +Math.round(k)+ " x A");
+                    }
                     ((TextView) findViewById(A_id[i+1])).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(A_id[i+1])).setText(String.valueOf(in));
                     ((TextView) findViewById(A_id[i+2])).setVisibility(View.VISIBLE);
@@ -802,6 +820,7 @@ public class Result_without extends AppCompatActivity {
                 if(in==0){
                     A7 = findViewById(R.id.A7);
                     A7.setVisibility(View.VISIBLE);
+                    A7.setText(" + 1 x A");
                     A71 = findViewById(R.id.A71);
                     A71.setVisibility(View.VISIBLE);
                     A71.setText(String.valueOf(togetherF.draw));
@@ -811,12 +830,12 @@ public class Result_without extends AppCompatActivity {
                 }
                 UP1.setText(String.valueOf(x));
                 DOWN1.setText(String.valueOf(down1));
-                if(functions.reduction_double(x*nmrk, Math.round(down1*denok))==1){
+                if(functions.reduction_double(x, Math.round(down1))==1){
                     Re3.setVisibility(View.GONE);
                     equal.setVisibility(View.GONE);
                 }
-                else {UP2.setText(String.valueOf(Math.round(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));
-                    DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));}
+                else {UP2.setText(String.valueOf(Math.round(x / (functions.reduction_double(x, Math.round(down1))))));
+                    DOWN2.setText(String.valueOf(Math.round(Math.round(down1) / (functions.reduction_double(x, Math.round(down1))))));}
             }
             if(numberOfLines1==1 & functions.index_max(togetherF.varOne, inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)), togetherF.draw)>6){
                 threePoints.setVisibility(View.VISIBLE);
@@ -827,6 +846,12 @@ public class Result_without extends AppCompatActivity {
                         break;
                     }
                     ((TextView) findViewById(A_id[i])).setVisibility(View.VISIBLE);
+                    double k = functions.factorial(type.draw)/(functions.factorial(in)*(functions.factorial(togetherF.draw-in)));
+                    if(i==0){
+                        ((TextView) findViewById(A_id[i])).setText(Math.round(k)+ " x A");}
+                    else{
+                        ((TextView) findViewById(A_id[i])).setText(" + " +Math.round(k)+ " x A");
+                    }
                     ((TextView) findViewById(A_id[i+1])).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(A_id[i+1])).setText(String.valueOf(in));
                     ((TextView) findViewById(A_id[i+2])).setVisibility(View.VISIBLE);
@@ -844,6 +869,9 @@ public class Result_without extends AppCompatActivity {
                         break;
                     }
                 }
+                double k = functions.factorial(type.draw)/(functions.factorial(inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)))
+                        *functions.factorial((togetherF.draw)-(inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)))));
+                A6b.setText(" + " +Math.round(k)+ " x A");
                 A61.setText(String.valueOf((inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)))));
                 A62.setText(String.valueOf((inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)))));
                 A61b.setText(String.valueOf((togetherF.draw)-(inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1)))));
@@ -852,6 +880,7 @@ public class Result_without extends AppCompatActivity {
                 DOWN1.setText(String.valueOf(down1));
                 if(in==0){
                     A7 = findViewById(R.id.A7);
+                    A7.setText(" + 1 x A");
                     A7.setVisibility(View.VISIBLE);
                     A71 = findViewById(R.id.A71);
                     A71.setVisibility(View.VISIBLE);
@@ -860,12 +889,12 @@ public class Result_without extends AppCompatActivity {
                     A72.setVisibility(View.VISIBLE);
                     A72.setText(String.valueOf(inputs.Result-(togetherF.allballsB.get((togetherF.index11)-1))));
                 }
-                if(functions.reduction_double(x*nmrk, Math.round(down1*denok))==1){
+                if(functions.reduction_double(x, Math.round(down1))==1){
                     Re3.setVisibility(View.GONE);
                     equal.setVisibility(View.GONE);
                 }
-                else {UP2.setText(String.valueOf(Math.round(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));
-                    DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(x*nmrk, Math.round(down1*denok))))));}
+                else {UP2.setText(String.valueOf(Math.round(x / (functions.reduction_double(x, Math.round(down1))))));
+                    DOWN2.setText(String.valueOf(Math.round(Math.round(down1) / (functions.reduction_double(x, Math.round(down1))))));}
             }
         }
 // max2
@@ -920,6 +949,12 @@ public class Result_without extends AppCompatActivity {
                 x = functions.for_max_plus_without(togetherF.var2One, togetherF.allballsB.get((togetherF.index21)-1), togetherF.draw-togetherF.var2One, inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)));
                 for(int i=0; i<functions.index_max(togetherF.var2One, inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)), togetherF.draw)*6; i=i+6){
                     ((TextView) findViewById(A_sec_id[i])).setVisibility(View.VISIBLE);
+                    double k = functions.factorial(type.draw)/(functions.factorial(in)*(functions.factorial(togetherF.draw-in)));
+                    if(i==0){
+                        ((TextView) findViewById(A_sec_id[i])).setText(Math.round(k)+ " x A");}
+                    else{
+                        ((TextView) findViewById(A_sec_id[i])).setText(" + " +Math.round(k)+ " x A");
+                    }
                     ((TextView) findViewById(A_sec_id[i+1])).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(A_sec_id[i+1])).setText(String.valueOf(in));
                     ((TextView) findViewById(A_sec_id[i+2])).setVisibility(View.VISIBLE);
@@ -940,6 +975,7 @@ public class Result_without extends AppCompatActivity {
                 if(in==0){
                     A7_sec = findViewById(R.id.A7_sec);
                     A7_sec.setVisibility(View.VISIBLE);
+                    A7_sec.setText(" + 1 x A");
                     A71_sec = findViewById(R.id.A71_sec);
                     A71_sec.setVisibility(View.VISIBLE);
                     A71_sec.setText(String.valueOf(togetherF.draw));
@@ -949,12 +985,12 @@ public class Result_without extends AppCompatActivity {
                 }
                 UP1_sec.setText(String.valueOf(x));
                 DOWN1_sec.setText(String.valueOf(down1_sec));
-                if(functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec))==1){
+                if(functions.reduction_double(x, Math.round(down1_sec))==1){
                     Re3_sec.setVisibility(View.GONE);
                     equal_sec.setVisibility(View.GONE);
                 }
-                else {UP2_sec.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));
-                    DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));}
+                else {UP2_sec.setText(String.valueOf(x / (functions.reduction_double(x, Math.round(down1_sec)))));
+                    DOWN2_sec.setText(String.valueOf(Math.round(down1_sec) / (functions.reduction_double(x, Math.round(down1_sec)))));}
             }
             if(numberOfLines2==1 & functions.index_max(togetherF.var2One, inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)), togetherF.draw)>6){
                 threePoints_sec.setVisibility(View.VISIBLE);
@@ -965,6 +1001,12 @@ public class Result_without extends AppCompatActivity {
                         break;
                     }
                     ((TextView) findViewById(A_sec_id[i])).setVisibility(View.VISIBLE);
+                    double k = functions.factorial(type.draw)/(functions.factorial(in)*(functions.factorial(togetherF.draw-in)));
+                    if(i==0){
+                        ((TextView) findViewById(A_sec_id[i])).setText(Math.round(k)+ " x A");}
+                    else{
+                        ((TextView) findViewById(A_sec_id[i])).setText(" + " +Math.round(k)+ " x A");
+                    }
                     ((TextView) findViewById(A_sec_id[i+1])).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(A_sec_id[i+1])).setText(String.valueOf(in));
                     ((TextView) findViewById(A_sec_id[i+2])).setVisibility(View.VISIBLE);
@@ -982,6 +1024,9 @@ public class Result_without extends AppCompatActivity {
                         break;
                     }
                 }
+                double k = functions.factorial(type.draw)/(functions.factorial(inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)))
+                        *functions.factorial((togetherF.draw)-(inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)))));
+                A6b_sec.setText(" + " +Math.round(k)+ " x A");
                 A61_sec.setText(String.valueOf((inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)))));
                 A62_sec.setText(String.valueOf((inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)))));
                 A61b_sec.setText(String.valueOf((togetherF.draw)-(inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1)))));
@@ -991,6 +1036,7 @@ public class Result_without extends AppCompatActivity {
                 if(in==0){
                     A7_sec = findViewById(R.id.A7_sec);
                     A7_sec.setVisibility(View.VISIBLE);
+                    A7_sec.setText(" + 1 x A");
                     A71_sec = findViewById(R.id.A71_sec);
                     A71_sec.setVisibility(View.VISIBLE);
                     A71_sec.setText(String.valueOf(togetherF.draw));
@@ -998,12 +1044,12 @@ public class Result_without extends AppCompatActivity {
                     A72_sec.setVisibility(View.VISIBLE);
                     A72_sec.setText(String.valueOf(inputs.Result-(togetherF.allballsB.get((togetherF.index21)-1))));
                 }
-                if(functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec))==1){
+                if(functions.reduction_double(x, Math.round(down1_sec))==1){
                     Re3_sec.setVisibility(View.GONE);
                     equal_sec.setVisibility(View.GONE);
                 }
-                else {UP2_sec.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));
-                    DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(x*nmrk, Math.round(down1_sec*denok_sec)))));}
+                else {UP2_sec.setText(String.valueOf(x / (functions.reduction_double(x, Math.round(down1_sec)))));
+                    DOWN2_sec.setText(String.valueOf(Math.round(down1_sec) / (functions.reduction_double(x, Math.round(down1_sec)))));}
             }
         }
         if(togetherF.typeOfDraw3==2){
@@ -1058,6 +1104,12 @@ public class Result_without extends AppCompatActivity {
                 x = functions.for_max_plus_without(togetherF.var3One, togetherF.allballsB.get((togetherF.index31)-1), togetherF.draw-togetherF.var3One, inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)));
                 for(int i=0; i<functions.index_max(togetherF.var3One, inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)), togetherF.draw)*6; i=i+6){
                     ((TextView) findViewById(A_trd_id[i])).setVisibility(View.VISIBLE);
+                    double k = functions.factorial(type.draw)/(functions.factorial(in)*(functions.factorial(togetherF.draw-in)));
+                    if(i==0){
+                        ((TextView) findViewById(A_trd_id[i])).setText(Math.round(k)+ " x A");}
+                    else{
+                        ((TextView) findViewById(A_trd_id[i])).setText(" + " +Math.round(k)+ " x A");
+                    }
                     ((TextView) findViewById(A_trd_id[i+1])).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(A_trd_id[i+1])).setText(String.valueOf(in));
                     ((TextView) findViewById(A_trd_id[i+2])).setVisibility(View.VISIBLE);
@@ -1078,6 +1130,7 @@ public class Result_without extends AppCompatActivity {
                 if(in==0){
                     A7_trd = findViewById(R.id.A7_trd);
                     A7_trd.setVisibility(View.VISIBLE);
+                    A7_trd.setText(" + 1 x A");
                     A71_trd = findViewById(R.id.A71_trd);
                     A71_trd.setVisibility(View.VISIBLE);
                     A71_trd.setText(String.valueOf(togetherF.draw));
@@ -1087,12 +1140,12 @@ public class Result_without extends AppCompatActivity {
                 }
                 UP1_trd.setText(String.valueOf(x));
                 DOWN1_trd.setText(String.valueOf(down1_trd));
-                if(functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd))==1){
+                if(functions.reduction_double(x, Math.round(down1_trd))==1){
                     Re3_trd.setVisibility(View.GONE);
                     equal_trd.setVisibility(View.GONE);
                 }
-                else {UP2_trd.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));
-                    DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));}
+                else {UP2_trd.setText(String.valueOf(x / (functions.reduction_double(x, Math.round(down1_trd)))));
+                    DOWN2_trd.setText(String.valueOf(Math.round(down1_trd) / (functions.reduction_double(x, Math.round(down1_trd)))));}
             }
             if(numberOfLines3==1 & functions.index_max(togetherF.var3One, inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)), togetherF.draw)>6){
                 threePoints_trd.setVisibility(View.VISIBLE);
@@ -1103,6 +1156,12 @@ public class Result_without extends AppCompatActivity {
                         break;
                     }
                     ((TextView) findViewById(A_trd_id[i])).setVisibility(View.VISIBLE);
+                    double k = functions.factorial(type.draw)/(functions.factorial(in)*(functions.factorial(togetherF.draw-in)));
+                    if(i==0){
+                        ((TextView) findViewById(A_trd_id[i])).setText(Math.round(k)+ " x A");}
+                    else{
+                        ((TextView) findViewById(A_trd_id[i])).setText(" + " +Math.round(k)+ " x A");
+                    }
                     ((TextView) findViewById(A_trd_id[i+1])).setVisibility(View.VISIBLE);
                     ((TextView) findViewById(A_trd_id[i+1])).setText(String.valueOf(in));
                     ((TextView) findViewById(A_trd_id[i+2])).setVisibility(View.VISIBLE);
@@ -1120,6 +1179,9 @@ public class Result_without extends AppCompatActivity {
                         break;
                     }
                 }
+                double k = functions.factorial(type.draw)/(functions.factorial(inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)))
+                        *functions.factorial((togetherF.draw)-(inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)))));
+                A6b_trd.setText(" + " +Math.round(k)+ " x A");
                 A61_trd.setText(String.valueOf((inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)))));
                 A62_trd.setText(String.valueOf((inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)))));
                 A61b_trd.setText(String.valueOf((togetherF.draw)-(inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1)))));
@@ -1129,6 +1191,7 @@ public class Result_without extends AppCompatActivity {
                 if(in==0){
                     A7_trd = findViewById(R.id.A7_trd);
                     A7_trd.setVisibility(View.VISIBLE);
+                    A7_trd.setText(" + 1 x A");
                     A71_trd = findViewById(R.id.A71_trd);
                     A71_trd.setVisibility(View.VISIBLE);
                     A71_trd.setText(String.valueOf(togetherF.draw));
@@ -1136,12 +1199,12 @@ public class Result_without extends AppCompatActivity {
                     A72_trd.setVisibility(View.VISIBLE);
                     A72_trd.setText(String.valueOf(inputs.Result-(togetherF.allballsB.get((togetherF.index31)-1))));
                 }
-                if(functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd))==1){
+                if(functions.reduction_double(x, Math.round(down1_trd))==1){
                     Re3_trd.setVisibility(View.GONE);
                     equal_trd.setVisibility(View.GONE);
                 }
-                else {UP2_trd.setText(String.valueOf(x*nmrk / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));
-                    DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(x*nmrk, Math.round(down1_trd*denok_trd)))));}
+                else {UP2_trd.setText(String.valueOf(x / (functions.reduction_double(x, Math.round(down1_trd)))));
+                    DOWN2_trd.setText(String.valueOf(Math.round(down1_trd) / (functions.reduction_double(x, Math.round(down1_trd)))));}
             }
         }
         // for min
@@ -1201,6 +1264,12 @@ public class Result_without extends AppCompatActivity {
             }
             for (int i = 0; i <= min_times*6 & i<36; i=i+6) {
                 ((TextView) findViewById(A_id[i])).setVisibility(View.VISIBLE);
+                double denokk = functions.factorial(type.draw)/(functions.factorial(in_a)*(functions.factorial(togetherF.draw-in_a)));
+                if(i==0){
+                    ((TextView) findViewById(A_id[i])).setText(Math.round(denokk)+ " x A");}
+                else{
+                    ((TextView) findViewById(A_id[i])).setText(" + " +Math.round(denokk)+ " x A");
+                }
                 ((TextView) findViewById(A_id[i + 1])).setVisibility(View.VISIBLE);
                 ((TextView) findViewById(A_id[i + 1])).setText(String.valueOf(in_a));
                 ((TextView) findViewById(A_id[i + 2])).setVisibility(View.VISIBLE);
@@ -1220,6 +1289,9 @@ public class Result_without extends AppCompatActivity {
             }
             if (min_times >= 6 & togetherF.varOne + min_times - 1 == (togetherF.allballsB.get((togetherF.index11) - 1))) {
                 threePoints.setVisibility(View.VISIBLE);
+                double denokk = functions.factorial(type.draw)/(functions.factorial((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index11) - 1))))
+                        *functions.factorial((togetherF.allballsB.get((togetherF.index11) - 1))));
+                A6b.setText(" + " +Math.round(denokk)+ " x A");
                 A61.setText(String.valueOf((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index11) - 1)))));
                 A62.setText(String.valueOf((inputs.Result - (togetherF.allballsB.get((togetherF.index11) - 1)))));
                 A61b.setText(String.valueOf((togetherF.allballsB.get((togetherF.index11) - 1))));
@@ -1227,18 +1299,20 @@ public class Result_without extends AppCompatActivity {
             }
             if (min_times >= 6 & ((togetherF.draw) - (in_a))==0){
                 threePoints.setVisibility(View.VISIBLE);
+
+                A6b.setText(" + 1 x A");
                 A61b.setText(String.valueOf(togetherF.draw));
                 A62b.setText(String.valueOf((togetherF.allballsB.get((togetherF.index11) - 1))));
                 A61.setVisibility(View.GONE);
                 A62.setVisibility(View.GONE);
                 A6.setVisibility(View.GONE);
             }
-            if(functions.reduction_double(min_Re*nmrk, Math.round(down1*denok))==1){
+            if(functions.reduction_double(min_Re, Math.round(down1))==1){
                 Re3.setVisibility(View.GONE);
                 equal.setVisibility(View.GONE);
             }
-            else {UP2.setText(String.valueOf(Math.round(min_Re*nmrk / (functions.reduction_double(min_Re*nmrk, Math.round(down1*denok))))));
-                DOWN2.setText(String.valueOf(Math.round(Math.round(down1*denok) / (functions.reduction_double(min_Re*nmrk, Math.round(down1*denok))))));}
+            else {UP2.setText(String.valueOf(Math.round(min_Re / (functions.reduction_double(min_Re, Math.round(down1))))));
+                DOWN2.setText(String.valueOf(Math.round(Math.round(down1) / (functions.reduction_double(min_Re, Math.round(down1))))));}
         }
         if(togetherF.typeOfDraw2==3) {
             actionTwo.setVisibility(View.VISIBLE);
@@ -1299,6 +1373,12 @@ public class Result_without extends AppCompatActivity {
             }
             for (int i = 0; i <= min_times*6 & i<36; i=i+6) {
                 ((TextView) findViewById(A_sec_id[i])).setVisibility(View.VISIBLE);
+                double denokk = functions.factorial(type.draw)/(functions.factorial(in_a)*(functions.factorial(togetherF.draw-in_a)));
+                if(i==0){
+                    ((TextView) findViewById(A_sec_id[i])).setText(Math.round(denokk)+ " x A");}
+                else{
+                    ((TextView) findViewById(A_sec_id[i])).setText(" + " +Math.round(denokk)+ " x A");
+                }
                 ((TextView) findViewById(A_sec_id[i + 1])).setVisibility(View.VISIBLE);
                 ((TextView) findViewById(A_sec_id[i + 1])).setText(String.valueOf(in_a));
                 ((TextView) findViewById(A_sec_id[i + 2])).setVisibility(View.VISIBLE);
@@ -1318,6 +1398,9 @@ public class Result_without extends AppCompatActivity {
             }
             if (min_times >= 6 & togetherF.var2One + min_times - 1 == (togetherF.allballsB.get((togetherF.index21) - 1))) {
                 threePoints_sec.setVisibility(View.VISIBLE);
+                double denokk = functions.factorial(type.draw)/(functions.factorial((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index21) - 1))))
+                        *functions.factorial((togetherF.allballsB.get((togetherF.index21) - 1))));
+                A6b_sec.setText(" + " +Math.round(denokk)+ " x A");
                 A61_sec.setText(String.valueOf((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index21) - 1)))));
                 A62_sec.setText(String.valueOf((inputs.Result - (togetherF.allballsB.get((togetherF.index21) - 1)))));
                 A61b_sec.setText(String.valueOf((togetherF.allballsB.get((togetherF.index21) - 1))));
@@ -1325,18 +1408,19 @@ public class Result_without extends AppCompatActivity {
             }
             if (min_times >= 6 & ((togetherF.draw) - (in_a))==0){
                 threePoints_sec.setVisibility(View.VISIBLE);
+                A6b_sec.setText(" + 1 x A");
                 A61b.setText(String.valueOf(togetherF.draw));
                 A62b_sec.setText(String.valueOf((togetherF.allballsB.get((togetherF.index21) - 1))));
                 A61_sec.setVisibility(View.GONE);
                 A62_sec.setVisibility(View.GONE);
                 A6_sec.setVisibility(View.GONE);
             }
-            if(functions.reduction_double(min_Re_sec*nmrk, Math.round(down1_sec*denok_sec))==1){
+            if(functions.reduction_double(min_Re_sec, Math.round(down1_sec))==1){
                 Re3_sec.setVisibility(View.GONE);
                 equal_sec.setVisibility(View.GONE);
             }
-            else {UP2_sec.setText(String.valueOf(min_Re_sec*nmrk / (functions.reduction_double(min_Re_sec*nmrk, Math.round(down1_sec*denok_sec)))));
-                DOWN2_sec.setText(String.valueOf(Math.round(down1_sec*denok_sec) / (functions.reduction_double(min_Re_sec*nmrk, Math.round(down1_sec*denok_sec)))));}
+            else {UP2_sec.setText(String.valueOf(min_Re_sec / (functions.reduction_double(min_Re_sec, Math.round(down1_sec)))));
+                DOWN2_sec.setText(String.valueOf(Math.round(down1_sec) / (functions.reduction_double(min_Re_sec, Math.round(down1_sec)))));}
         }
         if(togetherF.typeOfDraw3==3) {
             actionThree.setVisibility(View.VISIBLE);
@@ -1397,6 +1481,12 @@ public class Result_without extends AppCompatActivity {
             }
             for (int i = 0; i <= min_times*6 & i<36; i=i+6) {
                 ((TextView) findViewById(A_trd_id[i])).setVisibility(View.VISIBLE);
+                double denokk = functions.factorial(type.draw)/(functions.factorial(in_a)*(functions.factorial(togetherF.draw-in_a)));
+                if(i==0){
+                    ((TextView) findViewById(A_trd_id[i])).setText(Math.round(denokk)+ " x A");}
+                else{
+                    ((TextView) findViewById(A_trd_id[i])).setText(" + " +Math.round(denokk)+ " x A");
+                }
                 ((TextView) findViewById(A_trd_id[i + 1])).setVisibility(View.VISIBLE);
                 ((TextView) findViewById(A_trd_id[i + 1])).setText(String.valueOf(in_a));
                 ((TextView) findViewById(A_trd_id[i + 2])).setVisibility(View.VISIBLE);
@@ -1416,6 +1506,9 @@ public class Result_without extends AppCompatActivity {
             }
             if (min_times >= 6 & togetherF.var3One + min_times - 1 == (togetherF.allballsB.get((togetherF.index31) - 1))) {
                 threePoints_trd.setVisibility(View.VISIBLE);
+                double denokk = functions.factorial(type.draw)/(functions.factorial((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index31) - 1))))
+                        *functions.factorial((togetherF.allballsB.get((togetherF.index31) - 1))));
+                A6b_trd.setText(" + " +Math.round(denokk)+ " x A");
                 A61_trd.setText(String.valueOf((togetherF.draw) - ((togetherF.allballsB.get((togetherF.index31) - 1)))));
                 A62_trd.setText(String.valueOf((inputs.Result - (togetherF.allballsB.get((togetherF.index31) - 1)))));
                 A61b_trd.setText(String.valueOf((togetherF.allballsB.get((togetherF.index31) - 1))));
@@ -1423,18 +1516,19 @@ public class Result_without extends AppCompatActivity {
             }
             if (min_times >= 6 & ((togetherF.draw) - (in_a))==0){
                 threePoints_trd.setVisibility(View.VISIBLE);
+                A6b_trd.setText(" + 1 x A");
                 A61b.setText(String.valueOf(togetherF.draw));
                 A62b_trd.setText(String.valueOf((togetherF.allballsB.get((togetherF.index31) - 1))));
                 A61_trd.setVisibility(View.GONE);
                 A62_trd.setVisibility(View.GONE);
                 A6_trd.setVisibility(View.GONE);
             }
-            if(functions.reduction_double(min_Re_trd*nmrk, Math.round(down1_trd*denok_trd))==1){
+            if(functions.reduction_double(min_Re_trd, Math.round(down1_trd))==1){
                 Re3_trd.setVisibility(View.GONE);
                 equal_trd.setVisibility(View.GONE);
             }
-            else {UP2_trd.setText(String.valueOf(min_Re_trd*nmrk / (functions.reduction_double(min_Re_trd*nmrk, Math.round(down1_trd*denok_trd)))));
-                DOWN2_trd.setText(String.valueOf(Math.round(down1_trd*denok_trd) / (functions.reduction_double(min_Re_trd*nmrk, Math.round(down1_trd*denok_trd)))));}
+            else {UP2_trd.setText(String.valueOf(min_Re_trd / (functions.reduction_double(min_Re_trd, Math.round(down1_trd)))));
+                DOWN2_trd.setText(String.valueOf(Math.round(down1_trd) / (functions.reduction_double(min_Re_trd, Math.round(down1_trd)))));}
         }
     }
     public void action1line1(View view){
